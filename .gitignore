@@ -1,0 +1,27 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+
+# Configuration files
+refinitiv-data.config.json*
+
+# Logs
+*.log
+
+# Docker
+*.env
+docker-compose.yml
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# Other
+*.bak
+*.tmp
