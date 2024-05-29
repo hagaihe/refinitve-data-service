@@ -1,8 +1,9 @@
 import logging
 import refinitiv.data as rd
+from refinitiv.data.content import symbol_conversion
 import pandas as pd
 
-from app.config import REFINITIV_APP_KEY, REFINITIV_USERNAME, REFINITIV_PASSWORD
+from app.config import APP
 
 logger = logging.getLogger(__name__)
 
@@ -19,30 +20,54 @@ def convert_to_refinitiv_symbology(symbols):
     return converted, ignored
 
 
+def convert_to_ric(symbols):
+    try:
+        conversion_definition = symbol_conversion.Definition(
+            symbols=symbols,
+            from_symbol_type=symbol_conversion.SymbolTypes.TICKER_SYMBOL,
+            to_symbol_types=[symbol_conversion.SymbolTypes.RIC],
+            preferred_country_code=symbol_conversion.CountryCode.USA
+        ).get_data()
+
+        # Extracting the converted RICs
+        converted_ric_list = []
+        for symbol in symbols:
+            try:
+                ric = conversion_definition.data.raw['Matches'][symbol]['RIC']
+                converted_ric_list.append(ric)
+            except KeyError:
+                logging.warning(f"No RIC found for symbol '{symbol}'")
+                converted_ric_list.append(None)
+
+        return converted_ric_list
+
+    except Exception as e:
+        logging.error(f"Error in converting symbols: {e}")
+        return []
+
 async def validate_corporate_actions(input_universe, input_fields):
-    config = rd.get_config()
-    config.set_param("logs.transports.file.enabled", True)
-    config.set_param("logs.transports.file.name", "refinitiv-data-lib.log")
-    config.set_param("logs.level", "debug")
+    conf = APP.conf
     session = rd.session.platform.Definition(
-        app_key=REFINITIV_APP_KEY,
+        app_key=conf.refinitiv_app_key,
         signon_control=True,
         grant=rd.session.platform.GrantPassword(
-            username=REFINITIV_USERNAME,
-            password=REFINITIV_PASSWORD
+            username=conf.refinitiv_username,
+            password=conf.refinitiv_password
         )
     ).get_session()
     session.open()
     rd.session.set_default(session)
+
+    rics = convert_to_ric(input_universe)
 
     result = []
     no_data_symbols = []
     try:
         pd.set_option('future.no_silent_downcasting', True)
 
-        logging.info(f"requesting {input_fields} for {len(input_universe)}")
+        logging.info(f"requesting {input_fields} for {len(rics)} symbols")
         data_df = rd.get_data(
-            universe=input_universe,
+            universe=rics,
             fields=input_fields
         )
         data_df = data_df.infer_objects(copy=False)
@@ -58,7 +83,7 @@ async def validate_corporate_actions(input_universe, input_fields):
         valid_data_df = data_df.dropna(subset=['ADJUST_CLS', 'HST_CLOSE'])
         filtered_df = valid_data_df[valid_data_df['ADJUST_CLS'] != valid_data_df['HST_CLOSE']]
         if not filtered_df.empty:
-            logging.info(f"found corporate actions on {filtered_df}")
+            logging.info(f"found corporate actions\n{filtered_df}")
         result = filtered_df.to_dict(orient='records')
     except Exception as e:
         logger.error(f"Failed to get data: {e}")

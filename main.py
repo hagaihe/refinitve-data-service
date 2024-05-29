@@ -1,17 +1,37 @@
 import logging
+import aiojobs as aiojobs
 from aiohttp import web
-from app.config import setup_config
-from app.handlers import validate_corporate_actions_handler
+from aiojobs.aiohttp import setup
+import refinitiv.data as rd
+from app.config import APP
+from app.handlers import validate_corporate_actions_handler, health_check
 
 
-def create_app():
+def exception_handler(scheduler: aiojobs.Scheduler, context: dict):
+    exception = context.get('exception', None)
+    if exception is not None:
+        logging.error("exception handler", exc_info=exception)
+
+
+async def on_startup(app: web.Application):
+    logging.info("setting up application")
+    APP.refinitive_config = rd.get_config()
+    APP.refinitive_config.set_param("logs.transports.file.enabled", True)
+    APP.refinitive_config.set_param("logs.transports.file.name", "refinitiv-data-lib.log")
+    APP.refinitive_config.set_param("logs.level", "debug")
+
+
+def application_init():
+    conf = APP.conf
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     logging.info("init refinitive-data-service")
-    setup_config()
-    app = web.Application()
-    logging.info("adding endpoints")
-    app.router.add_post('/refinitive/corporate/validate', validate_corporate_actions_handler)
-    return app
+    webapp = web.Application(client_max_size=1024 ** 2 * 50)  # Set limit to 50 MB
+    webapp.router.add_get('/health_check', health_check)
+    webapp.router.add_post('/refinitive/corporate/validate', validate_corporate_actions_handler)
+    setup(webapp, exception_handler=exception_handler, pending_limit=100)
+    webapp.on_startup.append(on_startup)
+    return webapp
+
 
 if __name__ == '__main__':
-    web.run_app(create_app(), port=8080)
+    web.run_app(application_init(), port=8080)

@@ -1,37 +1,23 @@
-import logging
+import dataclasses
 import os
-import json
 
-REFINITIV_APP_KEY = os.getenv('REFINITIV_APP_KEY')
-REFINITIV_USERNAME = os.getenv('REFINITIV_USERNAME')
-REFINITIV_PASSWORD = os.getenv('REFINITIV_PASSWORD')
 
-def setup_config():
+class AppConfig:
+        def __init__(self):
+                self.refinitiv_app_key = os.getenv('REFINITIV_APP_KEY')
+                self.refinitiv_username = os.getenv('REFINITIV_USERNAME')
+                self.refinitiv_password = os.getenv('REFINITIV_PASSWORD')
 
-    if not REFINITIV_APP_KEY or not REFINITIV_USERNAME or not REFINITIV_PASSWORD:
-        raise ValueError("Environment variables for Refinitiv credentials are not set properly.")
+                if not self.refinitiv_app_key or not self.refinitiv_username or not self.refinitiv_password:
+                    raise ValueError("Environment variables for Refinitiv credentials are not set properly.")
 
-    config_file_name = 'refinitiv-data.config.json'
 
-    config = {
-            "sessions": {
-                "default": "platform.rdp",
-                "platform": {
-                "rdp": {
-                    "app-key": REFINITIV_APP_KEY,
-                    "user_name": REFINITIV_USERNAME,
-                    "password": REFINITIV_PASSWORD,
-                    "auto-reconnect": True,
-                    "server-mode": True,
-                    "signon_control": True
-                }
-            }
-        }
-    }
+@dataclasses.dataclass
+class App:
+    conf: AppConfig = None
+    refinitive_config = None
 
-    logging.info(f"load & update refinitive config to {config_file_name}")
-    if os.path.exists(config_file_name):
-        os.remove(config_file_name)
 
-    with open(config_file_name, 'w') as config_file:
-        json.dump(config, config_file, indent=4)
+APP = App(conf=AppConfig())
+
+

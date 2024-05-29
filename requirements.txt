@@ -1,3 +1,4 @@
 aiohttp
 pandas
 refinitiv-data
+aiojobs
