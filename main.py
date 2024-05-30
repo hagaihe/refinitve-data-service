@@ -25,7 +25,7 @@ async def on_startup(app: web.Application):
         os.makedirs(log_directory)
     current_date = datetime.now().strftime('%Y-%m-%d')
     log_file_path = os.path.join(log_directory, f"refinitiv-data-lib-{current_date}.log")
-    logging.info(f"set refintive log={log_file_path}")
+    logging.info(f"set refinitiv log={log_file_path}")
 
     APP.refinitive_config = rd.get_config()
     APP.refinitive_config.set_param("logs.transports.file.enabled", True)
@@ -34,8 +34,7 @@ async def on_startup(app: web.Application):
 
 
 def application_init():
-    conf = APP.conf
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     logging.info("init refinitive-data-service")
     webapp = web.Application(client_max_size=1024 ** 2 * 50)  # Set limit to 50 MB
     webapp.router.add_get('/health_check', health_check)
