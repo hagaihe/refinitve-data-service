@@ -74,19 +74,19 @@ async def validate_corporate_actions(input_universe, input_fields):
         logging.info(f"response from refinitive api contains data for {len(data_df)}")
 
         # Identify symbols with missing data in ADJUST_CLS or HST_CLOSE
-        missing_data_df = data_df[data_df[['ADJUST_CLS', 'HST_CLOSE']].isna().any(axis=1)]
+        missing_data_df = data_df[data_df[input_fields].isna().any(axis=1)]
         no_data_symbols = missing_data_df['Instrument'].tolist()
         if no_data_symbols:
             logging.error(f"the following symbols had no data={no_data_symbols}")
 
         # Filter rows where ADJUST_CLS and HST_CLOSE are both not NaN
-        valid_data_df = data_df.dropna(subset=['ADJUST_CLS', 'HST_CLOSE'])
-        filtered_df = valid_data_df[valid_data_df['ADJUST_CLS'] != valid_data_df['HST_CLOSE']]
+        valid_data_df = data_df.dropna(subset=input_fields)
+        filtered_df = valid_data_df[valid_data_df[input_fields[0]] != valid_data_df[input_fields[1]]]
         if not filtered_df.empty:
             logging.info(f"found corporate actions\n{filtered_df}")
         result = filtered_df.to_dict(orient='records')
-    except Exception as e:
-        logger.error(f"Failed to get data: {e}")
+    except:
+        logger.exception(f"Failed to get data")
     finally:
         rd.close_session()
     return result, no_data_symbols

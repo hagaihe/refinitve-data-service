@@ -1,4 +1,7 @@
 import logging
+import os
+from datetime import datetime
+
 import aiojobs as aiojobs
 from aiohttp import web
 from aiojobs.aiohttp import setup
@@ -15,9 +18,18 @@ def exception_handler(scheduler: aiojobs.Scheduler, context: dict):
 
 async def on_startup(app: web.Application):
     logging.info("setting up application")
+
+    root_directory = os.path.dirname(os.path.abspath(__file__))
+    log_directory = os.path.join(root_directory, 'logs')
+    if not os.path.exists(log_directory):
+        os.makedirs(log_directory)
+    current_date = datetime.now().strftime('%Y-%m-%d')
+    log_file_path = os.path.join(log_directory, f"refinitiv-data-lib-{current_date}.log")
+    logging.info(f"set refintive log={log_file_path}")
+
     APP.refinitive_config = rd.get_config()
     APP.refinitive_config.set_param("logs.transports.file.enabled", True)
-    APP.refinitive_config.set_param("logs.transports.file.name", "refinitiv-data-lib.log")
+    APP.refinitive_config.set_param("logs.transports.file.name", log_file_path)
     APP.refinitive_config.set_param("logs.level", "debug")
 
 
