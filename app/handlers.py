@@ -13,11 +13,12 @@ async def validate_corporate_actions_handler(request: web.Request):
             raise ValueError("unable to validate corporate actions without symbols")
 
         fields = body.get('fields', ['ADJUST_CLS', 'HST_CLOSE'])
-        data, no_data_symbols = await validate_corporate_actions(symbols, fields)
+        data, no_data_symbols, no_ric_symbols = await validate_corporate_actions(symbols, fields)
 
         return web.json_response({
-            'data': data,
-            'no_data_symbols': no_data_symbols
+            'corporate_actions': data,
+            'no_data_symbols': no_data_symbols,
+            'no_ric_symbols': no_ric_symbols
         })
     except Exception as e:
         return web.json_response({'error': str(e)}, status=500)

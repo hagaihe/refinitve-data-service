@@ -20,7 +20,7 @@ def convert_to_refinitiv_symbology(symbols):
     return converted, ignored
 
 
-def convert_to_ric(symbols):
+def convert_to_ric(symbols) -> dict:
     try:
         conversion_definition = symbol_conversion.Definition(
             symbols=symbols,
@@ -30,14 +30,14 @@ def convert_to_ric(symbols):
         ).get_data()
 
         # Extracting the converted RICs
-        converted_ric_list = []
+        converted_ric_list = {}
         for symbol in symbols:
             try:
                 ric = conversion_definition.data.raw['Matches'][symbol]['RIC']
-                converted_ric_list.append(ric)
+                converted_ric_list[symbol] = ric
             except KeyError:
                 logging.warning(f"No RIC found for symbol '{symbol}'")
-                converted_ric_list.append(None)
+                converted_ric_list[symbol] = None
 
         return converted_ric_list
 
@@ -58,14 +58,20 @@ async def validate_corporate_actions(input_universe, input_fields):
     session.open()
     rd.session.set_default(session)
 
-    rics = convert_to_ric(input_universe)
+    converted_symbols_dict = convert_to_ric(input_universe)
+    rics = [s for s in converted_symbols_dict.values() if s is not None]
+
+    no_ric_symbols = [k for k in converted_symbols_dict if converted_symbols_dict[k] is None]
+    if no_ric_symbols:
+        logging.error(f"the following symbols had no ric symbol={no_ric_symbols}")
 
     result = []
     no_data_symbols = []
     try:
         pd.set_option('future.no_silent_downcasting', True)
 
-        logging.info(f"requesting {input_fields} for {len(rics)} symbols")
+        logging.info(f"requesting {input_fields} for ric {len(rics)} symbols out of "
+                     f"total {len(input_universe)} symbols requested")
         data_df = rd.get_data(
             universe=rics,
             fields=input_fields
@@ -89,4 +95,4 @@ async def validate_corporate_actions(input_universe, input_fields):
         logger.exception(f"Failed to get data")
     finally:
         rd.close_session()
-    return result, no_data_symbols
+    return result, no_data_symbols, no_ric_symbols
