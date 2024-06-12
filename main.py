@@ -3,9 +3,10 @@ import os
 from datetime import datetime
 
 import aiojobs as aiojobs
+import refinitiv.data as rd
 from aiohttp import web
 from aiojobs.aiohttp import setup
-import refinitiv.data as rd
+
 from app.config import APP
 from app.handlers import validate_corporate_actions_handler, health_check
 
@@ -35,6 +36,11 @@ async def on_startup(app: web.Application):
 
 def application_init():
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    logging.getLogger('httpcore.http11').setLevel(logging.WARNING)
+    logging.getLogger('httpx').setLevel(logging.WARNING)
+    logging.getLogger('httpcore.connection').setLevel(logging.WARNING)
+    logging.getLogger('aiohttp.access').setLevel(logging.WARNING)
+
     logging.info("init refinitive-data-service")
     webapp = web.Application(client_max_size=1024 ** 2 * 50)  # Set limit to 50 MB
     webapp.router.add_get('/health_check', health_check)

@@ -1,11 +1,14 @@
 import logging
+from datetime import datetime
+
+import pandas as pd
 import refinitiv.data as rd
 from refinitiv.data.content import symbol_conversion
-import pandas as pd
 
 from app.config import APP
 
 logger = logging.getLogger(__name__)
+
 
 def convert_to_refinitiv_symbology(symbols):
     converted = []
@@ -45,6 +48,7 @@ def convert_to_ric(symbols) -> dict:
         logging.error(f"Error in converting symbols: {e}")
         return []
 
+
 async def validate_corporate_actions(input_universe, input_fields):
     conf = APP.conf
     session = rd.session.platform.Definition(
@@ -58,6 +62,7 @@ async def validate_corporate_actions(input_universe, input_fields):
     session.open()
     rd.session.set_default(session)
 
+    logging.info(f"convert {len(input_universe)} symbols to rics")
     converted_symbols_dict = convert_to_ric(input_universe)
     rics = [s for s in converted_symbols_dict.values() if s is not None]
 
@@ -65,13 +70,11 @@ async def validate_corporate_actions(input_universe, input_fields):
     if no_ric_symbols:
         logging.error(f"the following symbols had no ric symbol={no_ric_symbols}")
 
-    result = []
-    no_data_symbols = []
     try:
         pd.set_option('future.no_silent_downcasting', True)
-
         logging.info(f"requesting {input_fields} for ric {len(rics)} symbols out of "
                      f"total {len(input_universe)} symbols requested")
+
         data_df = rd.get_data(
             universe=rics,
             fields=input_fields
@@ -80,19 +83,27 @@ async def validate_corporate_actions(input_universe, input_fields):
         logging.info(f"response from refinitive api contains data for {len(data_df)}")
 
         # Identify symbols with missing data in ADJUST_CLS or HST_CLOSE
-        missing_data_df = data_df[data_df[input_fields].isna().any(axis=1)]
+        missing_data_df = data_df[data_df[['ADJUST_CLS', 'HST_CLOSE']].isna().any(axis=1)]
         no_data_symbols = missing_data_df['Instrument'].tolist()
         if no_data_symbols:
             logging.error(f"the following symbols had no data={no_data_symbols}")
+            ric_to_symbol = {v: k for k, v in converted_symbols_dict.items()}
+            # replace RICs in no_data_symbols with their corresponding requested symbols
+            no_data_symbols = [ric_to_symbol[ric] for ric in no_data_symbols if ric in ric_to_symbol]
 
-        # Filter rows where ADJUST_CLS and HST_CLOSE are both not NaN
-        valid_data_df = data_df.dropna(subset=input_fields)
-        filtered_df = valid_data_df[valid_data_df[input_fields[0]] != valid_data_df[input_fields[1]]]
+        today = pd.Timestamp(datetime.today().date())
+
+        valid_data_df = data_df.dropna(subset=['ADJUST_CLS', 'HST_CLOSE'])
+        filtered_df = valid_data_df[
+            (valid_data_df['ADJUST_CLS'] != valid_data_df['HST_CLOSE']) |
+            (valid_data_df['CAPITAL CHANGE EX DATE'].notna() & (valid_data_df['CAPITAL CHANGE EX DATE'] == today))]
+
         if not filtered_df.empty:
             logging.info(f"found corporate actions\n{filtered_df}")
         result = filtered_df.to_dict(orient='records')
-    except:
+    except Exception as e:
         logger.exception(f"Failed to get data")
+        raise e
     finally:
         rd.close_session()
     return result, no_data_symbols, no_ric_symbols
