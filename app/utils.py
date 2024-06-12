@@ -100,7 +100,14 @@ async def validate_corporate_actions(input_universe, input_fields):
 
         if not filtered_df.empty:
             logging.info(f"found corporate actions\n{filtered_df}")
+
         result = filtered_df.to_dict(orient='records')
+
+        # convert NaT to None for JSON serialization
+        for record in result:
+            for key, value in record.items():
+                if pd.isna(value):
+                    record[key] = None
     except Exception as e:
         logger.exception(f"Failed to get data")
         raise e
