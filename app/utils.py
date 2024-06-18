@@ -82,14 +82,15 @@ async def validate_corporate_actions(input_universe, input_fields):
         data_df = data_df.infer_objects(copy=False)
         logging.info(f"response from refinitive api contains data for {len(data_df)}")
 
+        # replace RICs in no_data_symbols with their corresponding requested symbols
+        ric_to_symbol = {v: k for k, v in converted_symbols_dict.items()}
+        data_df['Instrument'] = data_df['Instrument'].map(ric_to_symbol).fillna(data_df['Instrument'])
+
         # Identify symbols with missing data in ADJUST_CLS or HST_CLOSE
         missing_data_df = data_df[data_df[['ADJUST_CLS', 'HST_CLOSE']].isna().any(axis=1)]
         no_data_symbols = missing_data_df['Instrument'].tolist()
         if no_data_symbols:
             logging.error(f"the following symbols had no data={no_data_symbols}")
-            ric_to_symbol = {v: k for k, v in converted_symbols_dict.items()}
-            # replace RICs in no_data_symbols with their corresponding requested symbols
-            no_data_symbols = [ric_to_symbol[ric] for ric in no_data_symbols if ric in ric_to_symbol]
 
         today = pd.Timestamp(datetime.today().date())
 

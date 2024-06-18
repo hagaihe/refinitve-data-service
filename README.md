@@ -22,3 +22,11 @@ docker run -d -p 8080:8080 \
   -e REFINITIV_USERNAME=<'your-username'> \
   -e REFINITIV_PASSWORD=<'your-password'> \
   refinitiv-data-service:latest
+
+in windows server run the docker without quotes, as followed -
+
+docker run -d -p 8080:8080 \
+  -e REFINITIV_APP_KEY=<your-app-key> \
+  -e REFINITIV_USERNAME=<your-username> \
+  -e REFINITIV_PASSWORD=<your-password> \
+  refinitiv-data-service:latest
