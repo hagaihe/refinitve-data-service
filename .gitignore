@@ -25,3 +25,8 @@ docker-compose.yml
 # Other
 *.bak
 *.tmp
+
+# Ignore the Dockerfile itself and other unnecessary files
+Dockerfile
+README.md
+*.md
