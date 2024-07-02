@@ -1,9 +1,8 @@
 import json
 from datetime import datetime
-
 from aiohttp import web
-
-from .utils import validate_corporate_actions
+# from .utils import validate_corporate_actions
+from app.yahoo import validate_corporate_actions
 
 
 async def validate_corporate_actions_handler(request: web.Request):
@@ -13,8 +12,9 @@ async def validate_corporate_actions_handler(request: web.Request):
         if not symbols:
             raise ValueError("unable to validate corporate actions without symbols")
 
-        fields = body.get('fields', ['ADJUST_CLS', 'HST_CLOSE', 'CAPITAL CHANGE EX DATE'])
-        data, no_data_symbols, no_ric_symbols = await validate_corporate_actions(symbols, fields)
+        # fields = body.get('fields', ['ASK', 'BID', 'TR.DivExDate'])
+        # data, no_data_symbols, no_ric_symbols = await validate_corporate_actions(symbols, fields)
+        data, no_data_symbols, no_ric_symbols = await validate_corporate_actions(symbols)
 
         return web.json_response({
             'corporate_actions': data,
