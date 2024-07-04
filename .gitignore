@@ -1,32 +1,36 @@
-# Python cache files
+# Exclude Python cache files
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Virtual environment
+# Exclude virtual environments
 venv/
 .env/
 
-# Configuration files
+# Exclude configuration files
 refinitiv-data.config.json*
 
-# Logs
+# Exclude logs
 *.log
 
-# Docker
+# Exclude environment files
 *.env
+
+# Exclude Docker Compose files
 docker-compose.yml
 
-# IDE files
+# Exclude IDE and editor files
 .vscode/
 .idea/
 *.swp
 
-# Other
+# Exclude backup and temporary files
 *.bak
 *.tmp
 
-# Ignore the Dockerfile itself and other unnecessary files
+# Exclude documentation files
+*.md
+
+# Additional exclusions
 Dockerfile
 README.md
-*.md

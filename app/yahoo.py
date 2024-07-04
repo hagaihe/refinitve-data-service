@@ -29,6 +29,7 @@ async def download_ex_div_data(symbol, semaphore):
               f"period1={period1_epoch}&period2={period2_epoch}&interval=1d&events=div&includeAdjustedClose=true"
 
         try:
+            # logger.info(f"download ex-div for data for {symbol} from {period1} -> {period2}...")
             async with aiohttp.ClientSession() as session:
                 async with session.get(url) as response:
                     if response.status == 200:
@@ -41,7 +42,7 @@ async def download_ex_div_data(symbol, semaphore):
                             data_df = data_df.sort_values(by='Date')
                             return data_df
                     else:
-                        logger.info(f"failed to download data for {symbol}. HTTP Status code: {response.status}")
+                        raise Exception(f"failed to download data for {symbol}. HTTP Status code: {response.status}")
         except Exception as ex:
             logger.exception("failed to fetch ex-div data from yahoo finance")
             raise ex
@@ -49,7 +50,7 @@ async def download_ex_div_data(symbol, semaphore):
         return pd.DataFrame()
 
 
-async def validate_corporate_actions(input_universe, concurrent_requests_limit = 20):
+async def validate_corporate_actions(input_universe, concurrent_requests_limit=5):
     no_data_symbols = []
     today = pd.Timestamp(datetime.today().date() - timedelta(days=1))
     logging.info(f"Request ex-div data from Yahoo on {len(input_universe)} symbols")
