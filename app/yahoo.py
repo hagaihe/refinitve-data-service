@@ -18,7 +18,7 @@ async def download_ex_div_data(symbol, semaphore):
         # define the date range
         today = datetime.now().date()
         period1 = today - timedelta(days=7)
-        period2 = today + timedelta(days=1)
+        period2 = today + timedelta(days=7)
 
         # convert dates to epoch times
         period1_epoch = get_epoch_time(period1)
@@ -29,7 +29,7 @@ async def download_ex_div_data(symbol, semaphore):
               f"period1={period1_epoch}&period2={period2_epoch}&interval=1d&events=div&includeAdjustedClose=true"
 
         try:
-            # logger.info(f"download ex-div for data for {symbol} from {period1} -> {period2}...")
+            logger.debug(f"call {url}...")
             async with aiohttp.ClientSession() as session:
                 async with session.get(url) as response:
                     if response.status == 200:
@@ -37,6 +37,7 @@ async def download_ex_div_data(symbol, semaphore):
                         data_df = pd.read_csv(StringIO(content))
                         if not data_df.empty:
                             # sort data by 'Date' column in ascending order
+                            logging.debug(f"ex-div for {symbol}:\n{data_df}")
                             data_df['Instrument'] = symbol
                             data_df['Date'] = pd.to_datetime(data_df['Date'])
                             data_df = data_df.sort_values(by='Date')
@@ -52,7 +53,7 @@ async def download_ex_div_data(symbol, semaphore):
 
 async def validate_corporate_actions(input_universe, concurrent_requests_limit=5):
     no_data_symbols = []
-    today = pd.Timestamp(datetime.today().date() - timedelta(days=1))
+    today = pd.Timestamp(datetime.today().date() - timedelta(days=0))
     logging.info(f"Request ex-div data from Yahoo on {len(input_universe)} symbols")
 
     semaphore = asyncio.Semaphore(concurrent_requests_limit)
@@ -78,13 +79,14 @@ async def validate_corporate_actions(input_universe, concurrent_requests_limit=5
     if results:
         results_df = pd.DataFrame(results).reset_index(drop=True)
         filtered_df = results_df.loc[(results_df['Date'].notna()) & (results_df['Date'] == today)]
+        # filtered_df = results_df.loc[(results_df['Date'].notna())]
+        # Convert the 'Date' column to string format for JSON serialization
+        filtered_df['Date'] = filtered_df['Date'].dt.strftime('%Y-%m-%d')
     else:
         filtered_df = pd.DataFrame()
 
     if not filtered_df.empty:
         logging.info(f"Found corporate actions\n{filtered_df}")
 
-    # Convert the 'Date' column to string format for JSON serialization
-    filtered_df['Date'] = filtered_df['Date'].dt.strftime('%Y-%m-%d')
     logging.info("Request ex-div data from Yahoo ended")
     return filtered_df.to_dict(orient='records'), no_data_symbols, []

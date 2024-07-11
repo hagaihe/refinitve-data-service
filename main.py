@@ -35,11 +35,12 @@ async def on_startup(app: web.Application):
 
 
 def application_init():
-    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     logging.getLogger('httpcore.http11').setLevel(logging.WARNING)
     logging.getLogger('httpx').setLevel(logging.WARNING)
     logging.getLogger('httpcore.connection').setLevel(logging.WARNING)
     logging.getLogger('aiohttp.access').setLevel(logging.WARNING)
+    logging.getLogger('asyncio').setLevel(logging.WARNING)
 
     logging.info("init refinitive-data-service")
     webapp = web.Application(client_max_size=1024 ** 2 * 50)  # Set limit to 50 MB
