@@ -5,6 +5,7 @@ import time
 from datetime import datetime, timedelta
 import pandas as pd
 from io import StringIO
+import yfinance as yf
 
 logger = logging.getLogger(__name__)
 
@@ -17,8 +18,8 @@ async def download_ex_div_data(symbol, semaphore):
     async with semaphore:
         # define the date range
         today = datetime.now().date()
-        period1 = today - timedelta(days=7)
-        period2 = today + timedelta(days=7)
+        period1 = today - timedelta(days=60)
+        period2 = today + timedelta(days=30)
 
         # convert dates to epoch times
         period1_epoch = get_epoch_time(period1)
@@ -51,7 +52,27 @@ async def download_ex_div_data(symbol, semaphore):
         return pd.DataFrame()
 
 
-async def validate_corporate_actions(input_universe, concurrent_requests_limit=5):
+async def download_corporate_actions(symbol, semaphore):
+    async with semaphore:
+        try:
+            logger.debug(f"Fetching data for {symbol}...")
+            stock = yf.Ticker(symbol)
+            actions = stock.actions
+
+            if not actions.empty:
+                actions['Instrument'] = symbol
+                actions['Date'] = pd.to_datetime(actions.index).strftime('%Y-%m-%d')
+                actions = actions.reset_index(drop=True)
+                return actions
+        except Exception as ex:
+            logger.exception(f"Failed to fetch data for {symbol} using yfinance")
+            raise ex
+
+        return pd.DataFrame()
+
+
+async def validate_corporate_actions_v1(input_universe, concurrent_requests_limit=5):
+    t0 = time.time()
     no_data_symbols = []
     today = pd.Timestamp(datetime.today().date() - timedelta(days=0))
     logging.info(f"Request ex-div data from Yahoo on {len(input_universe)} symbols")
@@ -89,4 +110,52 @@ async def validate_corporate_actions(input_universe, concurrent_requests_limit=5
         logging.info(f"Found corporate actions\n{filtered_df}")
 
     logging.info("Request ex-div data from Yahoo ended")
+
+    elapsed = time.time() - t0
+    logging.info(f"Runtime: {elapsed} seconds")
+
     return filtered_df.to_dict(orient='records'), no_data_symbols, []
+
+
+async def validate_corporate_actions_v2(input_universe, concurrent_requests_limit=5, specific_date=None):
+    t0 = time.time()
+    no_data_symbols = []
+
+    if specific_date:
+        today = specific_date
+    else:
+        today = pd.Timestamp(datetime.today().date()).strftime('%Y-%m-%d')
+
+    logging.info(f"Request corporate actions data from yfinance on {len(input_universe)} symbols for date {today}")
+
+    semaphore = asyncio.Semaphore(concurrent_requests_limit)
+
+    async def fetch_data(symbol):
+        try:
+            data_df = await download_corporate_actions(symbol, semaphore)
+            if not data_df.empty:
+                return data_df[data_df['Date'] == today]
+        except Exception as e:
+            logger.exception(f"Failed to get data for {symbol}")
+            no_data_symbols.append(symbol)
+        return None
+
+    tasks = [fetch_data(symbol) for symbol in input_universe]
+    data = await asyncio.gather(*tasks)
+
+    results = [record for record in data if record is not None and not record.empty]
+
+    if no_data_symbols:
+        logging.error(f"The following symbols had no data: {no_data_symbols}")
+
+    if results:
+        results_df = pd.concat(results).reset_index(drop=True)
+        logging.info(f"Found corporate actions\n{results_df}")
+    else:
+        results_df = pd.DataFrame()
+
+    logging.info("Request corporate actions data from yfinance ended")
+
+    elapsed = time.time() - t0
+    logging.info(f"Runtime: {elapsed} seconds")
+    return results_df.to_dict(orient='records'), no_data_symbols, []

@@ -1,8 +1,8 @@
 import json
 from datetime import datetime
 from aiohttp import web
-# from .utils import validate_corporate_actions
-from app.yahoo import validate_corporate_actions
+
+from app.yahoo import validate_corporate_actions_v2
 
 
 async def validate_corporate_actions_handler(request: web.Request):
@@ -14,7 +14,7 @@ async def validate_corporate_actions_handler(request: web.Request):
 
         # fields = body.get('fields', ['ASK', 'BID', 'TR.DivExDate'])
         # data, no_data_symbols, no_ric_symbols = await validate_corporate_actions(symbols, fields)
-        data, no_data_symbols, no_ric_symbols = await validate_corporate_actions(symbols)
+        data, no_data_symbols, no_ric_symbols = await validate_corporate_actions_v2(symbols, concurrent_requests_limit=20)
 
         return web.json_response({
             'corporate_actions': data,
