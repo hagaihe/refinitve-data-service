@@ -8,7 +8,7 @@ from aiohttp import web
 from aiojobs.aiohttp import setup
 
 from app.config import APP
-from app.handlers import validate_corporate_actions_handler, health_check
+from app.handlers import validate_corporate_actions_handler, health_check, get_holdings
 
 
 def exception_handler(scheduler: aiojobs.Scheduler, context: dict):
@@ -45,6 +45,7 @@ def application_init():
     logging.info("init refinitive-data-service")
     webapp = web.Application(client_max_size=1024 ** 2 * 50)  # Set limit to 50 MB
     webapp.router.add_get('/health_check', health_check)
+    webapp.router.add_get('/refinitive/holdings', get_holdings)
     webapp.router.add_post('/refinitive/corporate/validate', validate_corporate_actions_handler)
     setup(webapp, exception_handler=exception_handler, pending_limit=100)
     webapp.on_startup.append(on_startup)

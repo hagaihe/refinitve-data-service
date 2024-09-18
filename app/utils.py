@@ -1,4 +1,6 @@
+import asyncio
 import logging
+import time
 from datetime import datetime
 
 import pandas as pd
@@ -48,7 +50,8 @@ def convert_to_ric(symbols) -> dict:
         logging.error(f"Error in converting symbols: {e}")
         return []
 
-async def get_data(input_universe, input_fields):
+
+async def get_data(input_universe, input_fields, retries=3):
     conf = APP.conf
     session = rd.session.platform.Definition(
         app_key=conf.refinitiv_app_key,
@@ -69,26 +72,34 @@ async def get_data(input_universe, input_fields):
     if no_ric_symbols:
         logging.error(f"the following symbols had no ric symbol={no_ric_symbols}")
 
-    try:
-        pd.set_option('future.no_silent_downcasting', True)
-        logging.info(f"requesting {input_fields} for {rics}")
+    attempt = 0
+    while attempt < retries:
+        try:
+            logging.info(f"Attempt {attempt + 1}: requesting {input_fields} for {rics}")
 
-        data_df = rd.get_data(
-            universe=rics,
-            fields=input_fields
-        )
-        data_df = data_df.infer_objects(copy=False)
-        logging.info(f"response: columns={data_df.columns.tolist()}, data count={len(data_df)}")
+            # Adding an external timeout mechanism using asyncio
+            data_df = await asyncio.to_thread(rd.get_data, universe=rics, fields=input_fields)
 
-        # replace RICs in no_data_symbols with their corresponding requested symbols
-        ric_to_symbol = {v: k for k, v in converted_symbols_dict.items()}
-        data_df['Instrument'] = data_df['Instrument'].map(ric_to_symbol).fillna(data_df['Instrument'])
+            data_df = data_df.infer_objects(copy=False)
+            logging.info(f"response: columns={data_df.columns.tolist()}, data count={len(data_df)}")
 
-        return data_df, no_ric_symbols
+            # replace RICs in no_data_symbols with their corresponding requested symbols
+            ric_to_symbol = {v: k for k, v in converted_symbols_dict.items()}
+            data_df['Instrument'] = data_df['Instrument'].map(ric_to_symbol).fillna(data_df['Instrument'])
 
-    except Exception as e:
-        logger.exception(f"Failed to get data")
-        raise e
+            return data_df, no_ric_symbols
+
+        except asyncio.TimeoutError:
+            logging.error(f"Timeout occurred during data retrieval. Attempt {attempt + 1} failed.")
+            attempt += 1
+            time.sleep(2)  # wait before retrying
+            continue  # Retry the request
+
+        except Exception as e:
+            logging.exception(f"An error occurred during data retrieval: {str(e)}")
+            raise e
+
+    raise Exception(f"Failed to retrieve data after {retries} attempts")
 
 
 async def validate_corporate_actions(input_universe, input_fields):
@@ -99,7 +110,7 @@ async def validate_corporate_actions(input_universe, input_fields):
         missing_data_df = data_df[data_df[[input_fields[0], input_fields[1]]].isna().any(axis=1)]
         no_data_symbols = missing_data_df['Instrument'].tolist()
         if no_data_symbols:
-             logging.error(f"the following symbols had no data={no_data_symbols}")
+            logging.error(f"the following symbols had no data={no_data_symbols}")
 
         today = pd.Timestamp(datetime.today().date())
 

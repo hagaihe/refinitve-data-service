@@ -71,7 +71,7 @@ async def download_corporate_actions(symbol, semaphore):
         return pd.DataFrame()
 
 
-async def validate_corporate_actions_v1(input_universe, concurrent_requests_limit=5):
+async def validate_corporate_actions_v1(input_universe, concurrent_requests_limit=1):
     t0 = time.time()
     no_data_symbols = []
     today = pd.Timestamp(datetime.today().date() - timedelta(days=0))
@@ -121,12 +121,10 @@ async def validate_corporate_actions_v2(input_universe, concurrent_requests_limi
     t0 = time.time()
     no_data_symbols = []
 
-    if specific_date:
-        today = specific_date
-    else:
-        today = pd.Timestamp(datetime.today().date()).strftime('%Y-%m-%d')
+    if not specific_date:
+        specific_date = pd.Timestamp(datetime.today().date() - timedelta(days=1)).strftime('%Y-%m-%d')
 
-    logging.info(f"Request corporate actions data from yfinance on {len(input_universe)} symbols for date {today}")
+    logging.info(f"Request corporate actions data from yfinance on {len(input_universe)} symbols for date {specific_date}")
 
     semaphore = asyncio.Semaphore(concurrent_requests_limit)
 
@@ -134,7 +132,7 @@ async def validate_corporate_actions_v2(input_universe, concurrent_requests_limi
         try:
             data_df = await download_corporate_actions(symbol, semaphore)
             if not data_df.empty:
-                return data_df[data_df['Date'] == today]
+                return data_df[data_df['Date'] == specific_date]
         except Exception as e:
             logger.exception(f"Failed to get data for {symbol}")
             no_data_symbols.append(symbol)
