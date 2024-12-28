@@ -1,10 +1,8 @@
 import os.path
 import time
 from datetime import datetime
-
 import pandas as pd
 import refinitiv.data as rd
-
 from app.config import APP
 from app.utils import convert_to_ric
 
@@ -19,10 +17,12 @@ session = rd.session.platform.Definition(
     )
 ).get_session()
 
+
 def check_state(state, message, session):
     print(f"State: {state}")
     print(f"Message: {message}")
     print("\n")
+
 
 # Add callback to session
 session.on_event(check_state)
@@ -35,7 +35,8 @@ start_date = datetime(2019, 1, 1)
 end_date = datetime(2024, 9, 1)
 
 input_universe = ["QQQ"]
-fields = ['TR.InvestorFullName','TR.PctOfSharesOutHeld','TR.SharesHeld.calcdate','TR.HoldingsDate','TR.SharesHeld','TR.SharesHeldChange','TR.SharesHeldValue']
+fields = ['TR.InvestorFullName', 'TR.PctOfSharesOutHeld', 'TR.SharesHeld.calcdate', 'TR.HoldingsDate', 'TR.SharesHeld',
+          'TR.SharesHeldChange', 'TR.SharesHeldValue']
 
 print(f"convert {len(input_universe)} symbols to rics")
 converted_symbols_dict = convert_to_ric(input_universe)

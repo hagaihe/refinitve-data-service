@@ -1,9 +1,8 @@
 import json
-import logging
 from datetime import datetime
 from aiohttp import web
 from app.refinitiv import fetch_holdings_for_symbol
-from app.utils import validate_corporate_actions, serialize_timestamps, save_df_to_csv
+from app.utils import validate_corporate_actions
 
 
 async def validate_corporate_actions_handler(request: web.Request):
@@ -14,9 +13,9 @@ async def validate_corporate_actions_handler(request: web.Request):
             raise ValueError("unable to validate corporate actions without symbols")
 
         fields = ['TR.DivExDate(SDate=2022-01-01,EDate=2027-12-31)'
-                    ,'TR.AdjmtFactorAdjustmentDate(SDate=2023-01-01,EDate=2027-12-31)'
-                    ,'TR.CAEffectiveDate(SDate=2023-01-01,EDate=2027-12-31)'
-                    ,'TR.CARecordDate(SDate=2023-01-01,EDate=2027-12-31)']
+            , 'TR.AdjmtFactorAdjustmentDate(SDate=2023-01-01,EDate=2027-12-31)'
+            , 'TR.CAEffectiveDate(SDate=2023-01-01,EDate=2027-12-31)'
+            , 'TR.CARecordDate(SDate=2023-01-01,EDate=2027-12-31)']
         data, no_data_symbols, no_ric_symbols = await validate_corporate_actions(symbols, fields)
 
         serializable_data = json.loads(json.dumps(data, default=str))
@@ -43,6 +42,7 @@ async def get_holdings(request: web.Request):
         # Remove escaped double quotes
         error_message = str(e).replace('"', '')
         return web.json_response({'error': error_message}, status=404)
+
 
 # async def get_holdings(request: web.Request):
 #     # Replace these variables with your actual credentials

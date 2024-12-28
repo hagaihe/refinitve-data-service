@@ -3,7 +3,6 @@ import logging
 import os
 import time
 from datetime import datetime
-
 import pandas as pd
 import refinitiv.data as rd
 from refinitiv.data.content import symbol_conversion
@@ -111,7 +110,7 @@ async def validate_corporate_actions(input_universe, input_fields):
 
         # filter only rows with date future value
         today = pd.Timestamp(datetime.today().date())
-        filtered_df = data_df[data_df.iloc[:, 1:].apply(lambda row: row.notna() & (row >= today), axis=1).any(axis=1)]
+        filtered_df = data_df[data_df.iloc[:, 1:].apply(lambda row: row.notna() & (row == today), axis=1).any(axis=1)]
 
         if not filtered_df.empty:
             logging.info(f"found {len(filtered_df)} corporate actions")
