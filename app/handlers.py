@@ -1,13 +1,9 @@
-import base64
 import json
-import os
+import logging
 from datetime import datetime
-
-import aiohttp
 from aiohttp import web
-
 from app.refinitiv import fetch_holdings_for_symbol
-from app.yahoo import validate_corporate_actions_v2, validate_corporate_actions_v1
+from app.utils import validate_corporate_actions, serialize_timestamps, save_df_to_csv
 
 
 async def validate_corporate_actions_handler(request: web.Request):
@@ -17,17 +13,20 @@ async def validate_corporate_actions_handler(request: web.Request):
         if not symbols:
             raise ValueError("unable to validate corporate actions without symbols")
 
-        # fields = body.get('fields', ['ASK', 'BID', 'TR.DivExDate'])
-        # data, no_data_symbols, no_ric_symbols = await validate_corporate_actions_v1(symbols)
-        data, no_data_symbols, no_ric_symbols = await validate_corporate_actions_v2(symbols, concurrent_requests_limit=50)
+        fields = ['TR.DivExDate(SDate=2022-01-01,EDate=2027-12-31)'
+                    ,'TR.AdjmtFactorAdjustmentDate(SDate=2023-01-01,EDate=2027-12-31)'
+                    ,'TR.CAEffectiveDate(SDate=2023-01-01,EDate=2027-12-31)'
+                    ,'TR.CARecordDate(SDate=2023-01-01,EDate=2027-12-31)']
+        data, no_data_symbols, no_ric_symbols = await validate_corporate_actions(symbols, fields)
 
+        serializable_data = json.loads(json.dumps(data, default=str))
         return web.json_response({
-            'corporate_actions': data,
+            'corporate_actions': serializable_data,
             'no_data_symbols': no_data_symbols,
             'no_ric_symbols': no_ric_symbols
         })
     except Exception as e:
-        # Remove escaped double quotes
+        # remove escaped double quotes
         error_message = str(e).replace('"', '')
         return web.json_response({'error': error_message}, status=404)
 
@@ -44,7 +43,6 @@ async def get_holdings(request: web.Request):
         # Remove escaped double quotes
         error_message = str(e).replace('"', '')
         return web.json_response({'error': error_message}, status=404)
-
 
 # async def get_holdings(request: web.Request):
 #     # Replace these variables with your actual credentials

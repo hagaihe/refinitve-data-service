@@ -1,5 +1,6 @@
 import asyncio
 import logging
+import os
 import time
 from datetime import datetime
 
@@ -61,6 +62,7 @@ async def get_data(input_universe, input_fields, retries=3):
             password=conf.refinitiv_password
         )
     ).get_session()
+    rd.get_config()["http.request-timeout"] = 300  # Increase timeout to 300 seconds (5 minutes)
     session.open()
     rd.session.set_default(session)
 
@@ -104,26 +106,16 @@ async def get_data(input_universe, input_fields, retries=3):
 
 async def validate_corporate_actions(input_universe, input_fields):
     try:
-        no_ric_symbols, data_df = await get_data(input_universe, input_fields)
+        data_df, no_ric_symbols = await get_data(input_universe, input_fields)
+        no_data_symbols = [symbol for symbol in input_universe if symbol not in data_df['Instrument'].values]
 
-        # Identify symbols with missing data in ADJUST_CLS or HST_CLOSE
-        missing_data_df = data_df[data_df[[input_fields[0], input_fields[1]]].isna().any(axis=1)]
-        no_data_symbols = missing_data_df['Instrument'].tolist()
-        if no_data_symbols:
-            logging.error(f"the following symbols had no data={no_data_symbols}")
-
+        # filter only rows with date future value
         today = pd.Timestamp(datetime.today().date())
-
-        # valid_data_df = data_df.dropna(subset=['ADJUST_CLS', 'HST_CLOSE'])
-        # filtered_df = valid_data_df[
-        #     (valid_data_df['ADJUST_CLS'] != valid_data_df['HST_CLOSE']) |
-        #     (valid_data_df['CAPITAL CHANGE EX DATE'].notna() & (valid_data_df['CAPITAL CHANGE EX DATE'] == today))]
-
-        filtered_df = data_df[
-            (data_df['Dividend Ex Date'].notna() & (data_df['Dividend Ex Date'] == today))]
+        filtered_df = data_df[data_df.iloc[:, 1:].apply(lambda row: row.notna() & (row >= today), axis=1).any(axis=1)]
 
         if not filtered_df.empty:
-            logging.info(f"found corporate actions\n{filtered_df}")
+            logging.info(f"found {len(filtered_df)} corporate actions")
+            logging.info(f"DataFrame saved to: {save_df_to_csv(filtered_df)}")
 
         result = filtered_df.to_dict(orient='records')
 
@@ -138,3 +130,18 @@ async def validate_corporate_actions(input_universe, input_fields):
     finally:
         rd.close_session()
     return result, no_data_symbols, no_ric_symbols
+
+
+def serialize_timestamps(obj):
+    if isinstance(obj, pd.Timestamp):
+        return obj.isoformat()
+    return obj
+
+
+def save_df_to_csv(df, file_prefix='corporate_actions', folder='data_output'):
+    os.makedirs(folder, exist_ok=True)
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    filename = f'{file_prefix}_{timestamp}.csv'
+    filepath = os.path.join(folder, filename)
+    df.to_csv(filepath, index=False)
+    return filepath

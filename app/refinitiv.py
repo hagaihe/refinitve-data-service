@@ -1,6 +1,8 @@
 import logging
+
 import pandas as pd
 import refinitiv.data as rd
+
 from app.utils import get_data
 
 logger = logging.getLogger(__name__)
@@ -45,5 +47,3 @@ async def fetch_holdings_for_symbol(symbol):
         rd.close_session()
 
     return result, no_ric_symbols
-
-

@@ -1,6 +1,7 @@
 import asyncio
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime
+
 import pandas as pd
 import yfinance as yf
 

@@ -1,17 +1,61 @@
 import asyncio
 import logging
-import aiohttp
 import time
 from datetime import datetime, timedelta
-import pandas as pd
 from io import StringIO
+
+import aiohttp
+import pandas as pd
 import yfinance as yf
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 
 logger = logging.getLogger(__name__)
 
 
 def get_epoch_time(date):
     return int(time.mktime(date.timetuple()))
+
+
+def get_crumb_and_cookie_selenium(symbol):
+    url = f"https://finance.yahoo.com/quote/{symbol}"
+
+    # Set up Chrome options to force English language
+    chrome_options = Options()
+    chrome_options.add_argument("--lang=en-US")
+
+    # Setup WebDriver with Chrome options
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+
+    # Visit the Yahoo Finance page
+    driver.get(url)
+
+    # Check if there's a consent form and accept it
+    try:
+        consent_button = driver.find_element(By.XPATH, '//button[text()="Accept"]')
+        consent_button.click()
+    except Exception as e:
+        print(f"No consent form found: {e}")
+
+    # Extract cookies
+    cookies = driver.get_cookies()
+    cookie_string = "; ".join([f"{cookie['name']}={cookie['value']}" for cookie in cookies])
+
+    # Attempt to extract crumb
+    try:
+        crumb = driver.execute_script("return CrumbStore && CrumbStore.crumb;")
+        if not crumb:
+            raise Exception("CrumbStore not defined or no crumb found.")
+    except Exception as e:
+        print(f"Error fetching crumb: {e}")
+        crumb = None
+
+    driver.quit()
+
+    return crumb, cookie_string
 
 
 async def download_ex_div_data(symbol, semaphore):
@@ -25,13 +69,21 @@ async def download_ex_div_data(symbol, semaphore):
         period1_epoch = get_epoch_time(period1)
         period2_epoch = get_epoch_time(period2)
 
-        # construct the URL
+        # Retrieve crumb and cookie
+        crumb, cookie = await get_crumb_and_cookie_selenium(symbol)
+
+        # Construct the URL with crumb
         url = f"https://query1.finance.yahoo.com/v7/finance/download/{symbol}?" \
-              f"period1={period1_epoch}&period2={period2_epoch}&interval=1d&events=div&includeAdjustedClose=true"
+              f"period1={period1_epoch}&period2={period2_epoch}&interval=1d&events=div&crumb={crumb}"
+
+        headers = {
+            "Cookie": cookie,
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
+        }
 
         try:
             logger.debug(f"call {url}...")
-            async with aiohttp.ClientSession() as session:
+            async with aiohttp.ClientSession(headers=headers) as session:
                 async with session.get(url) as response:
                     if response.status == 200:
                         content = await response.text()
@@ -49,7 +101,7 @@ async def download_ex_div_data(symbol, semaphore):
             logger.exception("failed to fetch ex-div data from yahoo finance")
             raise ex
 
-        return pd.DataFrame()
+    return pd.DataFrame()
 
 
 async def download_corporate_actions(symbol, semaphore):
@@ -122,9 +174,10 @@ async def validate_corporate_actions_v2(input_universe, concurrent_requests_limi
     no_data_symbols = []
 
     if not specific_date:
-        specific_date = pd.Timestamp(datetime.today().date() - timedelta(days=1)).strftime('%Y-%m-%d')
+        specific_date = pd.Timestamp(datetime.today().date() - timedelta(days=0)).strftime('%Y-%m-%d')
 
-    logging.info(f"Request corporate actions data from yfinance on {len(input_universe)} symbols for date {specific_date}")
+    logging.info(
+        f"Request corporate actions data from yfinance on {len(input_universe)} symbols for date {specific_date}")
 
     semaphore = asyncio.Semaphore(concurrent_requests_limit)
 
