@@ -3,8 +3,10 @@ import logging
 import os
 import time
 from datetime import datetime
+
 import pandas as pd
 import refinitiv.data as rd
+from refinitiv.data._errors import RDError
 from refinitiv.data.content import symbol_conversion
 
 from app.config import APP
@@ -51,6 +53,12 @@ def convert_to_ric(symbols) -> dict:
         return []
 
 
+def fetch_data_with_retry(rics, input_fields):
+    """ Synchronous function to fetch data with retry handling. """
+    import refinitiv.data as rd
+    return rd.get_data(universe=rics, fields=input_fields)
+
+
 async def get_data(input_universe, input_fields, retries=3):
     conf = APP.conf
     session = rd.session.platform.Definition(
@@ -61,7 +69,9 @@ async def get_data(input_universe, input_fields, retries=3):
             password=conf.refinitiv_password
         )
     ).get_session()
-    rd.get_config()["http.request-timeout"] = 300  # Increase timeout to 300 seconds (5 minutes)
+    # Set global timeout configuration
+    rd.get_config()["http.request-timeout"] = 300  # 5 minutes
+    rd.get_config()["http.connect-timeout"] = 300  # Connect timeout
     session.open()
     rd.session.set_default(session)
 
@@ -77,8 +87,6 @@ async def get_data(input_universe, input_fields, retries=3):
     while attempt < retries:
         try:
             logging.info(f"Attempt {attempt + 1}: requesting {input_fields} for {rics}")
-
-            # Adding an external timeout mechanism using asyncio
             data_df = await asyncio.to_thread(rd.get_data, universe=rics, fields=input_fields)
 
             data_df = data_df.infer_objects(copy=False)
@@ -90,20 +98,20 @@ async def get_data(input_universe, input_fields, retries=3):
 
             return data_df, no_ric_symbols
 
-        except asyncio.TimeoutError:
-            logging.error(f"Timeout occurred during data retrieval. Attempt {attempt + 1} failed.")
+        except (asyncio.TimeoutError, RDError) as e:
+            logging.error(f"Error occurred during data retrieval: {str(e)}. Attempt {attempt + 1} failed.")
             attempt += 1
-            time.sleep(2)  # wait before retrying
-            continue  # Retry the request
+            time.sleep(2)
+            continue
 
         except Exception as e:
-            logging.exception(f"An error occurred during data retrieval: {str(e)}")
+            logging.exception(f"An unexpected error occurred during data retrieval: {str(e)}")
             raise e
 
     raise Exception(f"Failed to retrieve data after {retries} attempts")
 
 
-async def validate_corporate_actions(input_universe, input_fields):
+async def refinitiv_corporate_actions(input_universe, input_fields):
     try:
         data_df, no_ric_symbols = await get_data(input_universe, input_fields)
         no_data_symbols = [symbol for symbol in input_universe if symbol not in data_df['Instrument'].values]

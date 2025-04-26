@@ -1,6 +1,6 @@
 Building and Porting the Docker Image:
 
-To build the Docker image, use the docker build command. Here is the general syntax: docker build -t refinitiv-data-service: latest .
+To build the Docker image, use the docker build command. Here is the general syntax: docker build -t refinitiv-data-service:latest .
 
 Once the image is built, you can save it to a file using the docker save command. T
 his creates a tarball of the image which can be transferred to another machine.

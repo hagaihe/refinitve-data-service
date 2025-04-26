@@ -1,8 +1,10 @@
 import os.path
 import time
 from datetime import datetime
+
 import pandas as pd
 import refinitiv.data as rd
+
 from app.config import APP
 from app.utils import convert_to_ric
 

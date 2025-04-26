@@ -1,8 +1,9 @@
 import logging
+
 import pandas as pd
 import refinitiv.data as rd
-from app.utils import get_data
 
+from app.utils import get_data
 
 logger = logging.getLogger(__name__)
 
