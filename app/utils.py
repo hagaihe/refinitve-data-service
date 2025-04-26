@@ -9,8 +9,6 @@ import refinitiv.data as rd
 from refinitiv.data._errors import RDError
 from refinitiv.data.content import symbol_conversion
 
-from app.config import APP
-
 logger = logging.getLogger(__name__)
 
 
@@ -60,21 +58,6 @@ def fetch_data_with_retry(rics, input_fields):
 
 
 async def get_data(input_universe, input_fields, retries=3):
-    conf = APP.conf
-    session = rd.session.platform.Definition(
-        app_key=conf.refinitiv_app_key,
-        signon_control=True,
-        grant=rd.session.platform.GrantPassword(
-            username=conf.refinitiv_username,
-            password=conf.refinitiv_password
-        )
-    ).get_session()
-    # Set global timeout configuration
-    rd.get_config()["http.request-timeout"] = 300  # 5 minutes
-    rd.get_config()["http.connect-timeout"] = 300  # Connect timeout
-    session.open()
-    rd.session.set_default(session)
-
     logging.info(f"convert {len(input_universe)} symbols to rics")
     converted_symbols_dict = convert_to_ric(input_universe)
     rics = [s for s in converted_symbols_dict.values() if s is not None]
@@ -134,8 +117,7 @@ async def refinitiv_corporate_actions(input_universe, input_fields):
     except Exception as e:
         logger.exception(f"Failed to get data")
         raise e
-    finally:
-        rd.close_session()
+
     return result, no_data_symbols, no_ric_symbols
 
 

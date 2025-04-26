@@ -35,7 +35,8 @@ async def on_startup(app: web.Application):
 
 
 def application_init():
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    logging.basicConfig(level=logging.INFO,
+                        format='%(asctime)s - %(name)s - %(levelname)s - [%(threadName)s] - %(message)s')
     logging.getLogger('httpcore.http11').setLevel(logging.WARNING)
     logging.getLogger('httpx').setLevel(logging.WARNING)
     logging.getLogger('httpcore.connection').setLevel(logging.WARNING)
