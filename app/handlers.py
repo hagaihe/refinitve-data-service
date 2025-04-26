@@ -4,15 +4,9 @@ import logging
 from datetime import datetime, timedelta
 import refinitiv.data as rd
 from aiohttp import web
-
 from app.config import APP
-from app.refinitiv import fetch_holdings_for_symbol
-from app.utils import refinitiv_corporate_actions
-
-
-def batch_symbols(symbols, batch_size=50):
-    for i in range(0, len(symbols), batch_size):
-        yield symbols[i:i + batch_size]
+from app.refinitiv import fetch_holdings_for_symbol, refinitiv_corporate_actions, refinitiv_fetch_close_prices
+from app.utils import batch_symbols
 
 
 async def validate_corporate_actions_handler(request: web.Request):
@@ -52,12 +46,11 @@ async def validate_corporate_actions_handler(request: web.Request):
         rd.session.set_default(session)
         logging.info(f"Connected to refiniv. SessionId={session.open_state}, ServerMode={session.server_mode}")
 
-        # Batch the symbols
         symbol_batches = list(batch_symbols(symbols, batch_size=30))
-
         async def fetch_batch(batch):
             try:
                 data, no_data_symbols, no_ric_symbols = await refinitiv_corporate_actions(batch, fields)
+                await refinitiv_fetch_close_prices(batch)
                 return data, no_data_symbols, no_ric_symbols
             except Exception as e:
                 logging.error(f"Error fetching batch {batch}: {e}")
@@ -78,7 +71,6 @@ async def validate_corporate_actions_handler(request: web.Request):
 
         # Remove duplicates
         flagged_symbols = list(set(flagged_symbols))
-
         logging.info(f"Completed fetching. {len(corporate_actions)} symbols with corporate actions, {len(flagged_symbols)} flagged.")
 
         response = {
