@@ -5,9 +5,22 @@ from datetime import datetime, timedelta
 import refinitiv.data as rd
 from aiohttp import web
 from app.config import APP
+from app.ib.ib_price_fetcher import IBPriceFetcher
+from app.ib.ibclient import IBClient
 from app.refinitiv import fetch_holdings_for_symbol, refinitiv_corporate_actions, refinitiv_fetch_close_prices
 from app.utils import batch_symbols
 
+async def fetch_ib_prices(request):
+    data = await request.json()
+    symbols = data.get('symbols', [])
+    if not symbols:
+        return web.json_response({'error': 'No symbols provided'}, status=400)
+
+    ib_client = IBClient(port=7481)
+    fetcher = IBPriceFetcher(ib_client)
+    await fetcher.fetch_prices(symbols)
+
+    return web.json_response({'status': 'success'})
 
 async def validate_corporate_actions_handler(request: web.Request):
     try:

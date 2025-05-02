@@ -3,3 +3,4 @@ pandas
 refinitiv-data
 aiojobs
 asyncio
+ib_insync
