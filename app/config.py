@@ -1,6 +1,7 @@
 import dataclasses
 import os
-
+from dotenv import load_dotenv
+load_dotenv()
 
 class AppConfig:
     def __init__(self):
@@ -10,6 +11,16 @@ class AppConfig:
 
         if not self.refinitiv_app_key or not self.refinitiv_username or not self.refinitiv_password:
             raise ValueError("Environment variables for Refinitiv credentials are not set properly.")
+
+        # IB fetcher config
+        self.ib_max_concurrent_requests = int(os.getenv('IB_MAX_CONCURRENT_REQUESTS', 20))
+        self.ib_max_retries = int(os.getenv('IB_MAX_RETRIES', 2))
+        self.ib_batch_size = int(os.getenv('IB_BATCH_SIZE', 100))
+        self.ib_jitter_range_ms = (
+            int(os.getenv('IB_JITTER_MIN_MS', 100)),
+            int(os.getenv('IB_JITTER_MAX_MS', 300))
+        )
+        self.ib_max_concurrent_batches = int(os.getenv('IB_MAX_CONCURRENT_BATCHES', 3))
 
 
 @dataclasses.dataclass

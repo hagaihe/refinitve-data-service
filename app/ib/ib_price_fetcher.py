@@ -3,25 +3,20 @@ import logging
 import random
 from typing import List, Dict, Optional
 from app.cache.closing_prices_cache import ClosingPriceCache
+from app.config import APP
 from app.ib.ibclient import IBClient
+
 
 logger = logging.getLogger(__name__)
 
-
 class IBPriceFetcher:
-    def __init__(
-        self,
-        ib_client: IBClient,
-        max_concurrent_requests: int = 20,
-        max_retries: int = 2,
-        batch_size: int = 100,
-        jitter_range_ms: Optional[tuple] = (0, 100),
-    ):
+    def __init__(self, ib_client: IBClient):
         self.ib_client = ib_client
-        self.max_concurrent_requests = max_concurrent_requests
-        self.max_retries = max_retries
-        self.batch_size = batch_size
-        self.jitter_range_ms = jitter_range_ms
+        self.max_concurrent_requests = APP.conf.ib_max_concurrent_requests
+        self.max_retries = APP.conf.ib_max_retries
+        self.batch_size = APP.conf.ib_batch_size
+        self.jitter_range_ms = APP.conf.ib_jitter_range_ms
+        self.max_concurrent_batches = APP.conf.ib_max_concurrent_batches
         self.cache = ClosingPriceCache.instance()
         self.status_map: Dict[str, str] = {}
 
@@ -35,13 +30,19 @@ class IBPriceFetcher:
                 logger.info(f"Fetch attempt {attempt}, symbols left: {len(remaining_symbols)}")
                 failed: List[str] = []
 
+                batch_semaphore = asyncio.Semaphore(self.max_concurrent_batches)
+                tasks = []
+
                 for i in range(0, len(remaining_symbols), self.batch_size):
                     batch = remaining_symbols[i:i + self.batch_size]
-                    batch_failed = await self._process_batch(batch, status_map)
-                    failed.extend(batch_failed)
+                    tasks.append(self._process_batch_limited(batch, status_map, batch_semaphore))
+
+                await asyncio.gather(*tasks)
+
+                failed = [s for s in remaining_symbols if status_map.get(s) not in ('fetched', 'resolution_failed')]
 
                 if not failed:
-                    logger.info("All symbols fetched or failed definitively.")
+                    logger.info("All symbols fetched or definitively failed.")
                     break
                 elif attempt <= self.max_retries:
                     logger.warning(f"{len(failed)} symbols failed on attempt {attempt}, retrying...")
@@ -51,27 +52,28 @@ class IBPriceFetcher:
                     logger.error(f"Final attempt failed. Unresolved symbols: {failed}")
                     break
 
-            # Report
-            fetched = [s for s, status in status_map.items() if status == 'fetched']
-            resolution_failed = [s for s, status in status_map.items() if status == 'resolution_failed']
-            fetch_failed = [s for s, status in status_map.items() if status == 'fetch_failed']
+            # Finalize results
+            self.status_map = status_map
+            fetched = [s for s, v in status_map.items() if v == 'fetched']
+            resolution_failed = [s for s, v in status_map.items() if v == 'resolution_failed']
+            fetch_failed = [s for s, v in status_map.items() if v == 'fetch_failed']
 
-            logger.info(f"Summary:")
+            logger.info("Summary:")
             logger.info(f"  Total symbols: {len(symbols)}")
             logger.info(f"  Successfully fetched: {len(fetched)}")
             logger.info(f"  Resolution failed: {len(resolution_failed)}")
             logger.info(f"  Fetch failed (e.g., timeout, data error): {len(fetch_failed)}")
-
-            self.status_map = status_map
-
         finally:
             await self.ib_client.disconnect()
 
-    async def _process_batch(self, symbols: List[str], status_map: Dict[str, str]) -> List[str]:
+    async def _process_batch_limited(self, symbols: List[str], status_map: Dict[str, str], semaphore: asyncio.Semaphore):
+        async with semaphore:
+            await self._process_batch(symbols, status_map)
+
+    async def _process_batch(self, symbols: List[str], status_map: Dict[str, str]) -> None:
         semaphore = asyncio.Semaphore(self.max_concurrent_requests)
         tasks = [self._throttled_fetch(symbol, semaphore, status_map) for symbol in symbols]
         await asyncio.gather(*tasks, return_exceptions=True)
-        return [s for s in symbols if status_map.get(s) not in ('fetched', 'resolution_failed')]
 
     async def _throttled_fetch(self, symbol: str, semaphore: asyncio.Semaphore, status_map: Dict[str, str]):
         async with semaphore:

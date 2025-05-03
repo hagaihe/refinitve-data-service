@@ -4,3 +4,4 @@ refinitiv-data
 aiojobs
 asyncio
 ib_insync
+python-dotenv

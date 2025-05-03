@@ -17,13 +17,7 @@ logger = logging.getLogger(__name__)
 class IBPriceFetcherTest:
     def __init__(self):
         self.ib_client = IBClient(port=7481, client_id=158)
-        self.fetcher = IBPriceFetcher(
-            ib_client=self.ib_client,
-            max_concurrent_requests=20,
-            max_retries=2,
-            batch_size=100,
-            jitter_range_ms=(25, 100)
-        )
+        self.fetcher = IBPriceFetcher(ib_client=self.ib_client)
         self.status_map = {}
 
     async def run(self):
