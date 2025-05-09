@@ -1,14 +1,13 @@
 import logging
 import os
 from datetime import datetime
-
 import aiojobs as aiojobs
 import refinitiv.data as rd
 from aiohttp import web
 from aiojobs.aiohttp import setup
-
 from app.config import APP
-from app.handlers import validate_corporate_actions_handler, health_check, get_holdings
+from app.handlers import health_check, get_holdings, filter_daily_corporate_action_handler, \
+    fetch_ib_last_adj_price_handler
 
 
 def exception_handler(scheduler: aiojobs.Scheduler, context: dict):
@@ -47,7 +46,8 @@ def application_init():
     webapp = web.Application(client_max_size=1024 ** 2 * 50)  # Set limit to 50 MB
     webapp.router.add_get('/health_check', health_check)
     webapp.router.add_get('/refinitive/holdings', get_holdings)
-    webapp.router.add_post('/refinitive/corporate/validate', validate_corporate_actions_handler)
+    webapp.router.add_post('/refinitive/corporate_actions/validate', filter_daily_corporate_action_handler)
+    webapp.router.add_post('/ib/last_adj_close', fetch_ib_last_adj_price_handler)
     setup(webapp, exception_handler=exception_handler, pending_limit=100)
     webapp.on_startup.append(on_startup)
     return webapp

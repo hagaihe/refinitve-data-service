@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+
 class AppConfig:
     def __init__(self):
         self.refinitiv_app_key = os.getenv('REFINITIV_APP_KEY')
@@ -21,6 +22,8 @@ class AppConfig:
             int(os.getenv('IB_JITTER_MAX_MS', 300))
         )
         self.ib_max_concurrent_batches = int(os.getenv('IB_MAX_CONCURRENT_BATCHES', 3))
+        self.ib_host= os.getenv('IB_HOST', '127.0.0.1')
+        self.ib_port = int(os.getenv('IB_PORT', 7497))
 
 
 @dataclasses.dataclass

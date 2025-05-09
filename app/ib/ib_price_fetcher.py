@@ -9,6 +9,7 @@ from app.ib.ibclient import IBClient
 
 logger = logging.getLogger(__name__)
 
+
 class IBPriceFetcher:
     def __init__(self, ib_client: IBClient):
         self.ib_client = ib_client
@@ -63,6 +64,10 @@ class IBPriceFetcher:
             logger.info(f"  Successfully fetched: {len(fetched)}")
             logger.info(f"  Resolution failed: {len(resolution_failed)}")
             logger.info(f"  Fetch failed (e.g., timeout, data error): {len(fetch_failed)}")
+            return {"success": True, "resolution_failed": resolution_failed, "fetch_failed": fetch_failed}
+        except Exception as e:
+            logger.exception(f"fetch_prices failed with error: {e}")
+            return {"success": False, "error": str(e)}
         finally:
             await self.ib_client.disconnect()
 
