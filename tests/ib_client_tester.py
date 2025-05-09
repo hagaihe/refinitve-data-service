@@ -2,6 +2,7 @@ import asyncio
 import json
 import logging
 import os
+import random
 from datetime import datetime
 
 from app.cache.closing_prices_cache import ClosingPriceCache
@@ -16,24 +17,28 @@ logger = logging.getLogger(__name__)
 
 class IBPriceFetcherTest:
     def __init__(self):
-        self.ib_client = IBClient(port=7481, client_id=158)
-        self.fetcher = IBPriceFetcher(ib_client=self.ib_client)
+        self.client_id = random.randint(1000, 999999)
         self.status_map = {}
 
-    async def run(self):
-        logger.info(f"Fetching prices for {len(test_symbols)} symbols")
-        await self.fetcher.fetch_prices(test_symbols)
+    async def run(self, symbols):
+        logger.info(f"Fetching prices for {len(symbols)} symbols")
 
+        async with IBClient(client_id=self.client_id) as ib_client:
+            fetcher = IBPriceFetcher(ib_client=ib_client)
+            await fetcher.fetch_prices(symbols)
+            self.status_map = fetcher.status_map
+
+        await self._report(symbols)
+
+    async def _report(self, symbols):
         cache = ClosingPriceCache.instance()
-        status_map = self.fetcher.status_map
-
         fetched = []
         resolution_failed = []
         fetch_failed = []
         unknown = []
 
-        for symbol in test_symbols:
-            status = status_map.get(symbol)
+        for symbol in symbols:
+            status = self.status_map.get(symbol)
             if status == 'fetched':
                 prices = await cache.get_prices(symbol)
                 logger.info(f"✅ {symbol}: Adjusted close = {prices['ib_close']}")
@@ -50,15 +55,14 @@ class IBPriceFetcherTest:
 
         # Summary
         logger.info("=== Summary ===")
-        logger.info(f"Total symbols: {len(test_symbols)}")
+        logger.info(f"Total symbols: {len(symbols)}")
         logger.info(f"Fetched: {len(fetched)}")
         logger.info(f"Resolution failed: {len(resolution_failed)}")
         logger.info(f"Fetch failed: {len(fetch_failed)}")
         logger.info(f"Unknown: {len(unknown)}")
 
-        # Write summary JSON
         summary = {
-            "total_requested": len(test_symbols),
+            "total_requested": len(symbols),
             "fetched": fetched,
             "resolution_failed": resolution_failed,
             "fetch_failed": fetch_failed,
@@ -68,7 +72,6 @@ class IBPriceFetcherTest:
 
         logs_dir = os.path.join(os.path.dirname(__file__), "..", "logs")
         os.makedirs(logs_dir, exist_ok=True)
-
         filename = f"ib_price_fetch_summary_{datetime.utcnow().strftime('%Y%m%dT%H%M%S')}.json"
         summary_path = os.path.join(logs_dir, filename)
 
@@ -80,4 +83,4 @@ class IBPriceFetcherTest:
 
 if __name__ == '__main__':
     tester = IBPriceFetcherTest()
-    asyncio.run(tester.run())
+    asyncio.run(tester.run(test_symbols))

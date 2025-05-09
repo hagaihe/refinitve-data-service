@@ -22,7 +22,6 @@ class IBPriceFetcher:
         self.status_map: Dict[str, str] = {}
 
     async def fetch_prices(self, symbols: List[str]):
-        await self.ib_client.connect()
         try:
             status_map: Dict[str, str] = {}
             remaining_symbols = symbols.copy()
@@ -68,8 +67,6 @@ class IBPriceFetcher:
         except Exception as e:
             logger.exception(f"fetch_prices failed with error: {e}")
             return {"success": False, "error": str(e)}
-        finally:
-            await self.ib_client.disconnect()
 
     async def _process_batch_limited(self, symbols: List[str], status_map: Dict[str, str], semaphore: asyncio.Semaphore):
         async with semaphore:

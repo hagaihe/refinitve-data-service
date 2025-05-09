@@ -1,26 +1,35 @@
-import asyncio
-import sys
-
-from ib_insync import IB, ContractDetails, Stock, Contract
-from typing import Optional, Union
+import random
+from ib_insync import IB, Contract
+from typing import Optional
 import logging
+
+from app.config import APP
 
 logger = logging.getLogger(__name__)
 
 
 class IBClient:
-    def __init__(self, host='127.0.0.1', port=7497, client_id=1):
-        self.host = host
-        self.port = port
-        self.client_id = client_id
+    def __init__(self, host: str = None, port: int = None,  client_id=1):
+        self.host = host if host else APP.conf.ib_host
+        self.port = port if port else APP.conf.ib_port
+        self.client_id = (
+            random.randint(1000, 999999) if client_id == 1 else client_id
+        )
         self.ib: Optional[IB] = None
+
+    async def __aenter__(self):
+        await self.connect()
+        return self
+
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        await self.disconnect()
 
     async def connect(self):
         try:
             if self.ib and self.ib.isConnected():
                 return
             self.ib = IB()
-            await self.ib.connectAsync(self.host, self.port, clientId=self.client_id)
+            await self.ib.connectAsync(self.host, self.port, clientId=self.client_id, timeout=10)
             if not self.ib.isConnected():
                 raise ConnectionError("Failed to connect to IB")
             logger.info("Connected to IB TWS")
@@ -29,9 +38,12 @@ class IBClient:
             raise e
 
     async def disconnect(self):
-        if self.ib and self.ib.isConnected():
-            self.ib.disconnect()
-            logger.info("Disconnected from IB")
+        try:
+            if self.ib and self.ib.isConnected():
+                self.ib.disconnect()
+                logger.info("Disconnected from IB")
+        except Exception as e:
+            logger.warning(f"Error while disconnecting IB: {e}")
 
     async def resolve_contract(self, symbol: str) -> Optional[Contract]:
         base = Contract(symbol=symbol, secType='STK', exchange='SMART', currency='USD')
