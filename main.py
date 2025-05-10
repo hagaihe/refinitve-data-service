@@ -1,10 +1,12 @@
 import logging
 import os
 from datetime import datetime
+
 import aiojobs as aiojobs
 import refinitiv.data as rd
 from aiohttp import web
 from aiojobs.aiohttp import setup
+
 from app.config import APP
 from app.handlers import health_check, get_holdings, filter_daily_corporate_action_handler, \
     fetch_ib_last_adj_price_handler

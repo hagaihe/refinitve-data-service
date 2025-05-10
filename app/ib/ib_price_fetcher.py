@@ -1,11 +1,11 @@
 import asyncio
 import logging
 import random
-from typing import List, Dict, Optional
+from typing import List, Dict
+
 from app.cache.closing_prices_cache import ClosingPriceCache
 from app.config import APP
 from app.ib.ibclient import IBClient
-
 
 logger = logging.getLogger(__name__)
 

@@ -1,7 +1,9 @@
 import asyncio
-import refinitiv.data as rd
-from datetime import datetime, timedelta
 import logging
+from datetime import datetime, timedelta
+
+import refinitiv.data as rd
+
 from app.config import APP
 from app.refinitiv.refinitiv import refinitiv_corporate_actions, refinitiv_fetch_close_prices
 from app.utils import batch_symbols

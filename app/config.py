@@ -1,6 +1,8 @@
 import dataclasses
 import os
 from dotenv import load_dotenv
+from app.utils import get_previous_trading_day
+
 load_dotenv()
 
 
@@ -24,6 +26,8 @@ class AppConfig:
         self.ib_max_concurrent_batches = int(os.getenv('IB_MAX_CONCURRENT_BATCHES', 3))
         self.ib_host= os.getenv('IB_HOST', '127.0.0.1')
         self.ib_port = int(os.getenv('IB_PORT', 7497))
+
+        self.last_trading_day = get_previous_trading_day()
 
 
 @dataclasses.dataclass

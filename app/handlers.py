@@ -1,13 +1,15 @@
 import json
 import logging
 from datetime import datetime
+
 import pandas as pd
 from aiohttp import web
+
+from app.cache.closing_prices_cache import ClosingPriceCache
 from app.config import APP
 from app.ib.ib_service import fetch_last_adj_price
 from app.refinitiv.refinitiv import fetch_holdings_for_symbol
 from app.refinitiv.refinitive_service import fetch_corporate_actions
-from app.cache.closing_prices_cache import ClosingPriceCache
 
 
 async def fetch_ib_last_adj_price_handler(request):
@@ -95,6 +97,7 @@ async def get_holdings(request: web.Request):
 def health_check(request: web.Request):
     message = {
         'utc-time': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'last_trading_day': APP.conf.last_trading_day.strftime('%Y-%m-%d'),
         'health-check': 'healthy'
     }
     serialized = json.dumps(message, default=str)

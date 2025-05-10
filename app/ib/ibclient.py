@@ -1,9 +1,11 @@
-import random
-from ib_insync import IB, Contract
-from typing import Optional
 import logging
+import random
+from typing import Optional
+
+from ib_insync import IB, Contract
 
 from app.config import APP
+from app.utils import is_after_market_open
 
 logger = logging.getLogger(__name__)
 
@@ -65,12 +67,24 @@ class IBClient:
         bars = await self.ib.reqHistoricalDataAsync(
             contract,
             endDateTime='',
-            durationStr='1 D',
+            durationStr='2 D',
             barSizeSetting='1 day',
             whatToShow='ADJUSTED_LAST',
             useRTH=True,
             formatDate=1
         )
-        if bars:
-            return bars[-1].close
-        return None
+
+        if len(bars) > 0:
+            last_trading_day = APP.conf.last_trading_day
+            for bar in bars:
+                if bar.date == last_trading_day:
+                    logger.debug(f"{symbol} matched bar on {bar.date} with close {bar.close}")
+                    return bar.close
+
+            logger.warning(f"No adjusted close found for {symbol} on {last_trading_day}")
+            return None
+        else:
+            logger.warning(f"No historical bars fetched for {symbol}")
+            return None
+
+
