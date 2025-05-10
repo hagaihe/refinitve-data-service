@@ -96,9 +96,9 @@ async def get_holdings(request: web.Request):
 
 def health_check(request: web.Request):
     message = {
-        'utc-time': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'current_time': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
         'last_trading_day': APP.conf.last_trading_day.strftime('%Y-%m-%d'),
-        'health-check': 'healthy'
+        'health_check': 'healthy'
     }
     serialized = json.dumps(message, default=str)
     response = web.json_response(serialized)
