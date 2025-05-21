@@ -71,9 +71,19 @@ async def filter_daily_corporate_action_handler(request):
                 logging.warning(f"{symbol} is flagged: ib_close={ib_close} vs. refinitiv_close={ref_close}")
                 flagged_set.add(symbol)
 
+        # TODO: make this generic function
+        def normalize_corporate_actions(data):
+            for entry in data:
+                for key, value in entry.items():
+                    if isinstance(value, pd.Timestamp):
+                        entry[key] = value.isoformat()
+            return data
+
+        normalized_actions = normalize_corporate_actions(refinitiv_results.get('corporate_actions', []))
+
         return web.json_response({
             'flagged_symbols': sorted(flagged_set),
-            'corporate_actions': refinitiv_results.get('corporate_actions', {})
+            'corporate_actions': normalized_actions
         })
     except Exception as e:
         logging.exception("Unhandled error in filter_daily_corporate_action_handler")

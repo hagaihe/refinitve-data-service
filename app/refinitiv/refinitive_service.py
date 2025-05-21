@@ -55,12 +55,11 @@ async def fetch_corporate_actions(symbols: list[str]) -> dict:
         tasks = [fetch_batch(batch) for batch in symbol_batches]
         results = await asyncio.gather(*tasks)
 
-        corporate_actions = {}
-        flagged_symbols = []
+        corporate_actions, flagged_symbols = [], []
 
         for data, no_data_symbols, no_ric_symbols in results:
             if data:
-                corporate_actions.update(data)
+                corporate_actions.extend(data)
             flagged_symbols.extend(no_data_symbols)
             flagged_symbols.extend(no_ric_symbols)
 
