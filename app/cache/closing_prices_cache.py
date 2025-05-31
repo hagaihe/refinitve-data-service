@@ -14,8 +14,12 @@ class ClosingPriceCache:
         logging.info("Initializing ClosingPriceCache...")
         self._cache = {}  # { "symbol": { "ib_close": float, "refinitiv_close": float, "date": str } }
         self._cache_lock = asyncio.Lock()
-        self._last_updated = datetime.now().date()
-        self._load_today_cache()
+        if self._load_today_cache():
+            first_symbol, first_record = next(iter(self._cache.items()))
+            self._last_updated = datetime.strptime(first_record["date"], "%Y-%m-%d").date()
+            logging.info(f"Cache last updated on {self._last_updated}")
+        else:
+            self._last_updated = datetime.now().date()
 
     @classmethod
     def instance(cls):
@@ -26,12 +30,13 @@ class ClosingPriceCache:
     def _is_cache_expired(self):
         return datetime.now().date() > self._last_updated
 
-    def _load_today_cache(self):
+    def _load_today_cache(self) -> bool:
         logging.info(f"Loading cache from {self._csv_path}")
+        row_count = 0
+
         if os.path.exists(self._csv_path):
             with open(self._csv_path, mode='r', newline='') as file:
                 reader = csv.DictReader(file)
-                row_count = 0
                 for row in reader:
                     symbol = row['symbol']
                     entry = {
@@ -44,6 +49,8 @@ class ClosingPriceCache:
                 logging.info(f"Loaded {row_count} entries into cache")
         else:
             logging.info(f"Cache is not yet created")
+
+        return row_count > 0
 
     async def _reset_if_expired(self):
         if self._is_cache_expired():
@@ -58,7 +65,7 @@ class ClosingPriceCache:
         async with self._cache_lock:
             if symbol not in self._cache:
                 self._cache[symbol] = {'date': date}
-            self._cache[symbol]['refinitiv_close'] = close_price
+            self._cache[symbol]['refinitiv_close'] = close_price if close_price != '<NA>' else None
             self._cache[symbol]['date'] = date
             logging.debug(f"Set Refinitiv close for {symbol}")
             await self._maybe_log_to_csv(symbol)
@@ -77,10 +84,19 @@ class ClosingPriceCache:
         data = self._cache.get(symbol, {})
         if all(k in data for k in ('refinitiv_close', 'ib_close', 'date')):
             row = [data['date'], symbol, data['ib_close'], data['refinitiv_close']]
-            file_exists = os.path.exists(self._csv_path)
-            with open(self._csv_path, mode='a', newline='') as file:
-                writer = csv.writer(file)
-                if not file_exists:
+
+            needs_header = False
+            dir_path = os.path.dirname(self._csv_path)
+            if dir_path and not os.path.exists(dir_path):
+                os.makedirs(dir_path, exist_ok=True)
+                needs_header = True
+
+            if (not os.path.exists(self._csv_path)) or (os.path.getsize(self._csv_path) == 0):
+                needs_header = True
+
+            with open(self._csv_path, mode="a", newline="") as csvfile:
+                writer = csv.writer(csvfile)
+                if needs_header:
                     writer.writerow(['date', 'symbol', 'ib_close', 'refinitiv_close'])
                 writer.writerow(row)
                 logging.info(f"Logged prices for {symbol} on {data['date']}")

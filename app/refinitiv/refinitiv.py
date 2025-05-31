@@ -2,7 +2,7 @@ import asyncio
 import logging
 import time
 from datetime import datetime
-
+from app.config import APP
 import pandas as pd
 import refinitiv.data as rd
 from refinitiv.data._errors import RDError
@@ -122,8 +122,6 @@ async def refinitiv_corporate_actions(input_universe, input_fields):
 
 
 async def refinitiv_fetch_close_prices(input_universe):
-    from app.config import APP
-
     if not input_universe:
         logging.warning("Input symbols list is empty. Ignore fetch closing prices")
         return
@@ -133,7 +131,7 @@ async def refinitiv_fetch_close_prices(input_universe):
 
         if not data_df.empty:
             cache = ClosingPriceCache.instance()
-            reference_date = APP.last_trading_day.strftime('%Y-%m-%d')
+            reference_date = APP.conf.last_trading_day.strftime('%Y-%m-%d')
 
             for _, row in data_df.iterrows():
                 symbol = row["Instrument"]
