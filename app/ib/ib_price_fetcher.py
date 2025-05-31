@@ -86,7 +86,7 @@ class IBPriceFetcher:
 
                 price = await self.ib_client.fetch_adjusted_close(symbol)
                 if price is not None:
-                    await self.cache.set_ib_close(symbol, price)
+                    await self.cache.set_ib_close(symbol, price, APP.conf.last_trading_day)
                     logger.info(f"Fetched adjusted close for {symbol}: {price}")
                     status_map[symbol] = 'fetched'
                 else:

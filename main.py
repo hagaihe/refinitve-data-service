@@ -1,7 +1,7 @@
 import logging
 import os
 from datetime import datetime
-
+from app.cache.closing_prices_cache import ClosingPriceCache
 import aiojobs as aiojobs
 import refinitiv.data as rd
 from aiohttp import web
@@ -20,6 +20,8 @@ def exception_handler(scheduler: aiojobs.Scheduler, context: dict):
 
 async def on_startup(app: web.Application):
     logging.info("setting up application")
+    logging.info(f"Last trading day={APP.conf.last_trading_day}")
+    ClosingPriceCache.instance()
 
     root_directory = os.path.dirname(os.path.abspath(__file__))
     log_directory = os.path.join(root_directory, 'logs')

@@ -4,7 +4,7 @@ import time
 from datetime import datetime, time, timedelta
 from pytz import timezone
 import pandas as pd
-from pandas.tseries.holiday import USFederalHolidayCalendar
+import pandas_market_calendars as mcal
 
 logger = logging.getLogger(__name__)
 
@@ -38,7 +38,7 @@ def is_after_market_open():
 
 def get_previous_trading_day(reference_date=None):
     """
-    Return the previous trading day (excluding weekends and US federal holidays).
+    Return the previous trading day using the NYSE calendar.
     """
     eastern = timezone('US/Eastern')
     if reference_date is None:
@@ -46,12 +46,14 @@ def get_previous_trading_day(reference_date=None):
     else:
         reference_date = pd.to_datetime(reference_date).date()
 
-    previous_day = reference_date - timedelta(days=1)
-    while previous_day.weekday() >= 5:  # Saturday = 5, Sunday = 6
-        previous_day -= timedelta(days=1)
+    nyse = mcal.get_calendar('NYSE')
+    schedule = nyse.schedule(start_date='2000-01-01', end_date=reference_date)
+    trading_days = schedule.index
 
-    holidays = USFederalHolidayCalendar().holidays(start="2000-01-01", end="2100-01-01")
-    while pd.Timestamp(previous_day) in holidays:
-        previous_day -= timedelta(days=1)
-
-    return previous_day
+    # Find the last trading day before the reference date
+    previous_days = trading_days[trading_days < pd.Timestamp(reference_date)]
+    if not previous_days.empty:
+        last_trading_day = previous_days[-1].date()
+        return last_trading_day
+    else:
+        raise SystemExit("No trading day found before the reference date")
