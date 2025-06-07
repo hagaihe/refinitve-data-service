@@ -99,5 +99,5 @@ class IBPriceFetcher:
                     logger.error(f"{symbol} failed: {ve}")
                     status_map[symbol] = 'fetch_failed'
             except Exception as e:
-                logger.error(f"{symbol} fetch exception: {e}")
+                logger.exception(f"{symbol} fetch exception: {e}")
                 status_map[symbol] = 'fetch_failed'

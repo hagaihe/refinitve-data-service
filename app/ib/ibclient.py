@@ -4,6 +4,7 @@ from typing import Optional
 
 from ib_insync import IB, Contract
 
+from app.cache.contract_metadata_cache import ContractMetadataCache
 from app.config import APP
 from app.utils import is_after_market_open
 
@@ -18,9 +19,11 @@ class IBClient:
             random.randint(1000, 999999) if client_id == 1 else client_id
         )
         self.ib: Optional[IB] = None
+        self.cache: None
 
     async def __aenter__(self):
         await self.connect()
+        self.cache = ContractMetadataCache.instance()
         return self
 
     async def __aexit__(self, exc_type, exc_val, exc_tb):
@@ -48,11 +51,25 @@ class IBClient:
             logger.warning(f"Error while disconnecting IB: {e}")
 
     async def resolve_contract(self, symbol: str) -> Optional[Contract]:
+        metadata = await self.cache.get_metadata(symbol)
+        if metadata and metadata.get('ib_conid'):
+            logger.info(f"Loaded IB contract metadata for {symbol} from cache")
+            contract = Contract()
+            contract.symbol = symbol
+            contract.secType = metadata.get('ib_under_sec_type')
+            contract.exchange = metadata.get('ib_exchange')
+            contract.currency = metadata.get('ib_currency')
+            contract.conId = int(metadata['ib_conid'])
+            contract.primaryExchange = metadata.get('ib_primary_exchange', '')
+            return contract
+
+
         base = Contract(symbol=symbol, secType='STK', exchange='SMART', currency='USD')
         details = await self.ib.reqContractDetailsAsync(base)
         if details:
             contract = details[0].contract
             logger.info(f"Resolved {symbol} to conId: {contract.conId}")
+            await self.update_cache(symbol, contract)
             return contract
         else:
             logger.warning(f"Could not resolve contract for symbol: {symbol}")
@@ -87,4 +104,15 @@ class IBClient:
             logger.warning(f"No historical bars fetched for {symbol}")
             return None
 
-
+    async def update_cache(self, symbol: str, contract: Contract):
+        ib_data = {
+            'conId': contract.conId,
+            'currency': contract.currency,
+            'description': contract.description,
+            'exchange': contract.exchange,
+            'multiplier': contract.multiplier,
+            'secType': contract.secType,
+            'localSymbol': contract.localSymbol,
+            'primaryExchange': contract.primaryExchange,
+        }
+        await self.cache.update_metadata(symbol, ib_data=ib_data)

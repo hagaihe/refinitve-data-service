@@ -1,7 +1,10 @@
 import asyncio
 import logging
+import re
 import time
 from datetime import datetime
+
+from app.cache.contract_metadata_cache import ContractMetadataCache
 from app.config import APP
 import pandas as pd
 import refinitiv.data as rd
@@ -25,24 +28,41 @@ def convert_to_refinitiv_symbology(symbols):
     return converted, ignored
 
 
-def convert_to_ric(symbols) -> dict:
+async def convert_to_ric(symbols) -> dict:
     try:
-        conversion_definition = symbol_conversion.Definition(
-            symbols=symbols,
-            from_symbol_type=symbol_conversion.SymbolTypes.TICKER_SYMBOL,
-            to_symbol_types=[symbol_conversion.SymbolTypes.RIC],
-            preferred_country_code=symbol_conversion.CountryCode.USA
-        ).get_data()
-
-        # Extracting the converted RICs
+        cache = ContractMetadataCache.instance()
         converted_ric_list = {}
+
+        # fetch from cache
+        symbols_to_fetch = []
         for symbol in symbols:
-            try:
-                ric = conversion_definition.data.raw['Matches'][symbol]['RIC']
-                converted_ric_list[symbol] = ric
-            except KeyError:
-                logging.warning(f"No RIC found for symbol '{symbol}'")
-                converted_ric_list[symbol] = None
+            metadata = await cache.get_metadata(symbol)
+            if metadata and metadata.get('refinitiv_ric'):
+                converted_ric_list[symbol] = metadata['refinitiv_ric']
+            else:
+                symbols_to_fetch.append(symbol)
+
+        # fetch from refinitiv symbols not in cache
+        if symbols_to_fetch:
+            conversion_definition = symbol_conversion.Definition(
+                symbols=symbols_to_fetch,
+                from_symbol_type=symbol_conversion.SymbolTypes.TICKER_SYMBOL,
+                to_symbol_types=[symbol_conversion.SymbolTypes.RIC],
+                preferred_country_code=symbol_conversion.CountryCode.USA
+            ).get_data()
+
+            for symbol in symbols_to_fetch:
+                try:
+                    ric = conversion_definition.data.raw['Matches'][symbol]['RIC']
+                    document_title = conversion_definition.data.raw['Matches'][symbol]['DocumentTitle']
+                    converted_ric_list[symbol] = ric
+                    await cache.update_metadata(symbol, refinitiv_data={
+                        'title': re.split(r'[,;]', document_title)[0].strip(),
+                        'ric': ric
+                    })
+                except KeyError:
+                    logging.warning(f"No RIC found for symbol '{symbol}'")
+                    converted_ric_list[symbol] = None
 
         return converted_ric_list
 
@@ -59,7 +79,7 @@ def fetch_data_with_retry(rics, input_fields):
 
 async def get_data(input_universe, input_fields, retries=3):
     logging.info(f"convert {len(input_universe)} symbols to rics")
-    converted_symbols_dict = convert_to_ric(input_universe)
+    converted_symbols_dict = await convert_to_ric(input_universe)
     rics = [s for s in converted_symbols_dict.values() if s is not None]
 
     no_ric_symbols = [k for k in converted_symbols_dict if converted_symbols_dict[k] is None]

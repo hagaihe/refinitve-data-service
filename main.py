@@ -7,6 +7,7 @@ import refinitiv.data as rd
 from aiohttp import web
 from aiojobs.aiohttp import setup
 
+from app.cache.contract_metadata_cache import ContractMetadataCache
 from app.config import APP
 from app.handlers import health_check, get_holdings, filter_daily_corporate_action_handler, \
     fetch_ib_last_adj_price_handler
@@ -22,6 +23,7 @@ async def on_startup(app: web.Application):
     logging.info("setting up application")
     logging.info(f"Last trading day={APP.conf.last_trading_day}")
     ClosingPriceCache.instance()
+    ContractMetadataCache.instance()
 
     root_directory = os.path.dirname(os.path.abspath(__file__))
     log_directory = os.path.join(root_directory, 'logs')
