@@ -4,6 +4,10 @@ import os
 import logging
 from datetime import datetime
 
+import pandas as pd
+
+from app.config import APP
+
 
 class ClosingPriceCache:
     _instance = None
@@ -14,12 +18,12 @@ class ClosingPriceCache:
         logging.info("Initializing ClosingPriceCache...")
         self._cache = {}  # { "symbol": { "ib_close": float, "refinitiv_close": float, "date": str } }
         self._cache_lock = asyncio.Lock()
-        if self._load_today_cache():
+        if self._load_cache():
             first_symbol, first_record = next(iter(self._cache.items()))
             self._last_updated = datetime.strptime(first_record["date"], "%Y-%m-%d").date()
             logging.info(f"Cache last updated on {self._last_updated}")
         else:
-            self._last_updated = datetime.now().date()
+            self._last_updated = None
 
     @classmethod
     def instance(cls):
@@ -28,9 +32,9 @@ class ClosingPriceCache:
         return cls._instance
 
     def _is_cache_expired(self):
-        return datetime.now().date() > self._last_updated
+        return self._last_updated is not None and APP.conf.last_trading_day > self._last_updated
 
-    def _load_today_cache(self) -> bool:
+    def _load_cache(self) -> bool:
         logging.info(f"Loading cache from {self._csv_path}")
         row_count = 0
 
@@ -39,9 +43,10 @@ class ClosingPriceCache:
                 reader = csv.DictReader(file)
                 for row in reader:
                     symbol = row['symbol']
+                    # logging.info(f"Reading {symbol} info from csv ...")
                     entry = {
-                        'ib_close': float(row['ib_close']) if row['ib_close'] else None,
-                        'refinitiv_close': float(row['refinitiv_close']) if row['refinitiv_close'] else None,
+                        'ib_close': float(row['ib_close']) if row['ib_close'] != "" else pd.NA,
+                        'refinitiv_close': float(row['refinitiv_close']) if row['refinitiv_close'] != ""  else pd.NA,
                         'date': row['date'],
                     }
                     self._cache[symbol] = entry
@@ -55,30 +60,44 @@ class ClosingPriceCache:
     async def _reset_if_expired(self):
         if self._is_cache_expired():
             async with self._cache_lock:
-                logging.warning("Cache expired. Reloading from disk...")
+                logging.warning("Clean cache ==> expired!")
                 self._cache.clear()
-                self._last_updated = datetime.now().date()
-                self._load_today_cache()
+                if os.path.exists(self._csv_path):
+                    os.remove(self._csv_path)
+                self._last_updated = APP.conf.last_trading_day
 
     async def set_refinitiv_close(self, symbol: str, close_price: float, date: str):
         await self._reset_if_expired()
         async with self._cache_lock:
             if symbol not in self._cache:
                 self._cache[symbol] = {'date': date}
-            self._cache[symbol]['refinitiv_close'] = close_price if close_price != '<NA>' else None
-            self._cache[symbol]['date'] = date
-            logging.debug(f"Set Refinitiv close for {symbol}")
-            await self._maybe_log_to_csv(symbol)
+            csv_value = close_price if pd.notna(close_price) else ""
+            # if cache was loaded when service started then self._cache[symbol]['refinitiv_close'] may contains pd.NA values
+            # so befor compare we need convert it to "" if it's pd.NA
+            if 'refinitiv_close' not in self._cache[symbol] or pd.isna(self._cache[symbol]['refinitiv_close']):
+                cache_value = ""
+            else:
+                cache_value = self._cache[symbol]['refinitiv_close']
+            if cache_value != csv_value:
+                self._cache[symbol]['refinitiv_close'] = csv_value
+                self._cache[symbol]['date'] = date
+                logging.debug(f"Set Refinitiv close for {symbol}")
+                await self._maybe_log_to_csv(symbol)
+            else:
+                logging.info(f"{symbol} already exists in cache with the same Refinitive price={close_price}")
 
     async def set_ib_close(self, symbol: str, close_price: float, date: str):
-        await self._reset_if_expired()
         async with self._cache_lock:
+            await self._reset_if_expired()
             if symbol not in self._cache:
                 self._cache[symbol] = {'date': date}
-            self._cache[symbol]['ib_close'] = close_price
-            self._cache[symbol]['date'] = date
-            logging.debug(f"Set IB close for {symbol}")
-            await self._maybe_log_to_csv(symbol)
+            if 'ib_close' not in self._cache[symbol] or self._cache[symbol]['ib_close'] != close_price:
+                self._cache[symbol]['ib_close'] = close_price
+                self._cache[symbol]['date'] = date
+                logging.debug(f"Set IB close for {symbol}")
+                await self._maybe_log_to_csv(symbol)
+            else:
+                logging.info(f"{symbol} already exists in cache with the same IB price={close_price}")
 
     async def _maybe_log_to_csv(self, symbol: str):
         data = self._cache.get(symbol, {})
@@ -102,16 +121,13 @@ class ClosingPriceCache:
                 logging.info(f"Logged prices for {symbol} on {data['date']}")
 
     async def get_prices(self, symbol: str):
-        await self._reset_if_expired()
         async with self._cache_lock:
             return self._cache.get(symbol, None)
 
     async def fetch(self, symbol: str):
-        await self._reset_if_expired()
         async with self._cache_lock:
             return self._cache.get(symbol, None)
 
     async def get_all(self):
-        await self._reset_if_expired()
         async with self._cache_lock:
             return dict(self._cache)

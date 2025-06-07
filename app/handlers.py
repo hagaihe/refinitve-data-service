@@ -67,6 +67,7 @@ async def filter_daily_corporate_action_handler(request):
             ref_close = data.get("refinitiv_close") if data else None
             if ib_close is None or ref_close is None or \
                 pd.isna(ib_close) or pd.isna(ref_close) or \
+                ib_close == "" or ref_close == "" or \
                 abs(ib_close - ref_close) > 0.05:
                 logging.warning(f"{symbol} is flagged: ib_close={ib_close} vs. refinitiv_close={ref_close}")
                 flagged_set.add(symbol)
