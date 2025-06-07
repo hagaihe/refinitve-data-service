@@ -84,13 +84,19 @@ class IBPriceFetcher:
                     jitter = random.randint(*self.jitter_range_ms)
                     await asyncio.sleep(jitter / 1000.0)
 
-                price = await self.ib_client.fetch_adjusted_close(symbol)
-                if price is not None:
-                    await self.cache.set_ib_close(symbol, price, APP.conf.last_trading_day)
-                    logger.info(f"Fetched adjusted close for {symbol}: {price}")
-                    status_map[symbol] = 'fetched'
+                cached = await self.cache.get_prices(symbol)
+                if cached and cached['date'] == APP.conf.last_trading_day.strftime('%Y-%m-%d'):
+                    price = cached['ib_close']
+                    logger.info(f"{symbol} adjusted close already exists in cache for : {cached['date']}({price})")
+                    status_map[symbol] = 'cached'
                 else:
-                    raise ValueError("No price returned")
+                    price = await self.ib_client.fetch_adjusted_close(symbol)
+                    if price is not None:
+                        await self.cache.set_ib_close(symbol, price, APP.conf.last_trading_day)
+                        logger.info(f"Fetched from IB adjusted close for {symbol}: {price}")
+                        status_map[symbol] = 'fetched'
+                    else:
+                        raise ValueError("No price returned")
             except ValueError as ve:
                 if "Could not resolve contract" in str(ve):
                     logger.warning(f"{symbol} contract resolution failed: {ve}")

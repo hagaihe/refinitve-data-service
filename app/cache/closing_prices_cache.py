@@ -131,3 +131,21 @@ class ClosingPriceCache:
     async def get_all(self):
         async with self._cache_lock:
             return dict(self._cache)
+
+    async def ib_price_exists(self, symbol) -> bool:
+        async with self._cache_lock:
+            if symbol in self._cache and 'ib_close' in self._cache[symbol]:
+                return True
+        return False
+
+    async def refinitiv_price_exists(self, symbol) -> bool:
+        async with self._cache_lock:
+            if symbol in self._cache and 'refinitiv_close' in self._cache[symbol]:
+                return True
+        return False
+
+    async def get_prices(self, symbol):
+        async with self._cache_lock:
+            if symbol in self._cache and 'ib_close' in self._cache[symbol]:
+                return self._cache[symbol]
+        return None

@@ -147,19 +147,27 @@ async def refinitiv_fetch_close_prices(input_universe):
         return
 
     try:
-        data_df, _ = await get_data(input_universe, ["TR.PriceClose"])
+        cache = ClosingPriceCache.instance()
 
-        if not data_df.empty:
-            cache = ClosingPriceCache.instance()
-            reference_date = APP.conf.last_trading_day.strftime('%Y-%m-%d')
+        # left_to_fetch = []
+        # for symbol in input_universe:
+        #     if symbol not in cache or 'refinitiv_close' not in cache[symbol] \
+        #             or cache[symbol]['date'] != APP.conf.last_trading_day.strftime('%Y-%m-%d'):
+        #         left_to_fetch.append(symbol)
 
-            for _, row in data_df.iterrows():
-                symbol = row["Instrument"]
-                close_price = row.get("Price Close")
-                if close_price is not None:
-                    await cache.set_refinitiv_close(symbol, close_price, reference_date)
-                else:
-                    logging.warning(f"No close price found for symbol '{symbol}'")
+        if input_universe:
+            data_df, _ = await get_data(input_universe, ["TR.PriceClose"])
+
+            if not data_df.empty:
+                reference_date = APP.conf.last_trading_day.strftime('%Y-%m-%d')
+
+                for _, row in data_df.iterrows():
+                    symbol = row["Instrument"]
+                    close_price = row.get("Price Close")
+                    if close_price is not None:
+                        await cache.set_refinitiv_close(symbol, close_price, reference_date)
+                    else:
+                        logging.warning(f"No close price found for symbol '{symbol}'")
 
     except Exception as e:
         logging.error(f"Error fetching close prices: {e}")
