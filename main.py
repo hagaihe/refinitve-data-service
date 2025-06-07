@@ -1,12 +1,13 @@
 import logging
 import os
 from datetime import datetime
-from app.cache.closing_prices_cache import ClosingPriceCache
+
 import aiojobs as aiojobs
 import refinitiv.data as rd
 from aiohttp import web
 from aiojobs.aiohttp import setup
 
+from app.cache.closing_prices_cache import ClosingPriceCache
 from app.cache.contract_metadata_cache import ContractMetadataCache
 from app.config import APP
 from app.handlers import health_check, get_holdings, filter_daily_corporate_action_handler, \

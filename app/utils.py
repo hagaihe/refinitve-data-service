@@ -1,10 +1,11 @@
 import logging
 import os
 import time
-from datetime import datetime, time, timedelta
-from pytz import timezone
+from datetime import datetime, time
+
 import pandas as pd
 import pandas_market_calendars as mcal
+from pytz import timezone
 
 logger = logging.getLogger(__name__)
 

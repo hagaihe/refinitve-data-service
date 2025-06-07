@@ -6,7 +6,6 @@ from ib_insync import IB, Contract
 
 from app.cache.contract_metadata_cache import ContractMetadataCache
 from app.config import APP
-from app.utils import is_after_market_open
 
 logger = logging.getLogger(__name__)
 
