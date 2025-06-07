@@ -13,13 +13,13 @@ class ClosingPriceCache:
     _csv_path = os.path.join(os.path.dirname(__file__), "storage", "closing_prices_log.csv")
 
     def __init__(self):
-        logging.info("Initializing ClosingPriceCache...")
+        logging.info("Initializing Closing Price Cache...")
         self._cache = {}  # { "symbol": { "ib_close": float, "refinitiv_close": float, "date": str } }
         self._cache_lock = asyncio.Lock()
         if self._load_cache():
             first_symbol, first_record = next(iter(self._cache.items()))
             self._last_updated = datetime.strptime(first_record["date"], "%Y-%m-%d").date()
-            logging.info(f"Cache last updated on {self._last_updated}")
+            logging.info(f"Closing Price Cache last updated on {self._last_updated}")
         else:
             self._last_updated = None
 
@@ -33,7 +33,6 @@ class ClosingPriceCache:
         return self._last_updated is not None and APP.conf.last_trading_day > self._last_updated
 
     def _load_cache(self) -> bool:
-        logging.info(f"Loading cache from {self._csv_path}")
         row_count = 0
 
         if os.path.exists(self._csv_path):
@@ -41,7 +40,6 @@ class ClosingPriceCache:
                 reader = csv.DictReader(file)
                 for row in reader:
                     symbol = row['symbol']
-                    # logging.info(f"Reading {symbol} info from csv ...")
                     entry = {
                         'ib_close': float(row['ib_close']) if row['ib_close'] != "" else pd.NA,
                         'refinitiv_close': float(row['refinitiv_close']) if row['refinitiv_close'] != ""  else pd.NA,
@@ -49,7 +47,9 @@ class ClosingPriceCache:
                     }
                     self._cache[symbol] = entry
                     row_count += 1
-                logging.info(f"Loaded {row_count} entries into cache")
+
+                if row_count > 0:
+                    logging.info(f"Loaded {row_count} entries into Closing Price Cache")
         else:
             logging.info(f"Cache is not yet created")
 

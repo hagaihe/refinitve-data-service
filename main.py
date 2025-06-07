@@ -31,7 +31,7 @@ async def on_startup(app: web.Application):
         os.makedirs(log_directory)
     current_date = datetime.now().strftime('%Y-%m-%d')
     log_file_path = os.path.join(log_directory, f"refinitiv-data-lib-{current_date}.log")
-    logging.info(f"set refinitiv log={log_file_path}")
+    # logging.info(f"set refinitiv log={log_file_path}")
 
     APP.refinitive_config = rd.get_config()
     APP.refinitive_config.set_param("logs.transports.file.enabled", True)
