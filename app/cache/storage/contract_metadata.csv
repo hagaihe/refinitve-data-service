@@ -1,0 +1,785 @@
+symbol,refinitiv_title,refinitiv_ric,ib_conid,ib_primary_exchange,ib_exchange,ib_long_name,ib_timezone,ib_trading_hours,ib_liquid_hours,ib_min_tick,ib_valid_exchanges,ib_price_magnifier,ib_industry,ib_category,ib_subcategory,ib_market_name,ib_order_types,ib_ev_rule,ib_ev_multiplier,ib_md_size_multiplier,ib_agg_group,ib_under_symbol,ib_under_sec_type,ib_market_rule_ids,ib_real_expiration_date,ib_last_trade_time,ib_stock_type,ib_min_size,ib_size_increment,ib_suggested_size_increment,ib_cusip,ib_ratings,ib_desc_append,ib_bond_type,ib_coupon_type,ib_callable,ib_putable,ib_coupon,ib_convertible,ib_maturity,ib_issue_date,ib_next_option_date,ib_next_option_type,ib_next_option_partial,ib_notes,isin,ib_currency,created_time,update_time
+EFA,iShares MSCI EAFE ETF,EFA,13002510,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:24:08.383586,2025-06-07T15:33:03.130611
+EEM,iShares MSCI Emerging Markets ETF,EEM,6604766,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:24:58.076781,2025-06-07T15:33:03.122611
+PSI,Invesco Semiconductors ETF,PSI,319357019,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:56.371651,2025-06-07T15:33:19.217027
+JMOM,Jpmorgan US Momentum Factor ETF,JMOM.K,295518913,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:56.520867,2025-06-07T15:33:12.105487
+IWM,iShares Russell 2000 ETF,IWM,9579970,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:56.524864,2025-06-07T15:33:03.156612
+SIZE,iShares MSCI USA Size Factor ETF,SIZE.K,125903837,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:56.525864,2025-06-07T15:33:14.897145
+FELG,Fidelity Enhanced Large Cap Growth ETF,FELG.K,666754577,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:56.672866,2025-06-07T15:33:05.914064
+HEDJ,WisdomTree Europe Hedged Equity Fund,HEDJ.K,71423629,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:56.675865,2025-06-07T15:33:11.438233
+JPEM,JPMorgan Diversified Return Emerging Mkts Eqty ETF,JPEM.K,179343619,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:56.828574,2025-06-07T15:33:12.124488
+SPDV,Aam S&P 500 High Dividend Value ETF,SPDV.K,297889586,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:56.980575,2025-06-07T15:33:15.054148
+DDWM,WisdomTree Dynamic International Equity Fund,DDWM.K,218130634,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:56.981575,2025-06-07T15:33:04.476640
+GWX,SPDR S&P International Small Cap ETF,GWX,45540825,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.132574,2025-06-07T15:33:11.377241
+PSET,Principal Quality ETF,PSET.O,226664426,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.286744,2025-06-07T15:33:19.210028
+ACSI,American Customer Satisfaction ETF,ACSI.K,493013391,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.287745,2025-06-07T15:33:03.243610
+SNPG,Xtrackers S&P 500 Growth Scored & Screened ETF,SNPG.K,596545605,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.369744,2025-06-07T15:33:15.006116
+QARP,Xtrackers Russell 1000 US Qlty at a Rsnbl Prce ETF,QARP.K,313130362,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.381744,2025-06-07T15:33:12.735040
+JIRE,JPMorgan International Research Enhanced Eqty ETF,JIRE.K,566841782,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.382743,2025-06-07T15:33:12.086487
+FELV,Fidelity Enhanced Large Cap Value ETF,FELV.K,666754580,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.383743,2025-06-07T15:33:05.924071
+HTD,John Hancock Tax Advantaged Dividend Income Closed Fund,HTD,30301899,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.384743,2025-06-07T15:33:11.514235
+FEM,First Trust Emerging Markets AlphaDEX Fund,FEM.O,87254450,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.385742,2025-06-07T15:33:05.935060
+TLT,iShares 20+ Year Treasury Bond ETF,TLT.O,15547841,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.386743,2025-06-07T15:33:03.204610
+VGK,Vanguard European Stock Index Fund ETF,VGK,27684070,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.387744,2025-06-07T15:33:17.219635
+FDVV,Fidelity High Dividend ETF,FDVV.K,247848806,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.388742,2025-06-07T15:33:05.885058
+VFVA,Vanguard US Value Factor ETF,VFVA.K,307015498,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.390742,2025-06-07T15:33:17.211601
+HDMV,First Trust Horizon Managed Vol Dev Intl ETF,HDMV.K,245170131,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.391743,2025-06-07T15:33:11.410234
+XLF,Financial Select Sector SPDR Fund,XLF,4215220,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.392745,2025-06-07T15:33:03.214611
+VBR,Vanguard Small-Cap Value Index Fund ETF,VBR,27638062,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.394744,2025-06-07T15:33:17.121601
+FELC,Fidelity Enhanced Large Cap Core ETF,FELC.K,666754575,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.395751,2025-06-07T15:33:05.904059
+FDVL,Foundations Dynamic Value ETF,FDVL.K,657760758,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.397744,2025-06-07T15:33:05.878017
+VIDI,Vident International Equity Strat ETF,VIDI.K,137537414,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.399742,2025-06-07T15:33:17.228604
+HUSV,First Trust Horizon Managed Vol Domestic ETF,HUSV.K,245170134,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.437743,2025-06-07T15:33:11.523234
+XLK,Technology Select Sector SPDR Fund,XLK,4215230,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.471744,2025-06-07T15:33:03.224610
+GVUS,Goldman Sachs MarketBeta Russell 1000 Value Eq ETF,GVUS.K,668631599,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.472742,2025-06-07T15:33:11.366267
+DFAS,Dimensional U S Small Cap ETF,DFAS.K,496646875,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.478745,2025-06-07T15:33:04.557639
+PXH,Invesco RAFI Emerging Markets ETF,PXH,319356969,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.479745,2025-06-07T15:33:12.717039
+FDGR,Foundations Dynamic Growth ETF,FDGR.K,657760749,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.480743,2025-06-07T15:33:08.879983
+FDRR,Fidelity Dividend ETF for Rising Rates,FDRR.K,247848809,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.481742,2025-06-07T15:33:08.929582
+DES,WisdomTree US SmallCap Dividend Fund,DES,39615644,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.482744,2025-06-07T15:33:04.517641
+FDIS,Fidelity MSCI Consumer Discretionary Index ETF,FDIS.K,137229010,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.484743,2025-06-07T15:33:08.889983
+FDLO,Fidelity Low Volatility Factor ETF,FDLO.K,247848812,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.521744,2025-06-07T15:33:08.899984
+DALI,First Trust Dorsey Wright DALI Equity ETF,DALI.O,317730384,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.590742,2025-06-07T15:33:04.059640
+VFQY,Vanguard US Quality Factor ETF,VFQY.K,307015493,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.596743,2025-06-07T15:33:17.203600
+JMEE,JPMorgan Small & Mid Cap Enhanced Equity ETF,JMEE.K,560578187,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.597742,2025-06-07T15:33:12.095487
+VB,Vanguard Small-Cap Index Fund ETF,VB,27638105,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.598745,2025-06-07T15:33:17.105602
+HLAL,Wahed FTSE USA Shariah ETF,HLAL.O,374687582,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.600743,2025-06-07T15:33:11.485231
+DARP,Grizzle Growth ETF,DARP.K,650738778,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.677742,2025-06-07T15:33:04.439640
+HERD,Pacer Cash Cows Fund of Funds ETF,HERD.O,364719326,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.678744,2025-06-07T15:33:11.456233
+HLGE,Hartford Longevity Economy ETF,HLGE.K,477005608,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.679742,2025-06-07T15:33:11.495233
+ACWX,iShares MSCI ACWI ex US ETF,ACWX.O,49954149,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.830755,2025-06-07T15:33:03.266611
+SPY,SPDR S&P 500 ETF Trust,SPY,756733,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.833753,2025-06-07T15:33:03.195611
+DFAT,Dimensional U S Targeted Value ETF,DFAT.K,496646878,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.981755,2025-06-07T15:33:04.565640
+VIG,Vanguard Dividend Appreciation Index Fund ETF,VIG,38746069,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:57.983754,2025-06-07T15:33:17.236638
+JOET,Virtus Terranova US Quality Momentum ETF,JOET.K,455801532,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.133754,2025-06-07T15:33:12.115487
+DBEM,Xtrackers MSCI Em Mkts Hdg Eqty ETF,DBEM.K,89380519,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.286784,2025-06-07T15:33:04.456639
+PSC,Principal U.S. Small-Cap ETF,PSC.O,248811629,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.289756,2025-06-07T15:33:19.202028
+DFAE,DFA Dimensional Emerging Core Equity Market ETF,DFAE.K,458378551,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.376753,2025-06-07T15:33:04.541639
+IBB,iShares Biotechnology ETF,IBB.O,11517520,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.378753,2025-06-07T15:33:11.530231
+JUST,Goldman Sachs JUST US Large Cap Equity ETF,JUST.K,321207371,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.380753,2025-06-07T15:33:12.173488
+FDT,First Trust Developed Markets ex-US AlphaDEX Fund,FDT.O,87254444,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.382753,2025-06-07T15:33:05.831015
+IEF,iShares 7-10 Year Treasury Bond ETF,IEF.O,15547844,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.383753,2025-06-07T15:33:03.138611
+AAXJ,iShares MSCI All Country Asia ex Japan ETF,AAXJ.O,53224215,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.384787,2025-06-07T15:33:03.234613
+DEMZ,Democratic Large Cap Core ETF,DEMZ.O,453313506,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.385787,2025-06-07T15:33:04.506639
+FENI,Fidelity Enhanced International ETF,FENI.K,666754570,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.391756,2025-06-07T15:33:05.945061
+HFGO,Hartford Large Cap Growth ETF,HFGO.K,525552645,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.394753,2025-06-07T15:33:11.466239
+SOCL,Global X Social Media ETF,SOCL.O,97477676,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.395756,2025-06-07T15:33:15.026146
+VALQ,American Century US Quality Value ETF,VALQ.K,302704705,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.397756,2025-06-07T15:33:17.097600
+VFMF,Vanguard US Multifactor Fund ETF,VFMF.K,307015508,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.398756,2025-06-07T15:33:17.179601
+SNPE,Xtrackers S&P 500 Scored & Screened ETF,SNPE.K,372737538,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.399753,2025-06-07T15:33:14.997113
+SPBC,Simplify US Equity Plus Bitcoin Strategy ETF,SPBC.O,493427753,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.401757,2025-06-07T15:33:15.045110
+FDWM,Fidelity Women's Leadership ETF,FDWM.K,497222700,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.402755,2025-06-07T15:33:05.894059
+FCFY,First Trust S&P 500 Diversified Free Cash Flow ETF,FCFY.K,650080326,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.439756,2025-06-07T15:33:08.830984
+SMDV,ProShares Russell 2000 Dividend Growers ETF,SMDV.K,183005008,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.443756,2025-06-07T15:33:14.930112
+SLYV,SPDR S&P 600 Small Cap Value ETF,SLYV.K,45540634,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.446757,2025-06-07T15:33:14.921111
+QDEF,FlexShares Quality Dividend Defensive Index Fund,QDEF.K,118977457,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.470755,2025-06-07T15:33:12.745041
+PRFZ,Invesco RAFI US 1500 Small-Mid ETF,PRFZ.O,320227512,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.471789,2025-06-07T15:33:19.186027
+VIOG,Vanguard S&P Small-Cap 600 Growth Index Fund ETF,VIOG.K,78645840,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.480756,2025-06-07T15:33:17.253634
+LCTU,BlackRock US Carbon Transition Readiness ETF,LCTU.K,480746347,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.482755,2025-06-07T15:33:12.262486
+PY,Principal Value ETF,PY.O,226664431,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.484754,2025-06-07T15:33:12.726041
+SLYG,SPDR S&P 600 Small Cap Growth ETF,SLYG.K,45540622,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.485755,2025-06-07T15:33:14.912110
+FDM,First Trust Dow Jones Select MicroCap Index Fund,FDM,36253174,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.487753,2025-06-07T15:33:08.909986
+JPUS,JPMorgan Diversified Return US Equity ETF,JPUS.K,208426442,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.489754,2025-06-07T15:33:12.153487
+SNPD,Xtrackers S&P Dividend Aristocrats Screened ETF,SNPD.K,596545615,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.521755,2025-06-07T15:33:14.987146
+ACWI,iShares MSCI ACWI ETF,ACWI.O,49954154,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.562757,2025-06-07T15:33:03.251609
+JPME,JPMorgan Diversified Return US Mid Cap Equity ETF,JPME.K,233150444,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.592756,2025-06-07T15:33:12.134488
+SMLF,iShares US Small-Cap Equity Factor ETF,SMLF.K,192643876,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.599755,2025-06-07T15:33:14.940135
+PTNQ,Pacer Trendpilot 100 ETF,PTNQ.O,196887990,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.601754,2025-06-07T15:33:19.243028
+PXF,Invesco RAFI Developed Mkts ex-US ETF,PXF,319356942,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.602753,2025-06-07T15:33:12.709039
+VBK,Vanguard Small-Cap Growth Index Fund ETF,VBK,27638059,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.604753,2025-06-07T15:33:17.113601
+SMMD,iShares Russell 2500 ETF,SMMD.K,281768501,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.674754,2025-06-07T15:33:14.949112
+SMOT,VanEck Morningstar SMID Moat ETF,SMOT.K,589639343,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.678754,2025-06-07T15:33:14.968149
+HACK,Amplify Cybersecurity ETF,HACK.K,680623548,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.680753,2025-06-07T15:33:11.385231
+PWB,Invesco Large Cap Growth ETF,PWB,319356939,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.831255,2025-06-07T15:33:19.260029
+DEM,WisdomTree Emerging Markets High Dividend Fund,DEM,45138765,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.835254,2025-06-07T15:33:04.496640
+PTEU,Pacer Trendpilot European Index ETF,PTEU.K,215304048,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.981257,2025-06-07T15:33:19.226030
+FEP,First Trust Europe AlphaDEX Fund,FEP.O,87254455,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:58.983257,2025-06-07T15:33:05.954059
+JPSE,JPMorgan Diversified Return US Small Cp Equity ETF,JPSE.K,255608023,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.133256,2025-06-07T15:33:12.144488
+FCPI,Fidelity Stocks for Inflation ETF,FCPI.K,390616575,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.286258,2025-06-07T15:33:08.839984
+HELO,JPMorgan Hedged Equity Laddered Overlay ETF,HELO.K,656787965,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.288256,2025-06-07T15:33:11.447266
+JVAL,Jpmorgan US Value Factor ETF,JVAL.K,295518923,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.368256,2025-06-07T15:33:12.183488
+PTLC,Pacer Trendpilot US Large Cap ETF,PTLC.K,196183258,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.376256,2025-06-07T15:33:19.235028
+VIGI,Vanguard Intl Dividend Appreciation Index Fund ETF,VIGI.O,224323076,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.378258,2025-06-07T15:33:17.245604
+SMMV,iShares MSCI USA Small-Cap Min Vol Factor ETF,SMMV.K,247473128,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.380254,2025-06-07T15:33:14.959115
+ADME,Aptus Drawdown Managed Equity ETF,ADME.K,236317234,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.382256,2025-06-07T15:33:03.274611
+SNPV,Xtrackers S&P 500 Value Scored & Screened ETF,SNPV.K,596545610,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.384272,2025-06-07T15:33:15.015113
+SKYY,First Trust Cloud Computing ETF,SKYY.O,90617252,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.386255,2025-06-07T15:33:14.905113
+DFIC,DFA Dimensional International Core Equity 2 ETF,DFIC.K,552592672,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.387255,2025-06-07T15:33:04.589639
+JQUA,Jpmorgan US Quality Factor ETF,JQUA.K,295518916,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.393256,2025-06-07T15:33:12.163488
+ACWV,iShares MSCI Global Min Vol Factor ETF,ACWV.K,96090060,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.395258,2025-06-07T15:33:03.258612
+ADPV,Adaptiv Select ETF,ADPV.K,595361684,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.397258,2025-06-07T15:33:03.282610
+SPE,Special Opportunities Fund,SPE,71319847,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.399259,2025-06-07T15:33:15.074147
+DFAC,Dimensional U S Core Equity 2 ETF,DFAC.K,496646865,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.401288,2025-06-07T15:33:04.533638
+DEEF,Xtrackers FTSE Developed ex US Multifactor ETF,DEEF.K,213617366,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.402290,2025-06-07T15:33:04.486640
+HEAT,Touchstone Climate Transition ETF,HEAT.K,628824406,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.404291,2025-06-07T15:33:11.429234
+SOR,Source Capital Beneficial Interest,SOR,744102298,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.405289,2025-06-07T15:33:15.037144
+DFAU,DFA Dimensional US Core Equity Market ETF,DFAU.K,455801517,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.439256,2025-06-07T15:33:04.573639
+VFH,Vanguard Financials Index Fund ETF,VFH,27638074,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.443257,2025-06-07T15:33:17.162603
+PWV,Invesco Large Cap Value ETF,PWV,319356954,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.446256,2025-06-07T15:33:12.701075
+SPDW,SPDR Portfolio Developed World ex-US ETF,SPDW.K,45540794,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.469258,2025-06-07T15:33:15.064112
+HQGO,Hartford US Quality Growth ETF,HQGO.O,669995112,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.476258,2025-06-07T15:33:11.504232
+HDEF,Xtrackers MSCI EAFE Hi Dv Yld Eq ETF,HDEF.K,202968412,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.479257,2025-06-07T15:33:11.401265
+VEU,Vanguard FTSE All World ex US ETF,VEU,43240070,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.480275,2025-06-07T15:33:17.154600
+IVV,iShares Core S&P 500 ETF,IVV,8991352,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.482256,2025-06-07T15:33:03.147611
+DFIS,DFA Dimensional International Small Cap ETF,DFIS.K,552592682,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.484291,2025-06-07T15:33:04.597641
+VFMO,Vanguard US Momentum Factor ETF,VFMO.K,307015505,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.486298,2025-06-07T15:33:17.187600
+DEUS,Xtrackers Russell US Multifactor ETF,DEUS.K,213617369,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.488257,2025-06-07T15:33:04.525639
+KIE,SPDR S&P Insurance ETF,KIE,45540872,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.522257,2025-06-07T15:33:12.192487
+ADX,Adams Diversified Equity Fund,ADX,4187,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.562258,2025-06-07T15:33:03.290611
+HDUS,Hartford Disciplined US Equity ETF,HDUS.K,597954924,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.593259,2025-06-07T15:33:11.419267
+MDY,SPDR S&P MidCap 400 ETF Trust,MDY,72195411,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.599258,2025-06-07T15:33:03.165611
+HKND,Humankind US Stock ETF,HKND.K,473315554,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.601257,2025-06-07T15:33:11.475232
+QEFA,SPDR MSCI EAFE StrategicFactors ETF,QEFA.K,154111516,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.603261,2025-06-07T15:33:12.764042
+LEAD,Siren DIVCON Leaders Dividend ETF,LEAD.K,455287569,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.605255,2025-06-07T15:33:12.272486
+KOMP,SPDR S&P Kensho New Economies Composite ETF,KOMP.K,338719520,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.674254,2025-06-07T15:33:12.212488
+ICOW,Pacer Developed Markets International Cash Cws 100,ICOW.K,279447217,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.678256,2025-06-07T15:33:11.538233
+KNG,FT Vest S&P 500 Dividend Aristocrats Tgt Inc,KNG,474092451,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.680256,2025-06-07T15:33:12.202488
+VFMV,Vanguard US Minimum Volatility ETF,VFMV.K,307015488,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.828255,2025-06-07T15:33:17.195600
+VEGN,US Vegan Climate ETF,VEGN.K,382534575,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.832258,2025-06-07T15:33:17.146602
+QEMM,SPDR MSCI Emerging Markets StrategicFactors ETF,QEMM.K,154111520,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.980257,2025-06-07T15:33:12.773042
+FCTR,First Trust Lunt US Factor Rotation ETF,FCTR.K,327422060,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:31:59.982258,2025-06-07T15:33:08.849982
+FDCE,Foundations Dynamic Core ETF,FDCE.K,657760744,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.132256,2025-06-07T15:33:08.859984
+DFEM,DFA Dimensional Emerging Markets Core Equity 2 ETF,DFEM.K,558456248,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.285282,2025-06-07T15:33:04.581640
+KONG,Formidable Fortress ETF,KONG.K,504262798,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.288281,2025-06-07T15:33:12.222489
+VFLO,VictoryShares Free Cash Flow ETF,VFLO.O,638569706,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.368305,2025-06-07T15:33:17.170600
+HAPI,Harbor Human Capital Factor US Large Cap ETF,HAPI.K,590844636,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.382301,2025-06-07T15:33:11.393234
+DFAI,DFA Dimensional International Core Equity Market,DFAI.K,455801512,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.384301,2025-06-07T15:33:04.549638
+DBEF,Xtrackers MSCI EAFE Hedged Equity ETF,DBEF.K,89380514,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.386301,2025-06-07T15:33:04.447638
+QGRO,American Century US Quality Growth ETF,QGRO.K,332975526,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.389302,2025-06-07T15:33:12.783040
+QDF,FlexShares Quality Dividend Index Fund,QDF,118938250,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.391303,2025-06-07T15:33:12.754039
+QQQ,Invesco QQQ Trust,QQQ.O,320227571,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.393302,2025-06-07T15:33:03.175612
+VEA,Vanguard Tax Managed Fund FTSE Developed Markets ETF,VEA,45444192,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.395302,2025-06-07T15:33:17.138602
+VCR,Vanguard Consumer Discretionary Index Fund ETF,VCR,27638064,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.397302,2025-06-07T15:33:17.130600
+LCF,Touchstone US Large Cap Focused ETF,LCF,576969484,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.402304,2025-06-07T15:33:12.252485
+SMRI,Bushido Capital US Equity ETF,SMRI.O,653754336,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.404305,2025-06-07T15:33:14.978110
+SMH,VanEck Semiconductor ETF,SMH.O,229725622,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.407303,2025-06-07T15:33:03.185610
+PVAL,Putnam Focused Large Cap Value ETF,PVAL.K,493464112,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.409302,2025-06-07T15:33:19.251027
+PRNT,3D Printing Etf,PRNT.K,241424237,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.411336,2025-06-07T15:33:19.194028
+DCOR,Dimensional US Core Equity 1 ETF,DCOR.K,653576406,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.413303,2025-06-07T15:33:04.465638
+KVLE,KraneShares Value Line Dynamic Dividend Eq Ix ETF,KVLE.K,457104543,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.442954,2025-06-07T15:33:12.242488
+KRMA,Global X Conscious Companies ETF,KRMA.O,240202361,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.445954,2025-06-07T15:33:12.232487
+FDG,American Century Focused Dynamic Growth ETF,FDG,415594731,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:00.465953,2025-06-07T15:33:08.869982
+LFEQ,VanEck Long/Flat Trend ETF,LFEQ.K,291378180,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.368694,2025-06-07T15:33:09.992593
+LGH,HCM Defender 500 Index ETF,LGH,386755002,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.377695,2025-06-07T15:33:10.000602
+FEUS,FlexShares ESG & Climate US Large Cap Core Index,FEUS.K,516097365,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.379694,2025-06-07T15:33:05.963092
+DFIV,Dimensional International Value ETF,DFIV.K,513880551,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.382693,2025-06-07T15:33:13.448793
+IDEV,iShares Core MSCI International Developed Mkt ETF,IDEV.K,270708877,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.384696,2025-06-07T15:33:11.546230
+SPEU,SPDR Portfolio Europe ETF,SPEU.K,45555866,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.386692,2025-06-07T15:33:15.093148
+QGRW,WisdomTree US Quality Growth Fund,QGRW.K,602596442,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.388694,2025-06-07T15:33:12.791043
+SPEM,SPDR Portfolio Emerging Markets ETF,SPEM.K,45540759,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.391696,2025-06-07T15:33:15.084113
+AESR,Anfield US Equity Sector Rotation ETF,AESR.K,395889538,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.394696,2025-06-07T15:33:03.298611
+FEZ,SPDR Euro Stoxx 50 ETF,FEZ,45555861,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.397702,2025-06-07T15:33:05.979073
+QLC,FlexShares US Quality Large Cap Index Fund,QLC,207825360,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.399694,2025-06-07T15:33:12.798040
+LGLV,SPDR SSGA US Large Cap Low Volatility Index ETF,LGLV.K,123103552,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.401727,2025-06-07T15:33:10.008603
+AGZ,iShares Agency Bond ETF,AGZ,55734123,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.404693,2025-06-07T15:33:03.314611
+AFLG,First Trust Active Factor Large Cap ETF,AFLG.K,393990626,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.406694,2025-06-07T15:33:03.306611
+FEX,First Trust Large Cap Core AlphaDEX Fund,FEX.O,44000304,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.408695,2025-06-07T15:33:05.970094
+SPGM,SPDR Portfolio MSCI Global Stock Market ETF,SPGM.K,103464320,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.411693,2025-06-07T15:33:15.103111
+IDV,iShares International Select Dividend ETF,IDV,44647192,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.438696,2025-06-07T15:33:11.561230
+IDLV,Invesco S&P Intl Developed Low Volatility ETF,IDLV.K,319359354,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.443694,2025-06-07T15:33:11.553230
+VIOO,Vanguard S&P Small-Cap 600 Index Fund ETF,VIOO.K,78645838,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.446694,2025-06-07T15:33:17.689310
+QLTY,GMO US Quality ETF,QLTY.K,665643518,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.465694,2025-06-07T15:33:12.806041
+FFLG,Fidelity Fundamental Large Cap Growth ETF,FFLG.K,469352062,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.468696,2025-06-07T15:33:05.988075
+VIOV,Vanguard S&P Small Cap 600 Value ETF,VIOV.K,78645845,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.478696,2025-06-07T15:33:17.697344
+IEFA,iShares Core MSCI EAFE ETF,IEFA.K,115826907,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.481700,2025-06-07T15:33:11.569230
+IEMG,iShares Core MSCI Emerging Markets ETF,IEMG.K,115826951,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.484693,2025-06-07T15:33:11.577231
+LGRO,Level Four Large Cap Growth Active ETF,LGRO.O,650082829,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.486692,2025-06-07T15:33:10.016603
+FFLV,Fidelity Fundamental Large Cap Value ETF,FFLV.K,686445400,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.488693,2025-06-07T15:33:05.998059
+IETC,iShares US Tech Independence Focused ETF,IETC.K,311897704,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.490693,2025-06-07T15:33:11.586232
+AIA,iShares Asia 50 ETF,AIA.O,47172453,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.518693,2025-06-07T15:33:03.322611
+DFLV,DFA Dimensional US Large Cap Value ETF,DFLV.K,601496542,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.522697,2025-06-07T15:33:13.456811
+FIDU,Fidelity MSCI Industrials Index ETF,FIDU.K,137229028,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.525695,2025-06-07T15:33:06.038059
+FFTY,Innovator IBD 50 ETF,FFTY.K,295751205,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.591693,2025-06-07T15:33:06.018059
+QLV,FlexShares US Quality Low Volatility Index Fund,QLV,374689879,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.596696,2025-06-07T15:33:12.814040
+IEV,iShares Europe ETF,IEV,10158657,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.599692,2025-06-07T15:33:11.602230
+DFUV,DFA Dimensional US Marketwide Value ETF,DFUV.K,560578180,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.601692,2025-06-07T15:33:13.480794
+IFRA,iShares US Infrastructure ETF,IFRA.K,313130248,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.639697,2025-06-07T15:33:11.610231
+FGD,First Trust Dow Jones Global Select Dividend Ix Fd,FGD,47488731,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.676693,2025-06-07T15:33:06.028059
+FFND,One Global ETF,FFND.K,510475037,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.679694,2025-06-07T15:33:06.008059
+AIEQ,Amplify Ai Powered Equity ETF,AIEQ.K,680623539,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.681694,2025-06-07T15:33:03.331611
+FIW,First Trust Water ETF,FIW,44000309,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.796693,2025-06-07T15:33:06.048059
+VLUE,iShares MSCI USA Value Factor ETF,VLUE.K,125903841,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.799694,2025-06-07T15:33:17.724307
+IEUR,iShares Core MSCI Europe ETF,IEUR.K,155518918,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:04.954693,2025-06-07T15:33:11.594233
+VLU,SPDR S&P 1500 Value Tilt ETF,VLU,116379893,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.101695,2025-06-07T15:33:17.716340
+VMAX,Hartford US Value ETF,VMAX.K,669796220,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.104697,2025-06-07T15:33:17.733308
+VIS,Vanguard Industrials Index Fund ETF,VIS,27684007,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.261693,2025-06-07T15:33:17.704309
+DFSU,Dimensional US Sustainability Core 1 ETF,DFSU.K,595177788,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.369696,2025-06-07T15:33:13.464793
+LOPP,Gabelli Love Our Planet & People ETF,LOPP.K,468793464,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.379695,2025-06-07T15:33:10.025604
+IGF,iShares Global Infrastructure ETF,IGF.O,47605491,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.382697,2025-06-07T15:33:11.619233
+DFSV,DFA Dimensional US Small Cap Value ETF,DFSV.K,546347209,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.385695,2025-06-07T15:33:13.472762
+VNSE,Natixis Vaughan Nelson Select ETF,VNSE.K,445550732,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.388694,2025-06-07T15:33:17.740309
+AIQ,Global X Artificial Intelligence & Technology ETF,AIQ.O,317792273,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.391695,2025-06-07T15:33:03.338611
+AIRR,First Trust RBA Amer Industrial Renaissance ETF,AIRR.O,145995043,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.394696,2025-06-07T15:33:03.347610
+DFVE,Doubleline Fortune 500 Equal Weight ETF,DFVE.K,681352396,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.398694,2025-06-07T15:33:13.489762
+DGRO,iShares Core Dividend Growth ETF,DGRO.K,155518915,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.400695,2025-06-07T15:33:13.508761
+DFVX,Dimensional US Large Cap Vector ETF,DFVX.K,663373293,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.403727,2025-06-07T15:33:13.499760
+LOWV,AB US Low Volatility Equity ETF,LOWV.K,621534108,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.406694,2025-06-07T15:33:10.034603
+FLGV,Franklin US Treasury Bond ETF,FLGV.K,426537421,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.409694,2025-06-07T15:33:06.058059
+QOWZ,Invesco Nasdaq Free Cash Flow Achievers ETF,QOWZ.O,669995117,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.412694,2025-06-07T15:33:12.822040
+AIVL,WisdomTree US AI Enhanced Value Fund,AIVL.K,39579986,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.415693,2025-06-07T15:33:03.355611
+IGM,iShares Expanded Tech Sector ETF,IGM,12637025,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.418694,2025-06-07T15:33:09.339991
+ALTL,Pacer Lunt Large Cap Alternator ETF,ALTL.K,429664983,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.421694,2025-06-07T15:33:03.364611
+AMOM,QRAFT AI-Enhanced US Large Cap Momentum ETF,AMOM.K,367310485,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.424694,2025-06-07T15:33:03.373612
+DGRS,WisdomTree US SmallCap Quality Dividend Growth,DGRS.O,132009493,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.427696,2025-06-07T15:33:13.518827
+SPGP,Invesco S and P 500 GARP ETF,SPGP.K,319357145,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.430696,2025-06-07T15:33:15.112111
+VO,Vanguard Mid-Cap Index Fund ETF,VO,27638087,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.434709,2025-06-07T15:33:17.748343
+FLOW,Global X US Cash Flow Kings 100 ETF,FLOW.K,641782968,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.437695,2025-06-07T15:33:06.068059
+SPHB,Invesco S&P 500 High Beta ETF,SPHB.K,319357119,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.468695,2025-06-07T15:33:15.120111
+SPHD,Invesco S&P 500 High Div Low Volatility ETF,SPHD.K,319357122,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.478695,2025-06-07T15:33:15.128111
+SPHQ,Invesco S&P 500 Quality ETF,SPHQ.K,319359474,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.481696,2025-06-07T15:33:15.135144
+QQH,HCM Defender 100 Index ETF,QQH,386754997,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.484695,2025-06-07T15:33:12.838039
+VOE,Vanguard Mid-Cap Value Index Fund ETF,VOE,40643342,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.487693,2025-06-07T15:33:17.756309
+AOA,iShares Core 80/20 Aggressive Allocation ETF,AOA,55734164,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.490694,2025-06-07T15:33:02.369861
+VONE,Vanguard Russell 1000 Index Fund ETF,VONE.O,79020251,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.494696,2025-06-07T15:33:17.764340
+QQEW,First Trust NASDAQ-100 Equal Weighted Index Fund,QQEW.O,38773329,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.497696,2025-06-07T15:33:12.830040
+SPLG,SPDR Portfolio S&P 500 ETF,SPLG.K,45540646,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.522697,2025-06-07T15:33:15.155638
+SPLV,Invesco S&P 500 Low Volatility ETF,SPLV.K,319357142,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.563699,2025-06-07T15:33:15.163659
+LQAI,LG QRAFT AI-Powered US Large Cap Core ETF,LQAI.K,664518932,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.575697,2025-06-07T15:33:10.044603
+FLQM,Franklin US Mid Cap Multifactor Index ETF,FLQM.K,274616929,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.580696,2025-06-07T15:33:06.087059
+FLQL,Franklin US Large Cap Multifactor Index ETF,FLQL.K,274616925,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.584693,2025-06-07T15:33:06.078060
+LRGC,AB US Large Cap Strategic Equities ETF,LRGC.K,655310917,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.587693,2025-06-07T15:33:10.053603
+FLRG,Fidelity U.S. Multifactor ETF,FLRG.K,445554132,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.591694,2025-06-07T15:33:06.097059
+LRGE,ClearBridge Large Cap Growth ESG ETF,LRGE.O,277216817,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.674841,2025-06-07T15:33:10.062639
+QQQE,Direxion NASDAQ-100 Equal Weighted Index Shares,QQQE.O,104792254,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.679842,2025-06-07T15:33:12.862040
+SPMV,Invesco S&P 500 Minimum Variance ETF,SPMV.K,317604339,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.682841,2025-06-07T15:33:16.279736
+QQMG,Invesco ESG NASDAQ 100 ETF,QQMG.O,523222599,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.828844,2025-06-07T15:33:12.846041
+QQQA,ProShares Nasdaq-100 Dorsey Wright Momentum ETF,QQQA.O,491665433,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.834842,2025-06-07T15:33:12.854039
+SPMO,Invesco S&P 500 Momentum ETF,SPMO.K,319357139,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.980841,2025-06-07T15:33:15.172626
+FLV,American Century Focused Large Cap Value ETF,FLV,415594734,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:05.984840,2025-06-07T15:33:06.106059
+IHDG,WisdomTree International Hedged Qual Dividend Gro,IHDG.K,150699950,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.133842,2025-06-07T15:33:09.347991
+QQQM,Invesco NASDAQ 100 ETF,QQQM.O,449738108,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.286843,2025-06-07T15:33:12.879040
+SPSM,SPDR Portfolio S&P 600 Small Cap ETF,SPSM.K,130869149,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.289842,2025-06-07T15:33:16.287735
+VONG,Vanguard Russell 1000 Growth Index Fund ETF,VONG.O,79020258,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.368842,2025-06-07T15:33:17.772308
+QQQJ,Invesco NASDAQ Next Gen 100 ETF,QQQJ.O,449738115,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.378844,2025-06-07T15:33:12.870039
+DGRW,WisdomTree US Quality Dividend Growth Fund,DGRW.O,128357879,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.382842,2025-06-07T15:33:13.528762
+FMAG,Fidelity Magellan ETF,FMAG.K,469352065,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.385875,2025-06-07T15:33:06.114059
+LRND,NYLI US Large Cap R&D Leaders ETF,LRND.O,543283593,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.388874,2025-06-07T15:33:10.078603
+IJJ,iShares S&P Mid-Cap 400 Value ETF,IJJ,10369812,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.391844,2025-06-07T15:33:09.355995
+SPTL,SPDR Portfolio Long Term Treasury ETF,SPTL.K,45540689,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.395844,2025-06-07T15:33:16.295736
+LRGF,iShares US Equity Factor ETF,LRGF.K,192643873,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.399843,2025-06-07T15:33:10.070667
+VONV,Vanguard Russell 1000 Value Index Fund ETF,VONV.O,79020254,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.402844,2025-06-07T15:33:17.780307
+QQXT,First Trust NASDAQ-100 Ex-Technology Sector Idx Fd,QQXT.O,42839251,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.405842,2025-06-07T15:33:12.887039
+LSGR,Natixis Loomis Sayles Focused Growth ETF,LSGR.K,639450941,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.408842,2025-06-07T15:33:10.087603
+SPTM,SPDR Portfolio S&P 1500 Composite Stock Market ETF,SPTM.K,45540643,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.412842,2025-06-07T15:33:16.303735
+AOTG,AOT Growth and Innovation ETF,AOTG.O,570487101,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.415841,2025-06-07T15:33:02.378827
+SPUS,SP Funds S&P 500 Sharia Industry Exclusions ETF,SPUS.K,396046406,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.418840,2025-06-07T15:33:16.312736
+DGS,WisdomTree Emerging Markets SmallCap Dividend Fund,DGS,47012106,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.422841,2025-06-07T15:33:13.537795
+ARTY,iShares Future AI & Tech ETF,ARTY.K,324062421,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.425842,2025-06-07T15:33:02.394873
+APUE,ActivePassive US Equity ETF,APUE.K,629123782,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.441844,2025-06-07T15:33:02.386903
+SPVM,Invesco S and P 500 Value with Momentum ETF,SPVM.K,319357133,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.445842,2025-06-07T15:33:16.322739
+SPVU,Invesco S&P 500 Enhanced Value ETF,SPVU.K,319357102,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.448841,2025-06-07T15:33:16.331736
+DHS,WisdomTree US High Dividend Fund,DHS,39579991,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.465842,2025-06-07T15:33:13.547767
+IJK,iShares S&P Mid-Cap 400 Growth ETF,IJK,10369809,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.468842,2025-06-07T15:33:09.363959
+DIM,WisdomTree International MidCap Dividend Fund,DIM,39615648,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.482841,2025-06-07T15:33:13.563793
+ATFV,Alger 35 ETF,ATFV.K,489110443,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.485842,2025-06-07T15:33:02.413870
+SPXE,ProShares S&P 500 Ex-Energy ETF,SPXE.K,207825422,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.488840,2025-06-07T15:33:16.341737
+AUSF,Global X Adaptive US Factor ETF,AUSF.K,331454468,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.492842,2025-06-07T15:33:02.423870
+DIA,SPDR Dow Jones Industrial Average ETF Trust,DIA,73128548,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.495840,2025-06-07T15:33:13.555762
+VOOV,Vanguard S&P 500 Value Index Fund ETF,VOOV.K,78645820,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.498840,2025-06-07T15:33:17.804309
+LVHD,Franklin US Low Volatility High Dividend Index,LVHD.O,217581626,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.519842,2025-06-07T15:33:10.097605
+DIVO,Amplify CWP Enhanced Dividend Income ETF,DIVO.K,258675284,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.524842,2025-06-07T15:33:13.579802
+VOT,Vanguard Mid-Cap Growth Index Fund ETF,VOT,40643359,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.527841,2025-06-07T15:33:17.813310
+ILCG,iShares Morningstar Growth ETF,ILCG.K,29318706,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.592844,2025-06-07T15:33:09.401957
+MBCC,Monarch Blue Chips Core Index ETF,MBCC.K,478647556,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.597843,2025-06-07T15:33:10.106604
+MDYG,SPDR S&P 400 Mid Cap Growth ETF,MDYG.K,45540624,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.601841,2025-06-07T15:33:10.116604
+ILCV,iShares Morningstar Value ETF,ILCV.K,29318711,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.604840,2025-06-07T15:33:09.411960
+QTEC,First Trust NASDAQ-100-Technology Sector Index Fd,QTEC.O,38773332,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.608841,2025-06-07T15:33:12.903039
+IJT,iShares S&P Small-Cap 600 Growth ETF,IJT.O,10435412,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.674841,2025-06-07T15:33:09.381958
+VOO,Vanguard 500 Index Fund ETF,VOO,136155102,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.678841,2025-06-07T15:33:17.788308
+ASG,Liberty All Star Growth Closed Fund,ASG,7816,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.682840,2025-06-07T15:33:02.403869
+QRFT,QRAFT AI-Enhanced US Large Cap ETF,QRFT.K,367310480,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.827843,2025-06-07T15:33:12.895039
+SPXN,ProShares S&P 500 Ex-Financials ETF,SPXN.K,207825429,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.830841,2025-06-07T15:33:16.350735
+ILCB,iShares Morningstar US Equity ETF,ILCB.K,29318700,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.988879,2025-06-07T15:33:09.391959
+DISV,DFA Dimensional International Small Cap Value ETF,DISV.K,552592687,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:06.992844,2025-06-07T15:33:13.571794
+IJS,iShares S&P Small-Cap 600 Value ETF,IJS,10435409,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.133846,2025-06-07T15:33:09.372960
+VOOG,Vanguard S&P 500 Growth Index Fund ETF,VOOG.K,78645817,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.298878,2025-06-07T15:33:17.797307
+MDYV,SPDR S&P 400 Mid Cap Value ETF,MDYV.K,45540639,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.302846,2025-06-07T15:33:10.127604
+AVDE,Avantis International Equity ETF,AVDE.K,385086964,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.376849,2025-06-07T15:33:02.434869
+FMDE,Fidelity Enhanced Mid Cap ETF,FMDE.K,666754587,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.383877,2025-06-07T15:33:06.130059
+VOTE,TCW Engine No 1 Transform 500 ETF,VOTE.K,499023780,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.387878,2025-06-07T15:33:17.820341
+VSGX,Vanguard ESG International Stock ETF,VSGX.K,333970431,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.391846,2025-06-07T15:33:17.829325
+VSLU,Applied Finance Valuation Large Cap ETF,VSLU.K,486828234,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.395847,2025-06-07T15:33:17.837308
+QUVU,Hartford Quality Value ETF,QUVU.K,659523008,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.399845,2025-06-07T15:33:12.928042
+DJD,Invesco Dow Jones Industrial Average Div ETF,DJD,319355962,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.403888,2025-06-07T15:33:13.587763
+MFEM,PIMCO RAFI Dynamic Multi-Factor Emerg Mkts Eq ETF,MFEM.K,288231294,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.408844,2025-06-07T15:33:10.137607
+IMCB,iShares Morningstar Mid-Cap ETF,IMCB.K,29318712,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.412844,2025-06-07T15:33:09.420958
+DLS,WisdomTree International SmallCap Dividend Fund,DLS,39832868,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.416878,2025-06-07T15:33:13.603793
+QUAL,iShares MSCI USA Quality Factor ETF,QUAL.K,131255429,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.420846,2025-06-07T15:33:12.911039
+QUS,SPDR MSCI USA StrategicFactors ETF,QUS,190480960,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.424845,2025-06-07T15:33:12.919039
+FMCX,FM Focus Equity ETF,FMCX.K,558017344,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.429847,2025-06-07T15:33:06.122059
+SPXT,ProShares S&P 500 Ex-Technology ETF,SPXT.K,207825419,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.433846,2025-06-07T15:33:16.359739
+DLN,WisdomTree US LargeCap Dividend Fund,DLN,39579980,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.437844,2025-06-07T15:33:13.595794
+AVDV,Avantis International Small Cap Value ETF,AVDV.K,385087093,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.441844,2025-06-07T15:33:02.444871
+VSMV,VictoryShares US Multi-Factor Minimum Vol ETF,VSMV.O,280350493,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.446844,2025-06-07T15:33:17.845306
+MFUS,PIMCO RAFI Dynamic Multi-Factor US Equity ETF,MFUS.K,288231300,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.450844,2025-06-07T15:33:10.147606
+QVML,Invesco S&P 500 QVM Multi-factor ETF,QVML.K,499901333,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.454843,2025-06-07T15:33:12.936039
+AVEM,Avantis Emerging Markets Equity ETF,AVEM.K,383858503,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.465844,2025-06-07T15:33:02.454868
+QWLD,SPDR MSCI World StrategicFactors ETF,QWLD.K,154111525,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.472846,2025-06-07T15:33:12.944043
+DOL,WisdomTree International LargeCap Dividend Fund,DOL,39982956,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:07.512844,2025-06-07T15:33:13.611805
+MGC,Vanguard Mega Cap Index Fund ETF,MGC,47640024,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:08.414541,2025-06-07T15:33:10.157606
+FNDA,Schwab Fundamental US Small Company ETF,FNDA.K,132803412,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:08.437542,2025-06-07T15:33:06.138070
+MGK,Vanguard Mega Cap Growth Index Fund ETF,MGK,47640023,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:08.466542,2025-06-07T15:33:10.167607
+MGV,Vanguard Mega Cap Value Index Fund ETF,MGV,47640018,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.373486,2025-06-07T15:33:10.176605
+AVLC,Avantis US Large Cap Equity ETF,AVLC.K,656551472,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.378489,2025-06-07T15:33:02.464905
+DON,WisdomTree US MidCap Dividend Fund,DON,39579977,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.383490,2025-06-07T15:33:13.619763
+MILN,Global X Millennial Consumer ETF,MILN.O,232341597,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.387487,2025-06-07T15:33:10.186607
+RDIV,Invesco S&P Ultra Dividend Revenue ETF,RDIV.K,368312558,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.391488,2025-06-07T15:33:14.175054
+FNDB,Schwab Fundamental US Broad Market ETF,FNDB.K,132803419,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.396488,2025-06-07T15:33:07.952996
+MMLG,First Trust Multi-Manager Large Growth ETF,MMLG.K,435932629,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.399518,2025-06-07T15:33:10.196606
+SPYD,SPDR Portfolio S&P 500 High Dividend ETF,SPYD.K,210534655,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.402521,2025-06-07T15:33:16.374736
+AVLV,Avantis US Large Cap Value ETF,AVLV.K,516382762,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.406485,2025-06-07T15:33:02.474873
+SPXV,ProShares S&P 500 Ex-Health Care ETF,SPXV.K,207825424,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.410489,2025-06-07T15:33:16.366735
+RAFE,PIMCO RAFI ESG US ETF,RAFE.K,396177799,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.413486,2025-06-07T15:33:14.167055
+IMCG,iShares Morningstar Mid-Cap Growth ETF,IMCG.K,29318717,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.417519,2025-06-07T15:33:09.430960
+FNDE,Schwab Fundamental EM Equity ETF,FNDE.K,132803397,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.421488,2025-06-07T15:33:07.963995
+FNDX,Schwab Fundamental US Large Company ETF,FNDX.K,132803409,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.430486,2025-06-07T15:33:07.971999
+AVSC,Avantis US Small Cap Equity ETF,AVSC.K,537638911,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.445488,2025-06-07T15:33:02.483869
+IMCV,iShares Morningstar Mid-Cap Value ETF,IMCV.O,29318720,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.449521,2025-06-07T15:33:09.440995
+IMTM,iShares MSCI Intl Momentum Factor ETF,IMTM.K,180124274,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.453519,2025-06-07T15:33:09.449957
+SPYG,SPDR Portfolio S&P 500 Growth ETF,SPYG.K,45540799,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.457486,2025-06-07T15:33:16.382735
+RDVY,First Trust Rising Dividend Achievers ETF,RDVY.O,141525386,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.472487,2025-06-07T15:33:14.183054
+VSS,Vanguard FTSE All-World ex-US Small-Cap Index ETF,VSS,59234393,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.477487,2025-06-07T15:33:17.853307
+DRUP,GraniteShares Nasdaq Select Disruptors ETF,DRUP.K,386383346,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.481486,2025-06-07T15:33:13.627766
+FQAL,Fidelity Quality Factor ETF,FQAL.K,247848823,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.485485,2025-06-07T15:33:08.030995
+FNX,First Trust Mid Cap Core AlphaDEX Fund,FNX.O,44000319,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.489486,2025-06-07T15:33:07.981031
+RECS,Columbia Research Enhanced Core ETF,RECS.K,384947353,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.522488,2025-06-07T15:33:14.191055
+IQDG,WisdomTree International Quality Dividend Growth,IQDG.K,228590488,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.563488,2025-06-07T15:33:09.498960
+DSTL,Distillate US Fundamental Stability & Value ETF,DSTL.K,338831043,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.592487,2025-06-07T15:33:13.643761
+MMTM,SPDR S&P 1500 Momentum Tilt ETF,MMTM.K,116379888,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.599486,2025-06-07T15:33:10.206607
+IQLT,iShares MSCI Intl Quality Factor ETF,IQLT.K,180124279,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.604485,2025-06-07T15:33:09.507959
+AVUS,Avantis US Equity ETF,AVUS.K,385087121,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.608485,2025-06-07T15:33:02.503868
+FPX,First Trust US Equity Opportunities ETF,FPX,38715957,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.612485,2025-06-07T15:33:08.020996
+FOF,Cohen & Steers Closed End Opportunity Closed Fund,FOF,41842341,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.675488,2025-06-07T15:33:08.000996
+IOO,iShares Global 100 ETF,IOO,11049686,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.679488,2025-06-07T15:33:09.478962
+VTI,Vanguard Total Stock Market Index Fund ETF,VTI,12340041,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.683484,2025-06-07T15:33:17.881318
+VTHR,Vanguard Russell 3000 Index Fund ETF,VTHR.O,79020269,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.828489,2025-06-07T15:33:17.873321
+INCE,Franklin Income Equity Focus ETF,INCE.K,248755455,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.832488,2025-06-07T15:33:09.459959
+AVSU,Avantis Responsible US Equity ETF,AVSU.K,550617872,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.981888,2025-06-07T15:33:02.493869
+MOO,VanEck Agribusiness ETF,MOO,229728912,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:11.985918,2025-06-07T15:33:10.216606
+VTWV,Vanguard Russell 2000 Value Index Fund ETF,VTWV.O,79020275,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.133886,2025-06-07T15:33:17.904321
+DSI,iShares ESG MSCI KLD 400 ETF,DSI,41612012,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.314898,2025-06-07T15:33:13.635794
+VTV,Vanguard Value Index Fund ETF,VTV,27638093,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.318884,2025-06-07T15:33:17.888321
+VTWG,Vanguard Russell 2000 Growth Index Fund ETF,VTWG.O,79020264,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.380917,2025-06-07T15:33:17.896352
+INTF,iShares International Equity Factor ETF,INTF.K,192643864,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.387915,2025-06-07T15:33:09.469958
+FNY,First Trust Mid Cap Growth AlphaDEX Fund,FNY.O,87254464,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.392919,2025-06-07T15:33:07.991046
+FSMD,Fidelity Small-Mid Multifactor ETF,FSMD.K,355332896,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.397916,2025-06-07T15:33:08.041030
+IPAY,Amplify Digital Payments ETF,IPAY.K,680623556,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.402916,2025-06-07T15:33:09.488960
+FORH,Formidable ETF,FORH.K,486829893,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.406915,2025-06-07T15:33:08.010997
+DUBS,Aptus Large Cap Enhanced Yield ETF,DUBS.K,636384975,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.410931,2025-06-07T15:33:13.660761
+DUSA,Davis Select US Equity ETF,DUSA.K,262072216,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.414916,2025-06-07T15:33:13.680763
+MOTE,VanEck Morningstar ESG Moat ETF,MOTE.K,519136200,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.419948,2025-06-07T15:33:10.225606
+VUG,Vanguard Growth Index Fund ETF,VUG,27638099,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.424915,2025-06-07T15:33:17.913352
+DUHP,DFA Dimensional US High Profitability ETF,DUHP.K,546347203,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.428915,2025-06-07T15:33:13.671761
+BAMG,Brookstone Growth Stock ETF,BAMG.K,656379375,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.433919,2025-06-07T15:33:02.522874
+DTD,WisdomTree US Total Dividend Fund,DTD,39622923,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.438916,2025-06-07T15:33:13.651794
+AVUV,Avantis US Small Cap Value ETF,AVUV.K,385087149,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.443916,2025-06-07T15:33:02.513870
+IQSU,NYLI Candriam US Large Cap Equity ETF,IQSU.K,395882745,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.448916,2025-06-07T15:33:09.515995
+REGL,ProShares S&P MidCap 400 Dividend Aristocrats ETF,REGL.K,183005006,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.452949,2025-06-07T15:33:14.199088
+FSST,Fidelity Sustainable US Equity ETF,FSST.K,497222697,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.461948,2025-06-07T15:33:08.050995
+ISCF,iShares Intl Small Cap Equity Factor ETF,ISCF.K,192643869,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.465916,2025-06-07T15:33:09.523991
+BBMC,JPMorgan BetaBuilders US Mid Cap Equity ETF,BBMC.K,417292616,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.470915,2025-06-07T15:33:02.542873
+BBEU,JPMorgan BetaBuilders Europe ETF,BBEU.K,477176641,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.474918,2025-06-07T15:33:02.532908
+DVOL,First Trust Dorsey Wright Momentum & Low Vol ETF,DVOL.O,332383615,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.478919,2025-06-07T15:33:13.687796
+BBSC,JPMorgan BetaBuilders US Small Cap Equity ETF,BBSC.K,455604801,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.483916,2025-06-07T15:33:02.552904
+SPYV,SPDR Portfolio S&P 500 Value ETF,SPYV.K,45540652,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.487918,2025-06-07T15:33:16.390737
+REVS,Columbia Research Enhanced Value ETF,REVS.K,384947356,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.491918,2025-06-07T15:33:14.209056
+SPYX,SPDR S&P 500 Fossil Fuel Reserves Free ETF,SPYX.K,214077049,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.496918,2025-06-07T15:33:16.398735
+SSUS,Day Hagan Smart Sector ETF,SSUS.K,399796655,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.500916,2025-06-07T15:33:16.438737
+RFEM,First Trust RiverFront Dynamic Emerging Mkts ETF,RFEM.O,236798101,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.504916,2025-06-07T15:33:14.237054
+MSTB,LHA Market State Tactical Beta ETF,MSTB.K,447947929,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.508918,2025-06-07T15:33:10.253636
+SQEW,LeaderShares Equity Skew ETF,SQEW.K,421560207,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.513917,2025-06-07T15:33:16.406737
+VUSE,Vident US Equity Strategy ETF,VUSE.K,142839686,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.517954,2025-06-07T15:33:17.921321
+MSMR,McElhenny Sheffield Managed Risk ETF,MSMR.K,526906278,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.592918,2025-06-07T15:33:10.245606
+SRHQ,SRH US Quality GARP ETF,SRHQ.K,589640484,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.598918,2025-06-07T15:33:16.414735
+FSZ,First Trust Switzerland AlphaDEX Fund,FSZ.O,102404282,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.603916,2025-06-07T15:33:08.060999
+SSPX,Janus Henderson US Sustainable Equity ETF,SSPX.K,513290463,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.608915,2025-06-07T15:33:16.422738
+FTCS,First Trust Capital Strength ETF,FTCS.O,39861739,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.612916,2025-06-07T15:33:08.091031
+RFDI,First Trust RiverFront Dynamic Developed Intl ETF,RFDI.O,229325937,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.746917,2025-06-07T15:33:14.228056
+SSPY,Stratified LargeCap Index ETF,SSPY.K,732636181,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.750916,2025-06-07T15:33:16.430736
+BBUS,JPMorgan BetaBuilders US Equity ETF,BBUS.K,356857993,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.754914,2025-06-07T15:33:02.561875
+MRNY,YieldMax MRNA Option Income Strategy ETF,MRNY.K,661253502,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.898918,2025-06-07T15:33:10.235606
+VWO,Vanguard Emerging Markets Stock Index Fund ETF,VWO,27684033,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.903916,2025-06-07T15:33:17.938319
+FTA,First Trust Large Cap Value AlphaDEX Fund,FTA.O,44000327,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:12.907916,2025-06-07T15:33:08.071032
+VV,Vanguard Large-Cap Index Fund ETF,VV,27638102,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.050917,2025-06-07T15:33:17.929352
+RFDA,RiverFront Dynamic US Dividend Advantage ETF,RFDA.K,236088098,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.205572,2025-06-07T15:33:14.218090
+FTC,First Trust Large Cap Growth AlphaDEX Fund,FTC.O,44000328,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.209573,2025-06-07T15:33:08.080998
+RFFC,ALPS Active Equity Opportunity ETF,RFFC.K,236088103,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.357575,2025-06-07T15:33:14.247068
+STNC,Hennessy Sustainable ETF,STNC.O,605219344,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.379576,2025-06-07T15:33:16.446737
+FTEC,Fidelity MSCI Information Technology Index ETF,FTEC.K,137229035,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.395576,2025-06-07T15:33:08.100995
+DVY,iShares Select Dividend ETF,DVY.O,26653236,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.400608,2025-06-07T15:33:13.696761
+MTUM,iShares MSCI USA Momentum Factor ETF,MTUM.K,125903832,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.405574,2025-06-07T15:33:18.361816
+MSTQ,LHA Market State Tactical Q ETF,MSTQ.K,543283537,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.410573,2025-06-07T15:33:10.262607
+RHRX,RH Tactical Rotation ETF,RHRX.K,525075095,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.414604,2025-06-07T15:33:14.266054
+VXF,Vanguard Extended Market Index Fund ETF,VXF,14077037,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.418605,2025-06-07T15:33:19.654721
+FUND,Sprott Focus Trust,FUND.O,186359407,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.423573,2025-06-07T15:33:08.110996
+ISCG,iShares Morningstar Small-Cap Growth ETF,ISCG.K,29318730,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.431572,2025-06-07T15:33:09.531959
+STXG,Strive 1000 Growth ETF,STXG.K,596739252,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.436572,2025-06-07T15:33:16.463741
+STRV,Strive 500 ETF,STRV.K,585324503,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.441680,2025-06-07T15:33:16.454737
+RFG,Invesco S&P MidCap 400 Pure Growth ETF,RFG,319359502,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.446573,2025-06-07T15:33:14.256060
+STXV,Strive 1000 Value ETF,STXV.K,596739259,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.450572,2025-06-07T15:33:16.471737
+ISMD,Inspire Small/Mid Cap ETF,ISMD.K,268132815,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.455572,2025-06-07T15:33:09.539961
+RJMG,FT Raymond James Multicap Growth Equity ETF,RJMG.K,677915247,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.460572,2025-06-07T15:33:14.279088
+MVPA,Miller Value Partners Appreciation ETF,MVPA.K,681352379,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.465573,2025-06-07T15:33:18.368814
+VXUS,Vanguard Total International Stock Index Fund ETF,VXUS.O,83512168,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.476574,2025-06-07T15:33:19.662709
+SURE,AdvisorShares Insider Advantage ETF,SURE.K,95568709,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.481574,2025-06-07T15:33:16.479736
+BCHP,Principal Focused Blue Chip ETF,BCHP.K,641782981,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.486572,2025-06-07T15:33:02.569904
+BEEZ,Honeytree US Equity ETF,BEEZ.O,664690525,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.491572,2025-06-07T15:33:02.585911
+BCUS,Bancreek U.S. Large Cap ETF,BCUS.K,673829581,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.496572,2025-06-07T15:33:02.578872
+DVYE,iShares Emerging Markets Dividend ETF,DVYE.K,103319970,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.501572,2025-06-07T15:33:06.893174
+SUSA,iShares ESG Optimized MSCI USA ETF,SUSA.K,32821285,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.506574,2025-06-07T15:33:16.487735
+IUS,Intercontinental Exchange US NYSE Semiconductor GTR Index Future Chain Chain Contracts,0#IUS:,332975609,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.511572,2025-06-07T15:33:09.570958
+VYMI,Vanguard Internatl High Div Yield Index Fund ETF,VYMI.O,224323083,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.516573,2025-06-07T15:33:19.679709
+DWM,WisdomTree International Equity Fund,DWM,39832865,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.522573,2025-06-07T15:33:06.910193
+DYNF,Ishares US Equity Factor Rotation Active ETF,DYNF.K,358367656,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.527572,2025-06-07T15:33:06.930175
+SUSL,iShares ESG MSCI USA Leaders ETF,SUSL.O,365328982,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.532572,2025-06-07T15:33:16.504355
+DWAS,Invesco Dorsey Wright SmallCap Momentum ETF,DWAS.O,320226777,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.537624,2025-06-07T15:33:06.901171
+NACP,Impact Shares NAACP Minority Empowerment ETF,NACP.K,326089417,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.560572,2025-06-07T15:33:18.377816
+ITAN,Sparkline Intangible Value ETF,ITAN.K,499640633,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.621572,2025-06-07T15:33:09.554958
+VYM,Vanguard High Dividend Yield Index Fund ETF,VYM,41647036,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.628574,2025-06-07T15:33:19.670709
+ITOT,iShares Core S&P Total US Stock Market ETF,ITOT.K,27443032,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.633572,2025-06-07T15:33:09.562958
+SVAL,iShares US Small Cap Value Factor ETF,SVAL.K,452367166,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.638571,2025-06-07T15:33:16.513360
+NFRA,FlexShares STOXX Global Broad Infrastructure Index,NFRA.K,136001685,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.643573,2025-06-07T15:33:18.392850
+ISWN,Amplify BlackSwan ISWN ETF,ISWN.K,467756051,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.675571,2025-06-07T15:33:09.546959
+BIBL,Inspire 100 ETF,BIBL.K,294526530,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.681572,2025-06-07T15:33:02.604873
+RMT,Royce Micro Cap Closed Fund,RMT,4816124,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.686572,2025-06-07T15:33:14.288058
+NANC,Unusual Whales Subversive Democratic Trading ETF,NANC.K,751081186,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.774574,2025-06-07T15:33:18.384847
+BFOR,Barron's 400 ETF,BFOR.K,128835003,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.779573,2025-06-07T15:33:02.594869
+DWX,SPDR S&P International Dividend ETF,DWX,48979499,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:13.927651,2025-06-07T15:33:06.920207
+WCEO,Hypatia Women CEO ETF,WCEO.K,606826283,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.091651,2025-06-07T15:33:19.716709
+IUSG,iShares Core S&P US Growth ETF,IUSG.O,10753223,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.099650,2025-06-07T15:33:09.578958
+WBIL,WBI BullBear Quality 3000 ETF,WBIL.K,165206704,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.233653,2025-06-07T15:33:19.697711
+BKIV,BNY Mellon Innovators Etf,BKIV.O,631370152,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.369652,2025-06-07T15:33:02.614870
+DYNI,IDX Dynamic Innovation ETF,DYNI.O,665383960,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.377651,2025-06-07T15:33:06.939175
+BKLC,BNY Mellon US Large Cap Core Equity ETF,BKLC.K,416494128,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.383650,2025-06-07T15:33:02.622872
+IUSV,iShares Core S&P US Value ETF,IUSV.O,10758520,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.388650,2025-06-07T15:33:09.587958
+WINN,Harbor Long-Term Growers ETF,WINN.K,542577763,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.393651,2025-06-07T15:33:19.726711
+NOBL,ProShares S&P 500 Dividend Aristocrats ETF,NOBL.K,136046695,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.398649,2025-06-07T15:33:18.399850
+WBIF,WBI BullBear Value 3000 ETF,WBIF.K,165206709,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.403652,2025-06-07T15:33:19.687709
+WBIY,WBI Power Factor High Dividend ETF,WBIY.K,259941292,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.415650,2025-06-07T15:33:19.707712
+FUNL,CornerCap Fundametrics Large Cap ETF,FUNL.K,677925375,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.420649,2025-06-07T15:33:08.120995
+ROAM,Hartford Multifactor Emerging Markets ETF,ROAM.K,185345348,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.425650,2025-06-07T15:33:14.296056
+RODM,Hartford Multifactor Developed Markets (ex-US) ETF,RODM.K,185345355,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.430650,2025-06-07T15:33:14.306058
+ROUS,Hartford Multifactor US Equity ETF,ROUS.K,185345358,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.436650,2025-06-07T15:33:14.325055
+NSCR,Nuveen Sustainable Core ETF,NSCR.O,688829887,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.441651,2025-06-07T15:33:18.407816
+EAGL,Eagle Capital Select Equity ETF,EAGL.K,692783518,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.446650,2025-06-07T15:33:06.949210
+SWAN,Amplify BlackSwan Growth & Treasury Core ETF,SWAN.K,340390084,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.452650,2025-06-07T15:33:16.521360
+ROE,Astoria US Equal Weight Quality Kings ETF,ROE.O,645904203,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.457651,2025-06-07T15:33:14.315054
+IVAL,Alpha Architect Internatl Quantitative Value ETF,IVAL.O,177128585,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.462652,2025-06-07T15:33:09.597958
+FV,First Trust Dorsey Wright Focus 5 ETF,FV.O,145766277,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.468650,2025-06-07T15:33:08.130996
+ECML,Euclidean Fundamental Value ETF,ECML.K,631370172,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.473652,2025-06-07T15:33:06.968913
+SXQG,ETC 6 Meridian Quality Growth ETF,SXQG.K,490450359,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.478650,2025-06-07T15:33:16.530362
+WOMN,Impact Shares YWCA Womens Empowerment ETF,WOMN.K,331358818,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.492651,2025-06-07T15:33:19.734743
+BKWO,BNY Mellon Women's Opportunities ETF,BKWO.O,631370157,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:14.497650,2025-06-07T15:33:02.631908
+NUDM,Nuveen ESG International Developed Markets Eqty,NUDM.K,278468179,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:15.379672,2025-06-07T15:33:18.415851
+RPG,Invesco S&P 500 Pure Growth ETF,RPG,319359450,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:15.385670,2025-06-07T15:33:14.335054
+BLCR,iShares Large Cap Core Active ETF,BLCR.O,662195179,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:15.391673,2025-06-07T15:33:02.641870
+RPHS,Regents Park Hedged Market Strategy ETF,RPHS.K,553809265,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:15.407705,2025-06-07T15:33:14.345055
+FVAL,Fidelity Value Factor ETF,FVAL.K,247848824,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:15.412670,2025-06-07T15:33:08.140996
+EDIV,SPDR S&P Emerging Markets Dividend ETF,EDIV.K,84648110,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:15.417669,2025-06-07T15:33:06.975914
+NUGO,Nuveen Growth Opportunities ETF,NUGO.K,517423788,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:15.473670,2025-06-07T15:33:18.431814
+NUEM,Nuveen ESG Emerging Markets Equity ETF,NUEM.K,278468173,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:15.478670,2025-06-07T15:33:18.423815
+EDOW,First Trust Dow 30 Equal Weight ETF,EDOW.K,285217681,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.370511,2025-06-07T15:33:06.984913
+NULC,Nuveen ESG Large-Cap ETF,NULC.K,369580931,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.380510,2025-06-07T15:33:18.439814
+FVC,First Trust Dorsey Wright Dynamic Focus 5 ETF,FVC.O,225651971,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.385509,2025-06-07T15:33:08.150996
+BLCV,Ishares Large Cap Value Active ETF,BLCV.K,632432521,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.391510,2025-06-07T15:33:01.475872
+NULG,Nuveen ESG Large-Cap Growth ETF,NULG.K,258674484,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.396510,2025-06-07T15:33:18.448815
+BLES,Inspire Global Hope ETF,BLES.K,268132810,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.401509,2025-06-07T15:33:01.483871
+FVD,First Trust Value Line Dividend Index Fund,FVD,42033524,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.406510,2025-06-07T15:33:08.160997
+EDV,Vanguard Extended Duration Treasury Index Fd ETF,EDV,47486780,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.411510,2025-06-07T15:33:06.994952
+NULV,Nuveen ESG Large-Cap Value ETF,NULV.K,258674491,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.417509,2025-06-07T15:33:18.456815
+SZNE,Pacer CFRA-Stovall Equal Weight Seasonal Rot Idx,SZNE.K,327230537,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.423510,2025-06-07T15:33:15.562348
+TBG,TBG Dividend Focus ETF,TBG,664518939,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.428510,2025-06-07T15:33:15.570345
+IVE,iShares S&P 500 Value ETF,IVE,9579975,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.434510,2025-06-07T15:33:10.680987
+RSP,Invesco S&P 500 Eql Wght ETF,RSP,319359375,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.439510,2025-06-07T15:33:14.364055
+RPV,Invesco S&P 500 Pure Value ETF,RPV,319359492,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.445510,2025-06-07T15:33:14.355055
+IVLU,iShares MSCI Intl Value Factor ETF,IVLU.K,197174257,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.450510,2025-06-07T15:33:10.688987
+BMVP,Invesco Bloomberg MVP Multi-Factor ETF,BMVP.K,319356997,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.471514,2025-06-07T15:33:01.491873
+TCAF,T Rowe Price Capital Appreciation Equity ETF,TCAF.K,636473720,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.477510,2025-06-07T15:33:15.578345
+IVOG,Vanguard S&P Mid-Cap 400 Growth Index Fund ETF,IVOG.K,78645828,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.483510,2025-06-07T15:33:10.697020
+FXD,First Trust Consumer Discretionary AlphaDEX Fund,FXD,44000333,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.494511,2025-06-07T15:33:08.169997
+RSPE,Invesco ESG S&P 500 Equal Weight ETF,RSPE.K,526726698,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.511510,2025-06-07T15:33:14.374056
+WTV,WisdomTree US Value Fund,WTV,43149364,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.566543,2025-06-07T15:33:19.742710
+EEA,The European Equity Fund Inc,EEA,7535,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.596511,2025-06-07T15:33:07.004917
+FXL,First Trust Technology AlphaDEX Fund,FXL,44000345,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.602513,2025-06-07T15:33:08.188999
+RSPT,Invesco S&P 500 Eql Wght Technology ETF,RSPT.K,319359399,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.608511,2025-06-07T15:33:14.384056
+IVOV,Vanguard S&P Mid-Cap 400 Value Index Fund ETF,IVOV.K,78645835,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.614511,2025-06-07T15:33:10.704988
+EELV,Invesco S&P Emerging Markets Low Volatility ETF,EELV.K,319357162,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.619509,2025-06-07T15:33:07.014949
+FXH,First Trust Health Care AlphaDEX Fund,FXH,44000342,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.669513,2025-06-07T15:33:08.180032
+EEMA,iShares MSCI Emerging Markets Asia ETF,EEMA.O,102121682,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.675511,2025-06-07T15:33:07.024918
+IWB,iShares Russell 1000 ETF,IWB,8991549,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.681512,2025-06-07T15:33:10.723989
+XLG,Invesco S&P 500 Top 50 ETF,XLG,319359438,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.823510,2025-06-07T15:33:19.765709
+XMHQ,Invesco S and P MidCap Quality ETF,XMHQ.K,319357114,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.829510,2025-06-07T15:33:19.781708
+NUSC,Nuveen ESG Small-Cap ETF,NUSC.K,258674502,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.974511,2025-06-07T15:33:18.473815
+XLSR,SPDR SSGA US Sector Rotation ETF,XLSR.K,359693014,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:18.982510,2025-06-07T15:33:19.773710
+BRNY,Burney US Factor Rotation ETF,BRNY.O,591000348,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.127511,2025-06-07T15:33:01.500871
+FXO,First Trust Financials AlphaDEX Fund,FXO,44000352,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.281108,2025-06-07T15:33:08.197032
+FYX,First Trust Small Cap Core AlphaDEX Fund,FYX.O,44000369,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.287109,2025-06-07T15:33:08.221031
+IWD,iShares Russell 1000 Value ETF,IWD,8991562,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.369107,2025-06-07T15:33:10.743007
+IWC,iShares Micro-Cap ETF,IWC,35445810,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.377107,2025-06-07T15:33:10.733021
+NUMV,Nuveen ESG Mid-Cap Value ETF,NUMV.K,258674499,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.383108,2025-06-07T15:33:18.464813
+FYC,First Trust Small Cap Growth AlphaDEX Fund,FYC.O,87254479,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.389107,2025-06-07T15:33:08.213032
+BSVO,EA Bridgeway Omni Small-Cap Value ETF,BSVO.O,618978009,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.395107,2025-06-07T15:33:01.510382
+XHB,SPDR S&P Homebuilders ETF,XHB,45540859,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.401108,2025-06-07T15:33:19.757710
+IVW,iShares S&P 500 Growth ETF,IVW,8991552,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.406109,2025-06-07T15:33:10.714019
+XAR,SPDR S&P Aerospace & Defense ETF,XAR,95346634,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.411143,2025-06-07T15:33:19.749708
+FXR,First Trust Industrials/Producer Drbls AlphaDEX Fd,FXR,44000357,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.417111,2025-06-07T15:33:08.204999
+IWF,iShares Russell 1000 Growth,IWF,8991557,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.423110,2025-06-07T15:33:10.752021
+NWLG,Nuveen Winslow Large-Cap Growth ESG ETF,NWLG.K,506470955,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.429109,2025-06-07T15:33:18.481813
+BUFR,FT Vest Laddered Buffer ETF,BUFR.K,439087509,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.435110,2025-06-07T15:33:01.519379
+EFAD,ProShares MSCI EAFE Dividend Growers ETF,EFAD.K,164701799,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.441108,2025-06-07T15:33:07.053914
+XMLV,Invesco S&P MidCap Low Volatility ETF,XMLV.K,319359377,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.447111,2025-06-07T15:33:19.789722
+EEMV,iShares MSCI Emerging Markets Min Vol Factor ETF,EEMV.K,96079926,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.453109,2025-06-07T15:33:07.033916
+GAB,Gabelli Equity Trust Inc,GAB,7442,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.459108,2025-06-07T15:33:08.229032
+EES,WisdomTree US SmallCap Fund,EES,43149374,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.465110,2025-06-07T15:33:07.043948
+IWFG,NYLI Winslow Focused Large Cap Growth ETF,IWFG.K,569541072,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.470109,2025-06-07T15:33:10.761988
+EFAV,iShares MSCI EAFE Min Vol Factor ETF,EFAV.K,96079923,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.475108,2025-06-07T15:33:07.062915
+BUL,Pacer US Cash Cows Growth ETF,BUL,364374725,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.483108,2025-06-07T15:33:01.529380
+IWL,iShares Russell Top 200 ETF,IWL,69046163,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.494110,2025-06-07T15:33:10.771028
+BUSA,Brandes US Value ETF,BUSA.K,658122488,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.499107,2025-06-07T15:33:01.539383
+RSSL,Global X Russell 2000 ETF,RSSL.K,707673302,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.505107,2025-06-07T15:33:14.393054
+BWTG,Brendan Wood TopGun ETF,BWTG.K,664697721,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.511111,2025-06-07T15:33:01.558381
+TGRT,T Rowe Price Growth ETF,TGRT.K,636473730,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.517109,2025-06-07T15:33:15.623350
+GAL,SPDR SSgA Global Allocation ETF,GAL,106661010,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.522107,2025-06-07T15:33:20.597519
+TCHP,T Rowe Price Blue Chip Growth ETF,TCHP.K,438221990,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.528108,2025-06-07T15:33:15.586345
+GDV,Gabelli Dividend & Income Trust,GDV,26904812,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.534153,2025-06-07T15:33:20.640597
+XNTK,SPDR Nyse Technology ETF,XNTK.K,45540886,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.540108,2025-06-07T15:33:19.814708
+NXTG,First Trust Indxx NextG ETF,NXTG.O,368642027,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.547108,2025-06-07T15:33:18.489814
+RWJ,Invesco S&P SmallCap 600 Revenue ETF,RWJ,368312555,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.586111,2025-06-07T15:33:14.432055
+XMMO,Invesco S and P MidCap Momentum ETF,XMMO.K,319357127,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.593110,2025-06-07T15:33:19.797709
+TDVG,T Rowe Price Dividend Growth ETF,TDVG.K,438221993,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.600108,2025-06-07T15:33:15.604345
+RVRB,Reverb ETF,RVRB.K,595752389,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.606108,2025-06-07T15:33:14.413055
+RVT,Royce Small-Cap Trust Inc,RVT,11775,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.613109,2025-06-07T15:33:14.423057
+GCOW,Pacer Global Cash Cows Dividend ETF,GCOW.K,223579685,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.676109,2025-06-07T15:33:20.631596
+EFG,iShares MSCI EAFE Growth ETF,EFG,35158180,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.683108,2025-06-07T15:33:07.070912
+GAM,General American Investors Closed Fund,GAM,7448,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.689110,2025-06-07T15:33:20.613597
+CALF,Pacer US Small Cap Cash Cows ETF,CALF.K,279447220,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.828109,2025-06-07T15:33:01.567381
+TDIV,First Trust NASDAQ Technology Dividend Index Fund,TDIV.O,112003455,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.834109,2025-06-07T15:33:15.595345
+BUZZ,VanEck Social Sentiment ETF,BUZZ.K,474820876,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.980108,2025-06-07T15:33:01.548382
+RUNN,Running Oak Efficient Growth ETF,RUNN.O,635449249,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:19.987108,2025-06-07T15:33:14.403054
+OALC,OneAscent Large Cap Core ETF,OALC.K,526726684,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.134109,2025-06-07T15:33:18.505815
+TGLR,LAFFER TENGLER Equity Income ETF,TGLR.K,646791508,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.286110,2025-06-07T15:33:15.614345
+XMVM,Invesco S and P MidCap Value with Momentum ETF,XMVM.K,319357109,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.293109,2025-06-07T15:33:19.805709
+NZUS,SPDR MSCI USA Climate Paris Aligned ETF,NZUS.O,558017336,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.368107,2025-06-07T15:33:18.497813
+RWK,Invesco S&P MidCap 400 Revenue ETF,RWK,368312530,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.376112,2025-06-07T15:33:14.441079
+TGRW,T Rowe Price Growth Stock ETF,TGRW.K,438222002,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.384110,2025-06-07T15:33:15.633380
+THLV,THOR Equal Weight Low Volatility ETF,THLV.K,585036584,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.390108,2025-06-07T15:33:15.643349
+GARP,iShares MSCI USA Quality GARP ETF,GARP.K,399652850,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.396109,2025-06-07T15:33:20.621596
+TILT,FlexShares Morningstar US Market Factor Tilt Index,TILT.K,95053802,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.402110,2025-06-07T15:33:15.652382
+GF,CME Cattle(Feeder) Electronic Commodity Future Continuation 1,FCc1,7540,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.408107,2025-06-07T15:33:20.657597
+OMFL,Invesco Russell 1000 Dynamic Multifactor ETF,OMFL.K,366359580,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.414108,2025-06-07T15:33:18.521816
+TLH,iShares 10-20 Year Treasury Bond ETF,TLH,42454568,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.421108,2025-06-07T15:33:15.662346
+OEF,iShares S&P 100 ETF,OEF,11488731,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.427108,2025-06-07T15:33:18.513813
+XOCT,FT Vest US Equity Enh & Mod Buffer ETF - Oct,XOCT.K,661016501,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.433107,2025-06-07T15:33:19.822710
+IWLG,NYLI Winslow Large Cap Growth ETF,IWLG.K,569541077,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.439109,2025-06-07T15:33:10.780988
+RWL,Invesco S&P 500 Revenue ETF,RWL,368312545,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.446107,2025-06-07T15:33:21.296019
+EFIV,SPDR S And P 500 ESG ETF,EFIV.K,436816450,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.452107,2025-06-07T15:33:07.078912
+GEM,Goldman Sachs ActiveBeta Em Mkts Equity ETF,GEM,208316993,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.458108,2025-06-07T15:33:20.649595
+TLTD,FlexShares MS Dev Mkts exUS Factors Tilt Idx,TLTD.K,114814343,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.465108,2025-06-07T15:33:15.671346
+TLTE,FlexShares Morningstar Em Mkts Factors Tilt Idx,TLTE.K,114814344,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.472107,2025-06-07T15:33:15.681345
+IWO,iShares Russell 2000 Growth ETF,IWO,10435402,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.478111,2025-06-07T15:33:10.790022
+RYLD,Global X Russell 2000 Covered Call ETF,RYLD.K,361439195,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.485110,2025-06-07T15:33:21.312019
+RXI,iShares Global Consumer Discretionary ETF,RXI,40784268,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.492110,2025-06-07T15:33:21.304019
+OMFS,Invesco Russell 2000 Dynamic Multifactor ETF,OMFS.K,366359584,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.499110,2025-06-07T15:33:18.530816
+XOVR,ERShares Private-Public Crossover ETF,XOVR.O,725809824,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.514109,2025-06-07T15:33:19.830708
+TMFC,Motley Fool 100 Index ETF,TMFC.K,304958621,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.521110,2025-06-07T15:33:15.690347
+TMFE,Motley Fool Capital Efficiency 100 Index ETF,TMFE.K,535920853,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.528109,2025-06-07T15:33:15.700345
+TMSL,T Rowe Price Small-Mid Cap ETF,TMSL.K,636473736,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.535109,2025-06-07T15:33:15.710349
+EFV,iShares MSCI EAFE Value ETF,EFV,35158187,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.542109,2025-06-07T15:33:07.086913
+RZG,Invesco S&P SmallCap 600 Pure Growth ETF,RZG,319359455,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.548108,2025-06-07T15:33:21.320019
+ONEV,SPDR Russell 1000 Low Volatility Focus ETF,ONEV.K,214246768,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.566129,2025-06-07T15:33:18.555817
+EGUS,iShares ESG Aware MSCI USA Growth ETF,EGUS.K,611584546,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.572128,2025-06-07T15:33:07.093914
+EMXC,iShares MSCI Emerging Markets ex China ETF,EMXC.O,282856694,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.579128,2025-06-07T15:33:07.109914
+IWR,iShares Russell Mid-Cap ETF,IWR,13002600,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.594129,2025-06-07T15:33:10.808986
+ONEQ,Fidelity NASDAQ Composite Index ETF,ONEQ.O,25065073,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.601128,2025-06-07T15:33:18.546854
+CDC,VictoryShares US EQ Income Enh Vol Wtd ETF,CDC.O,211076570,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.608128,2025-06-07T15:33:01.597381
+XSHQ,Invesco S&P SmallCap Quality ETF,XSHQ.K,317605590,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.615128,2025-06-07T15:33:19.846742
+CATH,Global X S&P 500 Catholic Values ETF,CATH.O,230465019,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.622128,2025-06-07T15:33:01.587381
+ONEO,SPDR Russell 1000 Momentum Focus ETF,ONEO.K,214246773,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.674129,2025-06-07T15:33:18.538817
+EMGF,iShares Emerging Markets Equity Factor ETF,EMGF.K,214809502,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.680128,2025-06-07T15:33:07.101913
+IWS,iShares Russell Mid-Cap Value ETF,IWS,13002611,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.687164,2025-06-07T15:33:10.817986
+XRLV,Invesco S&P 500 ex-Rate Sensitive LV ETF,XRLV.K,319357085,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.826130,2025-06-07T15:33:19.839713
+CDEI,Calvert US Large-Cap Diversity,CDEI.K,611584522,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.832127,2025-06-07T15:33:01.606384
+IWP,iShares Russell Mid-Cap Growth ETF,IWP,13002605,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.979342,2025-06-07T15:33:10.798985
+CET,Central Securities Closed Fund,CET,754065,AMEX,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:20.986333,2025-06-07T15:33:01.616380
+CAPE,DoubleLine Shiller CAPE US Equities ETF,CAPE.K,554413230,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.134331,2025-06-07T15:33:01.577383
+IWV,iShares Russell 3000 ETF,IWV,10205675,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.285352,2025-06-07T15:33:10.824986
+TOLL,Tema Monopolies and Oligopolies ETF,TOLL.K,630381106,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.292353,2025-06-07T15:33:15.719345
+XTN,SPDR S&P Transportation ETF,XTN,83434873,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.369366,2025-06-07T15:33:19.894712
+EPS,WisdomTree US LargeCap Fund,EPS,43149379,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.379333,2025-06-07T15:33:07.126914
+EPP,iShares MSCI Pacific ex Japan ETF,EPP,14501606,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.386333,2025-06-07T15:33:07.117913
+XSOE,WisdomTree EM ex-State-Owned Enterprises,XSOE.K,176477337,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.393333,2025-06-07T15:33:19.864744
+XSVM,Invesco S and P SmallCap Value with Momentum ETF,XSVM.K,319357089,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.400332,2025-06-07T15:33:19.874711
+XT,iShares Exponential Technologies ETF,XT.O,187513007,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.407334,2025-06-07T15:33:19.884709
+IWY,iShares Russell Top 200 Growth Index Fund,IWY,69046928,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.413334,2025-06-07T15:33:10.840986
+XSMO,Invesco S and P SmallCap Momentum ETF,XSMO.K,319357080,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.420333,2025-06-07T15:33:19.855711
+ONEY,SPDR Russell 1000 Yield Focus ETF,ONEY.K,214246778,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.427334,2025-06-07T15:33:18.563849
+CFO,VictoryShares US 500 Enhanced Volatility Wtd ETF,CFO.O,211076600,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.433333,2025-06-07T15:33:01.626383
+IWX,iShares Russell Top 200 Value ETF,IWX,69046900,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.440333,2025-06-07T15:33:10.832986
+SCHA,Schwab US Small-Cap ETF,SCHA.K,70083661,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.447332,2025-06-07T15:33:21.335054
+CGDV,Capital Group Dividend Value ETF,CGDV.K,546346968,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.454332,2025-06-07T15:33:01.635380
+GGM,GGM Macro Alignment ETF,GGM,656178879,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.461332,2025-06-07T15:33:20.665596
+EQAL,Invesco Russell 1000 Equal Weight ETF,EQAL.K,319357074,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.468332,2025-06-07T15:33:07.133913
+SCHB,Schwab US Broad Market ETF,SCHB.K,70083650,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.475333,2025-06-07T15:33:21.343020
+SAMT,Strategas Macro Thematic Opportunities ETF,SAMT.K,540342478,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.483334,2025-06-07T15:33:21.327018
+OSCV,Opus Small Cap Value ETF,OSCV.K,326089420,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.491334,2025-06-07T15:33:18.571835
+SCHC,Schwab International Small-Cap Equity ETF,SCHC.K,71714776,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.498333,2025-06-07T15:33:21.351018
+TPLC,Timothy Plan US Large/Mid Cap Core ETF,TPLC.K,363803357,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.505333,2025-06-07T15:33:15.729346
+IXG,iShares Global Financials ETF,IXG,13832156,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.513333,2025-06-07T15:33:10.848988
+GGRW,Gabelli Growth Innovators ETF,GGRW.K,471245457,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:21.520366,2025-06-07T15:33:20.674631
+EQL,ALPS Equal Sector Weight ETF,EQL,61602188,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:22.377276,2025-06-07T15:33:07.142914
+TPLE,Timothy Plan US Large/Mid Core Enhanced ETF,TPLE.K,505686757,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:22.385310,2025-06-07T15:33:15.739346
+XVOL,Acruence Active Hedge US Equity ETF,XVOL.K,483501620,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:22.393277,2025-06-07T15:33:19.903710
+OUSA,ALPS O'Shares US Quality Dividend ETF,OUSA.K,569345959,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:22.400310,2025-06-07T15:33:18.579848
+SCHE,Schwab Emerging Markets Equity ETF,SCHE.K,71715076,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:22.408276,2025-06-07T15:33:21.359019
+EQRR,ProShares Equities for Rising Rates ETF,EQRR.O,282747276,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:22.415277,2025-06-07T15:33:07.150913
+CGGO,Capital Group Global Growth Equity ETF,CGGO.K,546346973,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:22.442275,2025-06-07T15:33:01.645381
+CGGR,Capital Group Growth ETF,CGGR.K,546346977,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:22.449274,2025-06-07T15:33:01.655384
+OVLH,Overlay Shares Hedged Large Cap Equity ETF,OVLH.K,465973936,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:22.455274,2025-06-07T15:33:18.596814
+SCHF,Schwab International Equity ETF,SCHF.K,70083656,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:22.471276,2025-06-07T15:33:21.367018
+GGUS,Goldman Sachs MarketBeta Russell 1000 Grwth Eq ETF,GGUS.K,668631594,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:22.479274,2025-06-07T15:33:20.684601
+OVL,Overlay Shares Large Cap Equity ETF,OVL,385690416,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:22.486275,2025-06-07T15:33:18.588816
+EQWL,Invesco S and P 100 Equal Weight ETF,EQWL.K,319357128,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.375646,2025-06-07T15:33:08.664981
+PBUS,Invesco MSCI USA ETF,PBUS.K,317604207,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.385645,2025-06-07T15:33:19.023506
+GMF,SPDR S&P Emerging Asia Pacific ETF,GMF,45540748,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.393647,2025-06-07T15:33:20.703597
+EQS,Equus Total Return,EQS,754562,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.401678,2025-06-07T15:33:08.656983
+PALC,Pacer Lunt Large Cap Multi-Factor Alternator ETF,PALC.K,429664984,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.409646,2025-06-07T15:33:19.015504
+CGW,Invesco S&P Global Water Index ETF,CGW,319359342,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.418645,2025-06-07T15:33:01.671381
+GK,AdvisorShares Gerber Kawasaki ETF,GK,500289406,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.426648,2025-06-07T15:33:20.694598
+PABU,iShares Paris-Aligned Climate Optmzd MSCI USA ETF,PABU.O,543500004,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.435645,2025-06-07T15:33:19.007507
+CGUS,Capital Group Core Equity ETF,CGUS.K,546346962,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.444645,2025-06-07T15:33:01.663421
+IXN,iShares Global Tech ETF,IXN,13832150,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.452667,2025-06-07T15:33:10.856015
+TRND,Pacer Trendpilot Fund of Funds ETF,TRND.K,364719323,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.461645,2025-06-07T15:33:15.748345
+TSPA,T Rowe Price US Equity Research ETF,TSPA.K,495923474,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.470645,2025-06-07T15:33:15.758347
+SCHK,Schwab 1000 Index ETF,SCHK.K,292080780,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.479645,2025-06-07T15:33:21.383018
+SCHG,Schwab US Large-Cap Growth ETF,SCHG.K,70905158,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.487643,2025-06-07T15:33:21.375020
+CGXU,Capital Group International Focus Equity ETF,CGXU.K,546346980,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.520644,2025-06-07T15:33:01.679380
+IXP,iShares Global Comm Services ETF,IXP,6604147,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.528644,2025-06-07T15:33:10.864021
+GNR,SPDR S&P Global Natural Resources ETF,GNR,78958355,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.682644,2025-06-07T15:33:20.713597
+TUA,Simplify Short Term Treasury Futures Strategy ETF,TUA,597669735,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.690644,2025-06-07T15:33:15.767345
+GOCT,FT Vest US Equity Moderate Buffer ETF - Oct,GOCT.K,661016506,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.827643,2025-06-07T15:33:20.721596
+ESGE,iShares ESG Aware MSCI EM ETF,ESGE.O,238760480,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.835680,2025-06-07T15:33:08.689985
+SCHQ,Schwab Long-Term US Treasury ETF,SCHQ.K,386752912,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.980646,2025-06-07T15:33:21.399018
+GOVI,Invesco Equal Weight 0-30 Year Treasury ETF,GOVI.O,320226712,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:25.987642,2025-06-07T15:33:20.729596
+IXUS,iShares Core MSCI Total International Stock ETF,IXUS.O,115826952,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.133672,2025-06-07T15:33:10.872022
+IYC,iShares US Consumer Discretionary ETF,IYC,10190337,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.294671,2025-06-07T15:33:10.882985
+ESG,Intercontinental Exchange US MSCI EM Asia Selection NTR Index Future Chain Contracts,0#ESE:,240493879,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.301670,2025-06-07T15:33:08.672983
+SCHM,Schwab US Mid-Cap ETF,SCHM.K,82817275,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.368672,2025-06-07T15:33:21.391020
+ESGD,iShares ESG Aware MSCI EAFE ETF,ESGD.O,238760476,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.381671,2025-06-07T15:33:08.680982
+XVV,iShares ESG Select Screened S&P 500 ETF,XVV,446986934,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.388670,2025-06-07T15:33:20.192708
+IYG,iShares US Financial Services ETF,IYG,9930889,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.396671,2025-06-07T15:33:10.898985
+GQI,Natixis Gateway Quality Income ETF,GQI,671100121,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.403673,2025-06-07T15:33:20.738597
+PDN,Invesco RAFI Developed Mkts ex-US SM ETF,PDN,319356917,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.410671,2025-06-07T15:33:19.031505
+GRID,First Trust NASDAQ Cln Edge Smart Grid Infra Ix Fd,GRID.O,70302631,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.417669,2025-06-07T15:33:20.754596
+GRF,Eagle Capital Growth Fund,GRF,51667755,AMEX,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.424670,2025-06-07T15:33:20.746596
+ZECP,Zacks Earnings Consistent Portfolio ETF,ZECP.K,510475041,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.432669,2025-06-07T15:33:20.208752
+IYF,iShares US Financials ETF,IYF,9579962,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.439670,2025-06-07T15:33:10.891987
+IYJ,iShares US Industrials ETF,IYJ,10753241,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.446672,2025-06-07T15:33:10.907990
+PDP,Invesco Dorsey Wright Momentum ETF,PDP.O,320226771,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.453685,2025-06-07T15:33:19.038506
+YALL,God Bless America ETF,YALL.K,590510600,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.460671,2025-06-07T15:33:20.200751
+CHGX,Stance Sustainable Beta ETF,CHGX.O,774122389,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.467669,2025-06-07T15:33:01.686379
+ZIG,Acquirers Fund,ZIG,366131362,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.474672,2025-06-07T15:33:20.216752
+CIBR,First Trust NASDAQ Cybersecurity ETF,CIBR.O,199295926,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.482672,2025-06-07T15:33:01.694380
+ZROZ,PIMCO 25+ Year Zero Coupon US Treasury Index ETF,ZROZ.K,69839360,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.490671,2025-06-07T15:33:20.224752
+IYW,iShares US Technology ETF,IYW,10158652,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.497671,2025-06-07T15:33:10.917022
+IYY,iShares Dow Jones US ETF,IYY,10205678,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.504670,2025-06-07T15:33:10.926989
+GRPM,Invesco S&P MidCap 400 GARP ETF,GRPM.K,319359468,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.511671,2025-06-07T15:33:20.762596
+PEXL,Pacer US Export Leaders ETF,PEXL.K,327230540,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.518672,2025-06-07T15:33:19.046506
+ESGU,iShares ESG Aware MSCI USA ETF,ESGU.O,257689263,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.526671,2025-06-07T15:33:08.699982
+CLM,Cornerstone Strategic Investment Fund,CLM,177437740,AMEX,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.533669,2025-06-07T15:33:01.702379
+SCHX,Schwab US Large-Cap ETF,SCHX.K,70083655,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.540671,2025-06-07T15:33:21.416019
+JAVA,JPMorgan Active Value ETF,JAVA.K,518627867,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.548671,2025-06-07T15:33:11.995422
+TVAL,T Rowe Price Value ETF,TVAL.K,636473735,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.555670,2025-06-07T15:33:15.777346
+SCHV,Schwab US Large-Cap Value ETF,SCHV.K,70905155,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.563672,2025-06-07T15:33:21.408020
+IYZ,iShares US Telecommunications ETF,IYZ,9579981,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.588670,2025-06-07T15:33:10.935986
+GSEW,Goldman Sachs Equal Weight Us Large Cap Equity ETF,GSEW.K,288989361,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.595671,2025-06-07T15:33:20.779596
+COWG,Pacer US Large Cap Cash Cows Growth Leaders ETF,COWG.O,604737263,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.603670,2025-06-07T15:33:01.718379
+TY,Tri Continental Closed Fund,TY,13110,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.616705,2025-06-07T15:33:15.786384
+ESMV,IShares ESG Optimized MSCI USA Min Vol Factor ETF,ESMV.O,524337275,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.624670,2025-06-07T15:33:08.727985
+ESML,iShares ESG Aware MSCI USA Small-Cap ETF,ESML.K,313845618,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.632672,2025-06-07T15:33:08.718982
+GSIE,Goldman Sachs ActiveBeta International Equity ETF,GSIE.K,212134159,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.640671,2025-06-07T15:33:20.788600
+PEY,Invesco High Yield Equity Dividend Achvrs ETF,PEY.O,320227525,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.649672,2025-06-07T15:33:19.054504
+COWZ,Pacer US Cash Cows 100 ETF,COWZ.K,259025784,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.675672,2025-06-07T15:33:01.726381
+GSC,Goldman Sachs Small Cap Equity ETF,GSC,657917205,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.699672,2025-06-07T15:33:20.770596
+CLOU,Global X Cloud Computing ETF,CLOU.O,360975905,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.707672,2025-06-07T15:33:01.710381
+ESGV,Vanguard ESG US Stock ETF,ESGV.K,333970434,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.827671,2025-06-07T15:33:08.709984
+PFM,Invesco Dividend Achievers ETF,PFM.O,320226731,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.834670,2025-06-07T15:33:19.061505
+CPAI,Counterpoint Quantitative Equity ETF,CPAI.K,668447006,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.980672,2025-06-07T15:33:01.735380
+SDVY,First Trust SMID Cap Rising Dividend Achievers ETF,SDVY.O,294729601,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:26.987706,2025-06-07T15:33:21.432018
+CRBN,iShares MSCI ACWI Low Carbon Target ETF,CRBN.K,176371882,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.134674,2025-06-07T15:33:03.964638
+GSPY,Gotham Enhanced 500 ETF,GSPY.K,462788941,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.302704,2025-06-07T15:33:20.807596
+SCZ,iShares MSCI EAFE Small Cap ETF,SCZ.O,47605485,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.315671,2025-06-07T15:33:21.424027
+PFUT,Putnam Sustainable Future ETF,PFUT.K,493464117,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.368007,2025-06-07T15:33:19.069504
+URTH,iShares MSCI World ETF,URTH.K,100223106,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.376010,2025-06-07T15:33:15.794344
+SECT,Main Sector Rotation ETF,SECT.K,288231307,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.383005,2025-06-07T15:33:21.449018
+USCA,Xtrackers MSCI USA Climate Action Equity ETF,USCA.K,623834287,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.390010,2025-06-07T15:33:15.802346
+GSLC,Goldman Sachs ActiveBeta US Large Cap Equity ETF,GSLC.K,206903716,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.399006,2025-06-07T15:33:20.799596
+ETHO,Amplify Etho Climate Leadership US ETF,ETHO.K,680620611,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.406008,2025-06-07T15:33:08.737982
+USCL,iShares Climate Conscious & Transtn MSCI USA ETF,USCL.O,635680438,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.414006,2025-06-07T15:33:15.810346
+SDY,SPDR S&P Dividend ETF,SDY,45540807,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.421007,2025-06-07T15:33:21.441020
+USMF,WisdomTree US Multifactor Fund,USMF.K,280909280,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.429007,2025-06-07T15:33:15.826345
+GSUS,Goldman Sachs MarketBeta US Equity ETF,GSUS.K,422308285,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.436008,2025-06-07T15:33:20.822597
+USMV,iShares MSCI USA Min Vol Factor ETF,USMV.K,96079929,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.444006,2025-06-07T15:33:17.015602
+GSSC,Goldman Sachs ActiveBeta US Small Cap Equity ETF,GSSC.K,280911071,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.452006,2025-06-07T15:33:20.815596
+USMC,Principal US Mega-Cap ETF,USMC.O,292179090,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.460006,2025-06-07T15:33:15.818346
+PGRO,Putnam Focused Large Cap Growth ETF,PGRO.K,493464110,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.468008,2025-06-07T15:33:19.077506
+USNZ,Xtrackers Net Zero Pathway Paris Aligned US Eq ETF,USNZ.K,570106807,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.476007,2025-06-07T15:33:17.023918
+PHO,Invesco Water Resources ETF,PHO.O,320227626,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.485006,2025-06-07T15:33:19.085504
+JCTR,JPMorgan Carbon Transition US Equity ETF,JCTR.K,459553814,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.493006,2025-06-07T15:33:12.003485
+SEIQ,SEI Enhanced US Large Cap Quality Factor ETF,SEIQ.K,562605464,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.501007,2025-06-07T15:33:21.465019
+CRF,Cornerstone Total Return Closed Fund,CRF,177437752,AMEX,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.510007,2025-06-07T15:33:03.974639
+JGRO,JPMorgan Active Growth ETF,JGRO.K,578413058,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.518007,2025-06-07T15:33:12.019486
+SEIM,SEI Enhanced US Large Cap Momentum Factor ETF,SEIM.K,562605458,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.527009,2025-06-07T15:33:21.457020
+EUSA,iShares MSCI USA Equal Weighted ETF,EUSA.K,75064562,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.536007,2025-06-07T15:33:08.756983
+PJFG,PGIM Jennison Focused Growth ETF,PJFG.K,602439305,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.545008,2025-06-07T15:33:19.109540
+EUFN,iShares MSCI Europe Financials ETF,EUFN.O,72086400,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.554006,2025-06-07T15:33:08.747984
+GUNR,FlexShs Morningstar Glbl Upsteam Ntrl Res Idx Fd,GUNR.K,95053797,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.564006,2025-06-07T15:33:20.830629
+USSG,Xtrackers MSCI USA Selection Equity ETF,USSG.K,356101462,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.573006,2025-06-07T15:33:17.053635
+USSE,Segall Bryant & Hamill Select Equity ETF,USSE.K,650949025,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.583006,2025-06-07T15:33:17.046602
+PIE,Invesco Dorsey Wright Emerging Markets Mo ETF,PIE.O,320226746,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.592007,2025-06-07T15:33:19.093505
+EVUS,iShares ESG Aware MSCI USA Value ETF,EVUS.K,611584551,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.601009,2025-06-07T15:33:08.771983
+JGLO,JPMorgan Global Select Equity ETF,JGLO.O,653757705,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.611006,2025-06-07T15:33:12.010484
+USPX,Franklin US Equity Index ETF,USPX.K,235873539,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.628007,2025-06-07T15:33:17.031600
+USRD,Themes US R&D Champions ETF,USRD.O,671347152,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.637041,2025-06-07T15:33:17.038602
+SEIV,SEI Enhanced US Large Cap Value Factor ETF,SEIV.K,562605469,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.646006,2025-06-07T15:33:21.474020
+SELV,SEI Enhanced Low Volatility US Large Cap ETF,SELV.K,562605463,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.655040,2025-06-07T15:33:21.482019
+EVT,Eaton Vance Tax Advantaged Dividend Income Closed Fund,EVT,25960485,NYSE,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.665009,2025-06-07T15:33:08.763982
+PJBF,PGIM Jennison Better Future ETF,PJBF.K,672770441,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.676010,2025-06-07T15:33:19.101505
+USXF,iShares ESG Advanced MSCI USA ETF,USXF.O,427788907,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.684040,2025-06-07T15:33:17.062603
+CVLC,Calvert US Large-Cap Core Responsible Index ETF,CVLC.K,611584517,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.692007,2025-06-07T15:33:04.007639
+JHEM,John Hancock Multifactor Emerging Markets ETF,JHEM.K,335460261,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.829006,2025-06-07T15:33:12.037485
+JHMD,John Hancock Multifactor Developed Internatl ETF,JHMD.K,258905258,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.836005,2025-06-07T15:33:12.047485
+UTEN,US Treasury 10 Year Note ETF,UTEN.O,578561469,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.981008,2025-06-07T15:33:17.074602
+PJFV,PGIM Jennison Focused Value ETF,PJFV.K,602439308,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:27.989006,2025-06-07T15:33:19.134030
+CSD,Invesco S&P Spin-Off ETF,CSD,319359440,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.134006,2025-06-07T15:33:03.982638
+JHAC,John Hancock Fundamental All Cap Core ETF,JHAC.K,663376399,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.286009,2025-06-07T15:33:12.028485
+EZM,WisdomTree US MidCap Fund,EZM,43130881,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.294006,2025-06-07T15:33:08.794982
+EXI,iShares Global Industrials ETF,EXI,40784265,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.369008,2025-06-07T15:33:08.786981
+EWX,SPDR S&P Emerging Markets Small Cap ETF,EWX,51281171,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.377005,2025-06-07T15:33:08.779983
+CVAR,Cultivar ETF,CVAR.K,534562950,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.385005,2025-06-07T15:33:03.998640
+JHML,John Hancock Multifactor Large Cap ETF,JHML.K,208317013,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.393007,2025-06-07T15:33:12.057490
+PKW,Invesco Buyback Achievers ETF,PKW.O,320226721,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.402007,2025-06-07T15:33:19.143052
+CSM,ProShares Large Cap Core Plus,CSM,61668375,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.410006,2025-06-07T15:33:03.989638
+JHMM,John Hancock Multifactor Mid Cap ETF,JHMM.K,208317018,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.419005,2025-06-07T15:33:12.067486
+CVSE,Calvert US Select Equity ETF,CVSE.K,611584529,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.429007,2025-06-07T15:33:04.017638
+SFLO,VictoryShares Small Cap Free Cash Flow ETF,SFLO.O,673829596,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.476008,2025-06-07T15:33:21.490022
+SFYF,SoFi Social 50 ETF,SFYF.K,365214630,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.484004,2025-06-07T15:33:21.507021
+CWI,SPDR MSCI ACWI ex-US ETF,CWI,45540871,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.491007,2025-06-07T15:33:04.027640
+SFY,SoFi Select 500 ETF,SFY,730640115,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.523007,2025-06-07T15:33:21.498020
+PLDR,Putnam Sustainable Leaders ETF,PLDR.K,493464122,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.593006,2025-06-07T15:33:19.151062
+SGLC,SGI US Large Cap Core ETF,SGLC.K,633584569,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.601005,2025-06-07T15:33:21.515019
+FAD,First Trust Multi Cap Growth AlphaDEX Fund,FAD.O,44000299,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.610006,2025-06-07T15:33:08.805985
+GURU,Global X Guru Index ETF,GURU.K,108473907,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.618004,2025-06-07T15:33:20.839597
+JHSC,John Hancock Multifactor Small Cap ETF,JHSC.K,295520848,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.626245,2025-06-07T15:33:12.076487
+GUSA,Goldman Sachs MarketBeta US 1000 Equity ETF,GUSA.K,555711258,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.675006,2025-06-07T15:33:20.848596
+UTHY,US Treasury 30 Year Bond ETF,UTHY.O,622498027,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.683006,2025-06-07T15:33:17.081600
+PPA,Invesco Aerospace & Defense ETF,PPA,319355952,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.692006,2025-06-07T15:33:19.167029
+FBCV,Fidelity Blue Chip Value ETF,FBCV.K,425203213,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.828026,2025-06-07T15:33:08.822982
+SHE,SPDR MSCI USA Gender Diversity ETF,SHE,225021072,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:28.982028,2025-06-07T15:33:21.523022
+POWA,Invesco Bloomberg Pricing Power ETF,POWA.K,319355910,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:29.134029,2025-06-07T15:33:19.159028
+CWS,AdvisorShares Focused Equity ETF,CWS,248755954,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:29.288025,2025-06-07T15:33:04.037639
+CZA,Invesco Zacks Mid-Cap ETF,CZA,319359329,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:29.297026,2025-06-07T15:33:04.047641
+FBCG,Fidelity Blue Chip Growth ETF,FBCG.K,425203208,BATS,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:29.377026,2025-06-07T15:33:08.814983
+UTWY,US Treasury 20 Year Bond ETF,UTWY.O,622498020,NASDAQ,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:29.385025,2025-06-07T15:33:17.090602
+SIXA,ETC 6 Meridian Mega Cap Equity ETF,SIXA.K,421393595,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:29.394026,2025-06-07T15:33:21.531062
+GVIP,Goldman Sachs Hedge Industry VIP ETF,GVIP.K,254147634,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:29.402025,2025-06-07T15:33:20.858597
+PRF,Invesco RAFI US 1000 ETF,PRF,319357032,ARCA,SMART,,,,,,,,,,,,,,,,,,STK,,,,,,,,,,,,,,,,,,,,,,,,USD,2025-06-07T15:32:29.411025,2025-06-07T15:33:19.175065
